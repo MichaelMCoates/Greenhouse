@@ -214,13 +214,13 @@ Renders a component as a modal on top of the current page.
 **DynamicBodyContainer**
    - Story
    - Updates
-    + UpdateItems
-      + UpdateItemHeader
+     + UpdateItems
+       + UpdateItemHeader
    - Comments
-    + CommentForm
-    + CommentItems
+     + CommentForm
+     + CommentItems
    - Backers
-    + BackerItems
+     + BackerItems
 
 
 
