@@ -8,9 +8,9 @@ Renders a component as a modal on top of the current page.
 
 ---
 **NavigationBarContainer**
- - ExploreCategoriesList
- - SearchBar
- - UserBar
+   - ExploreCategoriesList
+   - SearchBar
+   - UserBar
 
 
 
@@ -23,9 +23,9 @@ Renders a component as a modal on top of the current page.
 
 ---
 **UserBarContainer**
- - SignUp
- - SignIn
- - UserDropDown
+   - SignUp
+   - SignIn
+   - UserDropDown
 
 
 
@@ -37,19 +37,19 @@ Renders a component as a modal on top of the current page.
 
 ---
 **SignUpContainer**
-- SignUp
+   - SignUp
 
 ---
 **SignInContainer**
-- SignIn
+   - SignIn
 
 
 ---
 **HomePageContainer**
- - FeaturedCarousel
- - TileCarousel
- - CategoryBoxes
- - GetStartedBox
+   - FeaturedCarousel
+   - TileCarousel
+   - CategoryBoxes
+   - GetStartedBox
 
 
 ---
@@ -80,7 +80,7 @@ Renders a component as a modal on top of the current page.
 
  ---
  **TileContainer**
- - FundingBar
+   - FundingBar
 
 
 
@@ -99,7 +99,7 @@ Renders a component as a modal on top of the current page.
 
 ---
 **CategoryBoxesContainer**
- - CategoryBoxes
+   - CategoryBoxes
 
 
 
@@ -131,11 +131,11 @@ Renders a component as a modal on top of the current page.
 
 ---
 **UserShowPageBodyContainer**
-  - UserProfile
-   + UserAbout
-  - UserCampaigns
-   + CampaignLists
-     + CampaignListItems
+   - UserProfile
+    + UserAbout
+   - UserCampaigns
+    + CampaignLists
+      + CampaignListItems
 
 
 
@@ -148,10 +148,10 @@ Renders a component as a modal on top of the current page.
 
 ---
 **CampaignShowPageContainer**
- - MediaBox
- - CampaignSummary
- - CampaignDetails
- - Perks
+   - MediaBox
+   - CampaignSummary
+   - CampaignDetails
+   - Perks
 
 
 
@@ -168,10 +168,10 @@ Renders a component as a modal on top of the current page.
 
 ---
 **CampaignSummaryContainer**
- - CampaignerDetails
- - FundingBar
- - BackItBar
- - AboutBox
+   - CampaignerDetails
+   - FundingBar
+   - BackItBar
+   - AboutBox
 
 
 
@@ -184,9 +184,9 @@ Renders a component as a modal on top of the current page.
 
 ---
 **BackItBarContainer**
- - SocialBar
-  + SocialButtons (BONUS)
- - DonationBar
+   - SocialBar
+    + SocialButtons (BONUS)
+   - DonationBar
 
 
 
@@ -197,10 +197,10 @@ Renders a component as a modal on top of the current page.
 
 ---
 **CampaignDetailsContainer**
- - CampaignOverview
- - DynamicDetails
-  + DynamicHeader
-  + DynamicBody
+   - CampaignOverview
+   - DynamicDetails
+    + DynamicHeader
+    + DynamicBody
 
 
 
@@ -212,15 +212,15 @@ Renders a component as a modal on top of the current page.
 
 ---
 **DynamicBodyContainer**
- - Story
- - Updates
-  + UpdateItems
-    + UpdateItemHeader
- - Comments
-  + CommentForm
-  + CommentItems
- - Backers
-  + BackerItems
+   - Story
+   - Updates
+    + UpdateItems
+      + UpdateItemHeader
+   - Comments
+    + CommentForm
+    + CommentItems
+   - Backers
+    + BackerItems
 
 
 
@@ -237,7 +237,7 @@ Renders a component as a modal on top of the current page.
 
 ---
 **PerksContainer**
- - PerkItems
+   - PerkItems
 
 
 
@@ -246,7 +246,7 @@ Renders a component as a modal on top of the current page.
 
 ---
 **CheckOutPageContainer**
- - CheckOutUser
+   - CheckOutUser
 
 
 
@@ -262,13 +262,13 @@ Renders a component as a modal on top of the current page.
 
 ---
 **CreateCampaignPageContainer**
- - CreateSidebar
- - CreateHeader
- - CreateBody
-   + BasicsEditor
-   + StoryEditor
-   + PerksEditor
-   + Preview (BONUS)
+   - CreateSidebar
+   - CreateHeader
+   - CreateBody
+     + BasicsEditor
+     + StoryEditor
+     + PerksEditor
+     + Preview (BONUS)
 
 
 
@@ -277,13 +277,13 @@ Renders a component as a modal on top of the current page.
 
 ---
 **SearchCategoriesPageContainer**
- - SearchForm
-   + SearchFormBar
-   + CategoriesSelect
-   + PropertiesSelect
-   + Filters
- - SearchResults
-   + Tiles
+   - SearchForm
+     + SearchFormBar
+     + CategoriesSelect
+     + PropertiesSelect
+     + Filters
+   - SearchResults
+     + Tiles
 
 
 
