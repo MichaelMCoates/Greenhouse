@@ -13,6 +13,7 @@ Renders a component as a modal on top of the current page.
  - UserBar
 
 
+
    NavigationBar will contain links to the IndexPage, SearchCategoriesPage, and CreateCampaignPage. May also have other links to HowItWorksPage and EarlyOfferingsPage.
 
    When the Explore Page link is hovered over, it shows the ExploreCategoriesList: a list of all categories of campaigns. Clicking on a category will take you to the SearchCategoriesPage with that category preselected.
@@ -25,6 +26,7 @@ Renders a component as a modal on top of the current page.
  - SignUp
  - SignIn
  - UserDropDown
+
 
 
    UserBar will either display Sign Up/Sign In buttons if there is no current user, or the user's username with a UserDropDown displayed on click.
@@ -55,6 +57,7 @@ Renders a component as a modal on top of the current page.
  - FeaturedCarouselItems
 
 
+
    FeaturedCarousel renders 5 FeaturedCarouselItems on load, and cycles through them automatically, or on user click.
 
    FeaturedCarouselItem renders as a large image, representing a campaign. If the image is the selected/middle image, it displays description text and a "Learn More" button which links to the campaign show page.
@@ -68,6 +71,7 @@ Renders a component as a modal on top of the current page.
     + Tiles
 
 
+
    TileCarousel displays a TileGroup containing 12 Tiles.
 
    TileCarouselHeader controls what Tiles are displayed in the TileGroup. You can choose to show tiles that are trending, popular near you, or that are specific to the tech or creative sector by clicking on the headers shown. Each of these headers dispatches an AJAX request to the server and returns the Tiles for the TileGroup.
@@ -79,12 +83,15 @@ Renders a component as a modal on top of the current page.
  - FundingBar
 
 
+
  A tile displays information about a campaign. It renders the image, category, title, description, and current funding status (FundingBar) of a campaign. When clicked, it redirects to the CampaignShowPage.
 
 
 
 ---
 **FundingBar**
+
+
 
    Displays how much a campaign has been funded, in dollar amount, a colorized bar, and as a percentage of the overall funding goal. Can be rendered in different ways, depending on if it is being rendered in a Tile or CampaignShowPage.
 
@@ -93,6 +100,7 @@ Renders a component as a modal on top of the current page.
 ---
 **CategoryBoxesContainer**
  - CategoryBoxes
+
 
 
    Shows 10 CategoryBoxes that a user can click on to redirect to the SearchCategoriesPage.
@@ -105,6 +113,7 @@ Renders a component as a modal on top of the current page.
    - UserShowPageBody
 
 
+
    Shows information about a user.
 
    The UserShowPageHeader is a row of links that control what is rendered in the UserShowPageBody.
@@ -114,6 +123,8 @@ Renders a component as a modal on top of the current page.
 ---
 **UserEditPageContainer**
    - UserEditForm
+
+
 
    Pre-filled form that allows you to edit your user information.
 
@@ -125,6 +136,7 @@ Renders a component as a modal on top of the current page.
   - UserCampaigns
    + CampaignLists
      + CampaignListItems
+
 
 
    UserProfile shows a user image, short description and the UserAbout component, which shows the amount of comments, campaigns, and contributions the user has.
@@ -162,6 +174,7 @@ Renders a component as a modal on top of the current page.
  - AboutBox
 
 
+
    Shows the title and description of the campaign as text.
 
    CampaignerDetails shows details about the creator of the campaign. It contains an "About" link, which dispatches the addContentToModal action with the AboutBox component and renders an About modal on top of the page. The AboutBox component displays more information about the campaign creator.
@@ -176,6 +189,7 @@ Renders a component as a modal on top of the current page.
  - DonationBar
 
 
+
    SocialBar contains a "Back It" button, which hides the SocialBar and shows the DonationBar. It also contains a SocialButtons component, which displays buttons for following the project or sharing it on social media. SocialButtons is a (BONUS) feature.
 
    DonationBar has an input for the amount that the user wants to donate, and a button that redirects to the CheckOutPage.
@@ -187,6 +201,7 @@ Renders a component as a modal on top of the current page.
  - DynamicDetails
   + DynamicHeader
   + DynamicBody
+
 
 
   The CampaignDetails component displays details about the campaign.
@@ -208,6 +223,7 @@ Renders a component as a modal on top of the current page.
   + BackerItems
 
 
+
   DynamicBody renders either the Story, Updates, Comments, or Backers component.
 
   Story simply shows the overall story of the campaign. Campaign creators can fill this with just text, or they can include images and diagrams.
@@ -224,12 +240,14 @@ Renders a component as a modal on top of the current page.
  - PerkItems
 
 
+
   Shows the perks for the campaign, which are rewards that users can receive if they contribute a certain amount to the campaign. Clicking on a perk takes you to the CheckOutPage. Making a PerkItem modal when clicking on a perk is a (BONUS) feature.
 
 
 ---
 **CheckOutPageContainer**
  - CheckOutUser
+
 
 
    Won't have many components, only the CheckOutUser component that displays the current user and a Log Out button. Mainly just a massive form to take in payment/shipping information.
@@ -253,6 +271,7 @@ Renders a component as a modal on top of the current page.
    + Preview (BONUS)
 
 
+
    Displays the page for creating a new campaign. The CreateSidebar has links for the user to choose which editor to display in the CreateBody. The CreateHeader shows the current open editor, and has links to show the Preview page (BONUS), save the campaign, and launch the campaign. The CreateBody renders the BasicsEditor, StoryEditor, PerksEditor, and Preview (BONUS) components, which are forms to edit the campaign being created.
 
 
@@ -265,6 +284,7 @@ Renders a component as a modal on top of the current page.
    + Filters
  - SearchResults
    + Tiles
+
 
 
    Displays the page for searching through and exploring categories. By combining the original search and explore pages, the SearchCategoriesPage allows the user to search for specific campaigns within a specific category.
