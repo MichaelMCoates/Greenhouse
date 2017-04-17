@@ -185,7 +185,7 @@ Renders a component as a modal on top of the current page.
 ---
 **BackItBarContainer**
    - SocialBar
-    + SocialButtons (BONUS)
+     + SocialButtons (BONUS)
    - DonationBar
 
 
