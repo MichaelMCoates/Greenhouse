@@ -54,7 +54,7 @@ Renders a component as a modal on top of the current page.
 
 ---
 **FeaturedCarouselContainer**
- - FeaturedCarouselItems
+   - FeaturedCarouselItems
 
 
 
@@ -68,7 +68,7 @@ Renders a component as a modal on top of the current page.
    - TileCarouselHeader
    - TileCarouselArrow
    - TileGroup
-    + Tiles
+     + Tiles
 
 
 
