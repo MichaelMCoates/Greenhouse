@@ -5,11 +5,11 @@
 [Trello link][trello]
 
 [heroku]: http://www.herokuapp.com
-[trello]: https://trello.com/b/ALgfuX0Q/freshernote
+[trello]: https://trello.com/b/8xxa1Hju/greenhouse
 
 ## Minimum Viable Product
 
-FresherNote is a web application inspired by Indiegogo built using Ruby on Rails
+GREENHOUSE is a web application inspired by Indiegogo built using Ruby on Rails
 and React/Redux.  By the end of Week 9, this app will, at a minimum, satisfy the
 following criteria with smooth, bug-free navigation, adequate seed data and
 sufficient CSS styling:
