@@ -63,3 +63,7 @@
 - `GET /api/followings`
 - `POST /api/followings`
 - `DELETE /api/followings`
+
+### Search
+
+- `GET /search`
