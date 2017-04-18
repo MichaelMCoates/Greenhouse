@@ -63,17 +63,17 @@ sufficient CSS styling:
 
 **Objective:** Users can see their profile and campaigns, other profiles, and edit their profile.
 
-### Phase 5: Search Categories Page (2 days)
+### Phase 5: Campaign Create Page (2 days)
 
-**Objective:** Users can search campaigns by keyword and categories, and they render as tiles showing basic information about the campaign.
+**Objective:** Users can create a campaign using the built-in form.
 
 ### Phase 6: Home Page (1 day)
 
 **Objective:** Renders the home page, which shows popular campaigns and categories.
 
-### Phase 7: Campaign Create Page (2 days)
+### Phase 7: Search Categories Page (2 days)
 
-**Objective:** Users can create a campaign using the built-in form.
+**Objective:** Users can search campaigns by keyword and categories, and they render as tiles showing basic information about the campaign.
 
 ### Bonus Features (TBD)
 - [ ] Social Sharing Button

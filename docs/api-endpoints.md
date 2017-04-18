@@ -30,29 +30,29 @@
 
 ### Perks
 
-- `GET /api/campaigns/:campaign_id/perks`
-- `POST /api/campaigns/:campaign_id/perks`
-- `PATCH /api/campaigns/:campaign_id/perks/:id`
-- `DELETE /api/campaigns/:campaign_id/perks/:id`
+- `GET /api/perks`
+- `POST /api/perks`
+- `PATCH /api/perks/:id`
+- `DELETE /api/perks/:id`
 
 ### Updates
 
-- `GET /api/campaigns/:campaign_id/updates`
-- `POST /api/campaigns/:campaign_id/updates`
-- `PATCH /api/campaigns/:campaign_id/updates/:id`
-- `DELETE /api/campaigns/:campaign_id/updates/:id`
+- `GET /api/updates`
+- `POST /api/updates`
+- `PATCH /api/updates/:id`
+- `DELETE /api/updates/:id`
 
 ### Contributions
 
-- `GET /api/campaigns/:campaign_id/contributions`
-- `POST /api/campaigns/:campaign_id/contributions`
+- `GET /api/contributions`
+- `POST /api/contributions`
 
 ### Comments
 
-- `GET /api/campaigns/:campaign_id/comments`
-- `POST /api/campaigns/:campaign_id/comments`
-- `PATCH /api/campaigns/:campaign_id/comments/:id`
-- `DELETE /api/campaigns/:campaign_id/comments/:id`
+- `GET /api/comments`
+- `POST /api/comments`
+- `PATCH /api/comments/:id`
+- `DELETE /api/comments/:id`
 
 ### Categories
 
