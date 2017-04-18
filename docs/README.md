@@ -4,7 +4,7 @@
 
 [Trello link][trello]
 
-[heroku]: http://www.herokuapp.com
+[heroku]: https://the-greenhouse.herokuapp.com/#/
 [trello]: https://trello.com/b/8xxa1Hju/greenhouse
 
 ## Minimum Viable Product

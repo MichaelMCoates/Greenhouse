@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
-  validates :email, presence: true, uniqueness: true
+  validates :email, presence: true, uniqueness: true, :email_format => { :message => 'must be a valid email address!'}
   validates :password_digest, presence: { message: "Password can't be blank"}
+  validates :first_name, :last_name, presence: true
   validates :session_token, presence: true, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
 

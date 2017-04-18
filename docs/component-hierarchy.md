@@ -24,14 +24,14 @@ Renders a component as a modal on top of the current page.
 ---
 **UserBarContainer**
    - SignUp
-   - SignIn
+   - LogIn
    - UserDropDown
 
 
 
    UserBar will either display Sign Up/Sign In buttons if there is no current user, or the user's username with a UserDropDown displayed on click.
 
-   When a user clicks on the Sign Up or Sign In buttons, it dispatches the addContentToModal action with the SignUp or SignIn components, which renders a SignUp or SignIn modal on top of the page.
+   When a user clicks on the Sign Up or Sign In buttons, it dispatches the addContentToModal action with the SignUp or LogIn components, which renders a SignUp or LogIn modal on top of the page.
 
    The UserDropDown contains links to a user's created campaigns, contributions, profile, and settings. It also allows the user to log out.
 
@@ -40,8 +40,8 @@ Renders a component as a modal on top of the current page.
    - SignUp
 
 ---
-**SignInContainer**
-   - SignIn
+**LogInContainer**
+   - LogIn
 
 
 ---
