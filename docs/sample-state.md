@@ -6,15 +6,9 @@
       id: 3,
       email: "oeiafjs@dijao.com",
       username: "aosdfia"
-    }
+    },
     errors: []
   }
-  currentUser: {
-    id: 1,
-    username: "michaelcoates",
-    first_name: "Michael",
-    last_name: "Coates"
-  },
 
   modal: {
     content: <SignUp />,
