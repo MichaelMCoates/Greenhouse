@@ -1,5 +1,14 @@
 ```js
 {
+
+  session: {
+    currentUser: {
+      id: 3,
+      email: "oeiafjs@dijao.com",
+      username: "aosdfia"
+    }
+    errors: []
+  }
   currentUser: {
     id: 1,
     username: "michaelcoates",
