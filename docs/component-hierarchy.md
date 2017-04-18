@@ -315,8 +315,8 @@ Renders a component as a modal on top of the current page.
 | "/campaigns/:campaignId/comments" | "Comments"
 | "/campaigns/:campaignId/backers" | "Backers"
 | "/campaigns/:campaignId/checkout" | "CheckOutPageContainer" |
-| "/create-campaign/" | "CreateCampaignStartPage" |
+| "/campaigns/new" | "CreateCampaignStartPage" |
+| "/campaigns/search" | "SearchCategoriesPageContainer" |
 | "/create-campaign/:campaignId/basics" | "BasicsEditor" |
 | "/create-campaign/:campaignId/story" | "StoryEditor" |
 | "/create-campaign/:campaignId/perks" | "PerksEditor" |
-| "/search-categories" | "SearchCategoriesPageContainer" |

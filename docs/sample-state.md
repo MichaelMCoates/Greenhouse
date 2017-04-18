@@ -98,10 +98,6 @@
     },
   },
 
-  check_out: {
-    // filled out by the user
-  }
-
   followings: {
     1: { campaign_id: 138},
   }
