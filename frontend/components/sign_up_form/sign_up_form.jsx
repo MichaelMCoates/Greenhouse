@@ -59,7 +59,6 @@ class SignUpForm extends React.Component {
               Sign Up With Your Email
             </span>
           </p>
-					<br/>
 					{this.renderErrors()}
 					<div className="signup-form">
 						<br/>

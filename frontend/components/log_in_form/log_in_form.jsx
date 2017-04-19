@@ -59,7 +59,6 @@ class LogInForm extends React.Component {
               Log In With Your Email
             </span>
           </p>
-					<br/>
 					{this.renderErrors()}
 					<div className="login-form">
 						<br/>
