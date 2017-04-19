@@ -8,7 +8,7 @@ import SignUpFormContainer from './sign_up_form/sign_up_form_container';
 
 
 const Root = ({ store }) => {
-  
+
   const _redirectIfLoggedIn = (nextState, replace) => {
     const currentUser = store.getState().session.currentUser;
     if (currentUser) {
@@ -19,9 +19,10 @@ const Root = ({ store }) => {
   return (
     <Provider store={ store }>
       <Router history={ hashHistory }>
-        <Route path="/" component={ App } />
+        <Route path="/" component={ App } >
           <Route path="/login" component={ LogInFormContainer } onEnter={_redirectIfLoggedIn} />
           <Route path="/signup" component={ SignUpFormContainer } onEnter={_redirectIfLoggedIn} />
+        </Route>
       </Router>
     </Provider>
   )

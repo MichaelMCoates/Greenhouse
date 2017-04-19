@@ -4,7 +4,8 @@ import UserBar from '../user_bar/user_bar';
 
 const NavigationBar = () => {
   return (
-    <nav>
+    <nav className="navigation-bar">
+      <div>"Logo"</div>
       <UserBar/>
     </nav>
   );

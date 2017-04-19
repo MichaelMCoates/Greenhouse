@@ -1,0 +1,36 @@
+.navigation-bar {
+  height: 74px;
+  border-bottom: 5px solid black;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  color: #2a2a2a;
+  font-size: 14px;
+  font-family: 'Libre Franklin', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.user-nav {
+  position: relative;
+  display: flex;
+  margin-left: 10px;
+  justify-content: flex-end;
+}
+
+.user-nav button {
+  margin-left: 30px;
+  padding: 27px 7px;
+  font-weight: bold;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.user-nav button:hover {
+  color: #eb1478;
+}
