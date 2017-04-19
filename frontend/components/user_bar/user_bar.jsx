@@ -12,7 +12,7 @@ const sessionLinks = (modalSignUp, modalLogIn) => (
 const userNav = (currentUser) => (
   <nav className="user-nav">
     <button className="user-nav-button" >
-      {props.currentUser.first_name} {props.currentUser.last_name}
+      {currentUser.first_name} {currentUser.last_name}
     </button>
   </nav>
 );
