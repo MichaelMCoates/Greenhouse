@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import React from 'react';
 import {addModalContent} from '../../actions/modal_actions'
 import UserBar from './user_bar';
 import SignUpFormContainer from '../sign_up_form/sign_up_form_container'
@@ -10,8 +11,8 @@ const mapStateToProps = ({ session }) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  modalSignUp: () => dispatch(addModalContent(SignUpFormContainer)),
-  modalLogIn: () => dispatch(addModalContent(LogInFormContainer)),
+  modalSignUp: () => dispatch(addModalContent(<SignUpFormContainer />)),
+  modalLogIn: () => dispatch(addModalContent(<LogInFormContainer />)),
 });
 
 export default connect(
