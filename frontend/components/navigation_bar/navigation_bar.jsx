@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router';
-import UserBar from '../user_bar/user_bar';
+import UserBarContainer from '../user_bar/user_bar_container';
 
 const NavigationBar = () => {
   return (
     <nav className="navigation-bar">
       <div>"Logo"</div>
-      <UserBar/>
+      <UserBarContainer />
     </nav>
   );
 };
