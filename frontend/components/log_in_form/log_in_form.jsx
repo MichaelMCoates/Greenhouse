@@ -77,7 +77,7 @@ class LogInForm extends React.Component {
 						<input className="pink-button" type="submit" value="LOG IN" />
 					</div>
 				</form>
-        <div className="topborder">
+        <div className="topborder" onClick={this.props.clearErrors}>
           New to GREENHOUSE? {this.navLink()}
         </div>
 			</div>

@@ -89,7 +89,7 @@ class SignUpForm extends React.Component {
 						<input className="pink-button" type="submit" value="CREATE AN ACCOUNT" />
 					</div>
 				</form>
-        <div className="topborder">
+        <div className="topborder" onClick={this.props.clearErrors}>
           Already have an account? {this.navLink()}
         </div>
 			</div>
