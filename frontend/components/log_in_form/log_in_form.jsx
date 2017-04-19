@@ -31,7 +31,7 @@ class LogInForm extends React.Component {
 	}
 
 	navLink() {
-			return (<Link to="/signup">Sign Up</Link>);
+			return (<div className="link" onClick={this.props.modalSignUp}>Sign Up</div>);
 	}
 
 	renderErrors() {
@@ -52,9 +52,13 @@ class LogInForm extends React.Component {
 
 
 		return (
-			<div className="login-form-container">
+			<div className="session-form-container">
 				<form onSubmit={this.handleSubmit} className="login-form-box">
-					Log In With Your Email
+          <p className="divider">
+  					<span className="divider-line">
+              Log In With Your Email
+            </span>
+          </p>
 					<br/>
 					{this.renderErrors()}
 					<div className="login-form">
@@ -62,19 +66,21 @@ class LogInForm extends React.Component {
 							<input type="text"
 								value={this.state.email}
 								onChange={this.update("email")}
-								className="login-input"
+								className="session-input"
                 placeholder="Email" />
 						<br/>
 							<input type="password"
 								value={this.state.password}
 								onChange={this.update("password")}
-								className="login-input"
+								className="session-input"
                 placeholder="Password" />
 						<br/>
 						<input className="pink-button" type="submit" value="LOG IN" />
 					</div>
 				</form>
-        New to GREENHOUSE? {this.navLink()}
+        <div className="topborder">
+          New to GREENHOUSE? {this.navLink()}
+        </div>
 			</div>
 		);
 	}

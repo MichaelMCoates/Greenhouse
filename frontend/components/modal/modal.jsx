@@ -2,10 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const modalContent = (content, closeModal) => (
-  <modal className="modal">
-    <button onClick={closeModal}> "XXX" </button>
-    {content}
-  </modal>
+  <div>
+    <div className="modal-screen" onClick={closeModal}/>
+    <div className="modal-content">
+      <button className="modal-close" onClick={closeModal}>x</button>
+      {content}
+    </div>
+  </div>
 )
 
 const Modal = ({active, content, closeModal}) => (

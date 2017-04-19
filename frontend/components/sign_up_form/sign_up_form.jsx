@@ -31,7 +31,7 @@ class SignUpForm extends React.Component {
 	}
 
 	navLink() {
-		return (<Link to="/login">Log In</Link>);
+		return (<div className="link" onClick={this.props.modalLogIn} >Log In</div>);
 	}
 
 	renderErrors() {
@@ -52,9 +52,13 @@ class SignUpForm extends React.Component {
 
 
 		return (
-			<div className="signup-form-container">
+			<div className="session-form-container">
 				<form onSubmit={this.handleSubmit} className="signup-form-box">
-					Sign Up With Your Email
+          <p className="divider">
+            <span className="divider-line">
+              Sign Up With Your Email
+            </span>
+          </p>
 					<br/>
 					{this.renderErrors()}
 					<div className="signup-form">
@@ -62,31 +66,33 @@ class SignUpForm extends React.Component {
 							<input type="text"
 								value={this.state.first_name}
 								onChange={this.update("first_name")}
-								className="signup-input"
+								className="session-input"
                 placeholder="First Name" />
 						<br/>
 							<input type="text"
 								value={this.state.last_name}
 								onChange={this.update("last_name")}
-								className="signup-input"
+								className="session-input"
                 placeholder="Last Name" />
 						<br/>
 							<input type="text"
 								value={this.state.email}
 								onChange={this.update("email")}
-								className="signup-input"
+								className="session-input"
                 placeholder="Email" />
 						<br/>
 							<input type="password"
 								value={this.state.password}
 								onChange={this.update("password")}
-								className="signup-input"
+								className="session-input"
                 placeholder="Password" />
 						<br/>
 						<input className="pink-button" type="submit" value="CREATE AN ACCOUNT" />
 					</div>
 				</form>
-        Already have an account? {this.navLink()}
+        <div className="topborder">
+          Already have an account? {this.navLink()}
+        </div>
 			</div>
 		);
 	}
