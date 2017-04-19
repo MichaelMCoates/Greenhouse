@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import UserDropDownContainer from '../user_drop_down/user_drop_down'
 
 
 const sessionLinks = (modalSignUp, modalLogIn) => (
@@ -16,6 +17,8 @@ const userNav = (currentUser) => (
     </button>
   </nav>
 );
+
+// <div type="hidden"><UserDropDownContainer /></div>
 
 const UserBar = ({ currentUser, modalSignUp, modalLogIn }) => (
   currentUser ? userNav(currentUser) : sessionLinks(modalSignUp, modalLogIn)
