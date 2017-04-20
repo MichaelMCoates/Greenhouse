@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import App from './app';
 import LogInFormContainer from './log_in_form/log_in_form_container';
 import SignUpFormContainer from './sign_up_form/sign_up_form_container';
+import CampaignShowPageContainer from './campaign/campaign_show_page_container';
 
 
 
@@ -20,6 +21,7 @@ const Root = ({ store }) => {
     <Provider store={ store }>
       <Router history={ hashHistory }>
         <Route path="/" component={ App } >
+          <Route path="/campaigns/:campaignId" component={CampaignShowPageContainer}/>
         </Route>
       </Router>
     </Provider>
@@ -29,6 +31,4 @@ const Root = ({ store }) => {
 
 };
 
-// <Route path="/login" component={ LogInFormContainer } onEnter={_redirectIfLoggedIn} />
-// <Route path="/signup" component={ SignUpFormContainer } onEnter={_redirectIfLoggedIn} />
 export default Root;
