@@ -6,7 +6,7 @@ const NavigationBar = () => {
   return (
     <nav className="navigation-bar">
       <div className="left">
-        <div>"Logo"</div>
+        <a className="logo"></a>
         <button >Explore</button>
         <button >How It Works</button>
         <button >Equity Offerings</button>

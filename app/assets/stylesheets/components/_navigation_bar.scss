@@ -16,10 +16,20 @@
   -webkit-font-smoothing: antialiased;
 }
 
+.navigation-bar a {
+  background-position: center;
+  background-image: asset-url('Greenhouse2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 24px;
+  width: 160px;
+}
+
 .navigation-bar .left {
   display: flex;
   align-items: center;
-  width: 732px;
+  width: 900px;
 }
 
 .navigation-bar .right {

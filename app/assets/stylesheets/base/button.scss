@@ -11,6 +11,7 @@
   min-height: 40px;
   font-weight: 700;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
 .pink-button-nav {
@@ -19,7 +20,7 @@
   letter-spacing: 1px;
   background-color: #eb1478;
   border: 2px solid #eb1478;
-  padding: 0 16px;
+  padding: 10px 13px 9px;
   border-radius: 2px;
   color: #ffffff;
   text-align: center;

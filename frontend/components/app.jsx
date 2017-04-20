@@ -7,8 +7,6 @@ const App = ({ children }) => (
   <div>
     <ModalContainer/>
     <NavigationBar/>
-    <h1>GREENHOUSE</h1>
-    <GreetingContainer />
     { children }
   </div>
 );
