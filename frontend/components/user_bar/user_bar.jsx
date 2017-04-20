@@ -23,8 +23,14 @@ class UserBar extends React.Component {
     const sessionLinks = () => {
       return (
         <nav className="user-nav">
-          <button className="sign-up-button" onClick={this.props.modalSignUp} >Sign Up</button>
-          <button className="log-in-button" onClick={this.props.modalLogIn} >Log In</button>
+          <button className="sign-up-button"
+            onClick={() => {this.props.clearErrors(); this.props.modalSignUp();}} >
+            Sign Up
+          </button>
+          <button className="log-in-button"
+            onClick={() => {this.props.clearErrors(); this.props.modalLogIn();}} >
+            Log In
+          </button>
         </nav>
       );
     };
