@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router';
-import {deactivateUserDropDown} from '../../actions/user_drop_down_actions';
 
 
 class UserDropDown extends React.Component {
