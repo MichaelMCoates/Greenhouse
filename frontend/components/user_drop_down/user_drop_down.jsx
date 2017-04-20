@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
+import {deactivateUserDropDown} from '../../actions/user_drop_down_actions';
+
 
 class UserDropDown extends React.Component {
   constructor (props){
@@ -7,20 +9,16 @@ class UserDropDown extends React.Component {
   }
 
   render() {
-    if (this.props.active) {
-      return (
-        <div className="user-drop-down">
-          <ul>
-            <li>My Contributions</li>
-            <li>My Profile</li>
-            <li>My Settings</li>
-            <li onClick={this.props.logout}>Log Out</li>
-          </ul>
-        </div>
-      );
-    } else {
-      return (<nav></nav>);
-    }
+    return (
+      <div className="user-drop-down udd ">
+        <ul>
+          <li>My Contributions</li>
+          <li>My Profile</li>
+          <li>My Settings</li>
+          <li onClick={this.props.logout}>Log Out</li>
+        </ul>
+      </div>
+    );
   }
 
 }

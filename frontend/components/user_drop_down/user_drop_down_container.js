@@ -6,14 +6,12 @@ import UserDropDown from './user_drop_down';
 
 const mapStateToProps = (state) => {
   return ({
-    currentUser: state.session.currentUser,
-    active: state.user_drop_down.active,
+    currentUser: state.session.currentUser
   });
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  logout: () => dispatch(logout()),
-  deactivateUserDropDown: () => dispatch(deactivateUserDropDown()),
+  logout: () => dispatch(logout())
 });
 
 

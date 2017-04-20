@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, hashHistory } from 'react-router';
 import UserBarContainer from '../user_bar/user_bar_container';
 
 const NavigationBar = () => {
   return (
     <nav className="navigation-bar">
       <div className="left">
-        <a className="logo"></a>
+        <a className="logo" onClick={() => hashHistory.push('/')} ></a>
         <button >Explore</button>
         <button >How It Works</button>
         <button >Equity Offerings</button>

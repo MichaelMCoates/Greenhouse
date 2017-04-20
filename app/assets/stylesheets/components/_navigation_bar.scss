@@ -16,7 +16,7 @@
   -webkit-font-smoothing: antialiased;
 }
 
-.navigation-bar a {
+.navigation-bar .logo {
   background-position: center;
   background-image: asset-url('Greenhouse2.png');
   background-size: contain;
@@ -34,6 +34,10 @@
 
 .navigation-bar .right {
   display: flex;
+}
+
+.logo {
+  cursor: pointer;
 }
 
 .search-bar {
