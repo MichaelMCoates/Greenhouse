@@ -34,6 +34,10 @@ class SignUpForm extends React.Component {
 		return (<div className="link" onClick={this.props.modalLogIn} >Log In</div>);
 	}
 
+  guestLoginLink() {
+    return (<div className="link" onClick={this.props.guestLogin}>Guest Login</div>);
+  }
+
 	renderErrors() {
     if (this.props.errors) {
   		return(
@@ -92,6 +96,9 @@ class SignUpForm extends React.Component {
         <div className="topborder" onClick={this.props.clearErrors}>
           Already have an account? {this.navLink()}
         </div>
+        or
+        <br/>
+        {this.guestLoginLink()}
 			</div>
 		);
 	}

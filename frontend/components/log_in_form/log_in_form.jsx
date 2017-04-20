@@ -31,8 +31,12 @@ class LogInForm extends React.Component {
 	}
 
 	navLink() {
-			return (<div className="link" onClick={this.props.modalSignUp}>Sign Up</div>);
+		return (<div className="link" onClick={this.props.modalSignUp}>Sign Up</div>);
 	}
+
+  guestLoginLink() {
+    return (<div className="link" onClick={this.props.guestLogin}>Guest Login</div>);
+  }
 
 	renderErrors() {
     if (this.props.errors) {
@@ -80,6 +84,9 @@ class LogInForm extends React.Component {
         <div className="topborder" onClick={this.props.clearErrors}>
           New to GREENHOUSE? {this.navLink()}
         </div>
+        or
+        <br/>
+        {this.guestLoginLink()}
 			</div>
 		);
 	}
