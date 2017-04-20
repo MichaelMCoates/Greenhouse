@@ -78,11 +78,9 @@
     tagline: "Adding 12+ hours of battery life, an improved kickstand and 2 game card slots.",
     goal_amt: 90000,
     current_amt: 5783,
-    start_date: 5783,
     overview_img_url: "http://oiejaf.eoaekd.jpg",
     overview: "aoisdjfiojaosdf asdoifja oisejfaio sd",
     story: "afasjd foaj oseijf aojsd foisdjfiojaosdf asdoifja oisejfaio sd",
-    donation_amt: null,
   },
 
 
