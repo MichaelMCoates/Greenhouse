@@ -9,8 +9,24 @@
   color: #ffffff;
   text-align: center;
   min-height: 40px;
-  font-weight: 400;
+  font-weight: 700;
   box-sizing: border-box;
+}
 
-
+.pink-button-nav {
+  margin: 20px 0px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: #eb1478;
+  border: 2px solid #eb1478;
+  padding: 0 16px;
+  border-radius: 2px;
+  color: #ffffff;
+  text-align: center;
+  min-height: 35px;
+  font-weight: 700;
+  box-sizing: border-box;
+  line-height: 12px;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
 }
