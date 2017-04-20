@@ -42,6 +42,12 @@ group :development, :test do
   gem 'byebug'
   gem 'annotate'
   gem 'pry-rails'
+  gem "guard", ">= 2.2.2", :require => false
+  gem "guard-livereload",  :require => false
+  gem "rack-livereload"
+  gem "rb-fsevent",        :require => false
+
+
 end
 
 group :development do

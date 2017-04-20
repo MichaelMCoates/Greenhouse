@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
-import UserDropDownContainer from '../user_drop_down/user_drop_down'
+import UserDropDownContainer from '../user_drop_down/user_drop_down_container'
+
 
 
 const sessionLinks = (modalSignUp, modalLogIn) => (
@@ -10,18 +11,24 @@ const sessionLinks = (modalSignUp, modalLogIn) => (
   </nav>
 );
 
-const userNav = (currentUser) => (
+const userNav = (currentUser, activateUserDropDown) => (
   <nav className="user-nav">
-    <button className="user-nav-button" >
+    <button className="user-nav-button" onClick={activateUserDropDown} >
       {currentUser.first_name} {currentUser.last_name}
     </button>
+    <UserDropDownContainer />
   </nav>
 );
 
-// <div type="hidden"><UserDropDownContainer /></div>
 
-const UserBar = ({ currentUser, modalSignUp, modalLogIn }) => (
-  currentUser ? userNav(currentUser) : sessionLinks(modalSignUp, modalLogIn)
-);
+const UserBar = ({ currentUser, active, modalSignUp, modalLogIn, activateUserDropDown, deactivateUserDropDown }) => {
+  if (currentUser && active) {
+    return userNav(currentUser, deactivateUserDropDown)
+  } else if (currentUser) {
+    return userNav(currentUser, activateUserDropDown)
+  } else {
+    return sessionLinks(modalSignUp, modalLogIn)
+  }
+}
 
 export default UserBar;

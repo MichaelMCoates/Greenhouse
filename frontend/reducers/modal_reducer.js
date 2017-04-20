@@ -10,7 +10,7 @@ const ModalReducer = (state = _nullModal, action) => {
   Object.freeze(state);
   switch(action.type) {
     case ADD_MODAL_CONTENT:
-      const content = action.content
+      const content = action.content;
       return merge({}, _nullModal, {content: content, active: true});
     case CLOSE_MODAL:
       return _nullModal;
