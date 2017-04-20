@@ -27,7 +27,7 @@ goal_amt         | integer   | not null
 current_amt      | integer   | not null
 title            | string    | not null
 tagline          | text      | not null
-tile_img_url     | integer   | not null
+tile_img_url     | string    | not null
 city             | string    | not null
 country          | string    | not null
 category_id      | integer   | not null

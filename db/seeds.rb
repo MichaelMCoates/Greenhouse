@@ -7,10 +7,25 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.destroy_all
+Campaign.destroy_all
 
 bill_nye = User.create({
   email: "BillNye@gmail.com",
   password: "thescienceguy",
   first_name: "Bill",
   last_name: "Nye"
+})
+
+
+tv_show = Campaign.create({
+  user_id: 1,
+  goal_amt: 10000,
+  current_amt: 0,
+  title: "Bill Nye The Science Guy",
+  tagline: "It's my show!",
+  city: "Hollywood",
+  country: "USA",
+  duration: 60,
+  overview: "This is some overview text",
+  campaign_story: "This is a huge campaign story"
 })

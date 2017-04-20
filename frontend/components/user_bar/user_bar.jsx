@@ -41,7 +41,7 @@ class UserBar extends React.Component {
           <button className="user-nav-button" onClick={this.dropDownToggle.bind(this)} >
             {this.props.currentUser.first_name} {this.props.currentUser.last_name}
           </button>
-          {this.state.user_dd_visible ? <UserDropDownContainer /> :   <div className="udd hidden"></div> }
+          {this.state.user_dd_visible ? <UserDropDownContainer /> : <div className="udd hidden"></div> }
         </nav>
       );
     };

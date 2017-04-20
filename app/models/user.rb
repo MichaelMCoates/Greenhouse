@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :integer          not null, primary key
+#  email           :string           not null
+#  password_digest :string           not null
+#  session_token   :string           not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  first_name      :string           not null
+#  last_name       :string           not null
+#
+
 class User < ActiveRecord::Base
   validates :email, presence: true, uniqueness: true, :email_format => { :message => 'must be a valid email address!'}
   validates :password_digest, presence: { message: "Password can't be blank"}
@@ -7,6 +21,8 @@ class User < ActiveRecord::Base
 
   after_initialize :ensure_session_token
   attr_reader :password
+
+  has_many :campaigns
 
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
