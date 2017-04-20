@@ -11,9 +11,9 @@ const sessionLinks = (modalSignUp, modalLogIn) => (
   </nav>
 );
 
-const userNav = (currentUser, activateUserDropDown) => (
+const userNav = (currentUser, toggleDropDown) => (
   <nav className="user-nav">
-    <button className="user-nav-button" onClick={activateUserDropDown} >
+    <button className="user-nav-button" onClick={toggleDropDown} >
       {currentUser.first_name} {currentUser.last_name}
     </button>
     <UserDropDownContainer />
