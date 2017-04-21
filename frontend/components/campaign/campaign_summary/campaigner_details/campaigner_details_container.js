@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import CampaignerDetails from './campaign_details';
+// import {fetchUser} from '../../../util' finish
 
 const mapStateToProps = ({user}, ownProps) => ({
   first_name: user.first_name,
