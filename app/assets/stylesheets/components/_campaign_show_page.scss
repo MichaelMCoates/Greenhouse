@@ -1,40 +1,113 @@
+// .campaign-show-page {
+//   max-width: 1250;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//
+//
+// }
+//
+//
+// .top-half-campaign-show-page {
+//   max-width: 1250;
+//   height: 460px;
+//   border: solid 1px black;
+//   justify-content: space-between;
+//   flex-direction: column;
+//
+// }
+//
+// .bottom-half-campaign-show-page {
+//   border: solid 1px black;
+//   max-width: 1250;
+//   justify-content: space-between;
+// }
+//
+// .campaign-show-left {
+//   border: solid 1px black;
+//    width: 695px;
+// }
+//
+// .campaign-show-right {
+//   border: solid 1px black;
+//   width: 485px;
+// }
+//
+// .perks {
+//   border: solid 1px black;
+//   width: 327px;
+//   flex-direction: column;
+// }
+
 .campaign-show-page {
-  max-width: 1250;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-
-
+  align-items: center;
+  font-family: 'Libre Franklin', sans-serif;
+  color: #2a2a2a;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0px;
 }
 
-
 .top-half-campaign-show-page {
-  max-width: 1250;
-  height: 460px;
-  border: solid 1px black;
-  justify-content: space-between;
-  flex-direction: column;
+  display: flex;
+  flex-direction: row;
+}
 
+.top-half-campaign-show-page > div {
+  margin: 20px;
+}
+
+.bottom-half-campaign-show-page > div {
+  margin: 20px;
 }
 
 .bottom-half-campaign-show-page {
-  border: solid 1px black;
-  max-width: 1250;
-  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
 }
 
 .campaign-show-left {
+  width: 695px;
   border: solid 1px black;
-   width: 695px;
 }
 
 .campaign-show-right {
-  border: solid 1px black;
   width: 485px;
+  border: solid 1px black;
 }
 
 .perks {
   border: solid 1px black;
-  width: 327px;
-  flex-direction: column;
+  width: 485px;
+  height: 1000px;
+}
+
+.campaign-details {
+  border: solid 1px black;
+  height: 1000px;
+}
+
+.media-box {
+  border: solid 1px black;
+  height: 465px;
+}
+
+.campaign-summary {
+  border: solid 1px black;
+  height: 465px;
+}
+
+.campaign-title {
+  font-size: 28px;
+  line-height: 35px;
+  font-weight: 600;
+}
+
+.campaign-tagline {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #6a6a6a;
+  margin-top: 10px;
 }
