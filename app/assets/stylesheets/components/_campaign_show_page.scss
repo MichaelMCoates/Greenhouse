@@ -1,0 +1,40 @@
+.campaign-show-page {
+  max-width: 1250;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+}
+
+
+.top-half-campaign-show-page {
+  max-width: 1250;
+  height: 460px;
+  border: solid 1px black;
+  justify-content: space-between;
+  flex-direction: column;
+
+}
+
+.bottom-half-campaign-show-page {
+  border: solid 1px black;
+  max-width: 1250;
+  justify-content: space-between;
+}
+
+.campaign-show-left {
+  border: solid 1px black;
+   width: 695px;
+}
+
+.campaign-show-right {
+  border: solid 1px black;
+  width: 485px;
+}
+
+.perks {
+  border: solid 1px black;
+  width: 327px;
+  flex-direction: column;
+}

@@ -4,7 +4,7 @@ class CampaignDetails extends React.Component {
 
   render() {
     return (
-      <div className="campaign-details">
+      <div className="campaign-details campaign-show-left">
         <div className="campaign-show-headerTitle">OVERVIEW</div>
         <div className="campaign-overview">
           // overview image

@@ -9,7 +9,7 @@ class CampaignSummary extends React.Component {
 
   render() {
     return (
-      <div className="campaign-summary">
+      <div className="campaign-summary campaign-show-right">
         <h1 className="campaign-title">{this.props.title}</h1>
         <h2 className="campaign-tagline">{this.props.tagline}</h2>
         // CampaignerDetails component, uses user_id. Uses Modal for AboutBox

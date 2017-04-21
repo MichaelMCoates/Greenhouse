@@ -21,12 +21,12 @@ class CampaignShowPage extends React.Component {
       <div className="campaign-show-page">
         <div className="top-half-campaign-show-page">
           <MediaBox />
-          <CampaignSummary  />
+          <CampaignSummaryContainer  />
         </div>
 
         <div className="bottom-half-campaign-show-page">
-          <CampaignDetails />
-          <Perks />
+          <CampaignDetailsContainer />
+          <PerksContainer />
         </div>
       </div>
     );
