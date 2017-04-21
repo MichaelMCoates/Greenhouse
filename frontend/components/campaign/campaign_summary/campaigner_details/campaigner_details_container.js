@@ -1,22 +1,22 @@
 import { connect } from 'react-redux';
-import CampaignDetails from './campaign_details';
+import CampaignerDetails from './campaign_details';
 
-const mapStateToProps = ({campaign, session}) => ({
-  title: campaign.title,
-  tagline: campaign.tagline,
-  user_id: campaign.user_id,
-  goal_amt: campaign.goal_amt,
-  current_amt: campaign.current_amt,
-  created_at: campaign.created_at,
-  duration: campaign.duration,
-  // need to get backers
-  current_user: session.current_user,
+const mapStateToProps = ({user}, ownProps) => ({
+  first_name: user.first_name,
+  last_name: user.last_name,
+  country: user.country,
+  city: user.city,
+  avatar_img_url: user.avatar_img_url,
+  created_at: user.created_at,
+  duration: user.duration,
+  user_id: ownProps.params.user_id,
 });
 
 const mapDispatchToProps = (dispatch) => ({
+  // fetchUser
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(CampaignDetails);
+)(CampaignerDetails);
