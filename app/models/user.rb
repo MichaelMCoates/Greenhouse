@@ -2,14 +2,18 @@
 #
 # Table name: users
 #
-#  id              :integer          not null, primary key
-#  email           :string           not null
-#  password_digest :string           not null
-#  session_token   :string           not null
-#  created_at      :datetime         not null
-#  updated_at      :datetime         not null
-#  first_name      :string           not null
-#  last_name       :string           not null
+#  id                      :integer          not null, primary key
+#  email                   :string           not null
+#  password_digest         :string           not null
+#  session_token           :string           not null
+#  created_at              :datetime         not null
+#  updated_at              :datetime         not null
+#  first_name              :string           not null
+#  last_name               :string           not null
+#  avatar_img_file_name    :string
+#  avatar_img_content_type :string
+#  avatar_img_file_size    :integer
+#  avatar_img_updated_at   :datetime
 #
 
 class User < ActiveRecord::Base
@@ -21,6 +25,11 @@ class User < ActiveRecord::Base
 
   after_initialize :ensure_session_token
   attr_reader :password
+
+  has_attached_file :avatar_img, default_url: "greenhouse-user-avatar.png"
+  validates_attachment_content_type :avatar_img, content_type: /\Aimage\/.*\Z/
+
+
 
   has_many :campaigns
 
