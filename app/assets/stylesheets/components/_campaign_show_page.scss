@@ -1,3 +1,78 @@
+
+.campaign-show-page {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Libre Franklin', sans-serif;
+  color: #2a2a2a;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0px;
+}
+
+.top-half-campaign-show-page {
+  display: flex;
+  flex-direction: row;
+}
+
+.top-half-campaign-show-page > div {
+  margin: 20px;
+}
+
+.bottom-half-campaign-show-page > div {
+  margin: 20px;
+  margin-top: 40px;
+}
+
+.bottom-half-campaign-show-page {
+  display: flex;
+  flex-direction: row;
+}
+
+.campaign-show-left {
+  width: 695px;
+  border: solid 1px black;
+}
+
+.campaign-show-right {
+  width: 485px;
+}
+
+.perks {
+  border: solid 1px black;
+  width: 485px;
+  height: 1000px;
+}
+
+.campaign-details {
+  border: solid 1px black;
+  height: 1000px;
+}
+
+.media-box {
+  border: solid 1px black;
+  height: 465px;
+}
+
+.campaign-summary {
+  height: 465px;
+}
+
+.campaign-title {
+  font-size: 28px;
+  line-height: 35px;
+  font-weight: 600;
+}
+
+.campaign-tagline {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #6a6a6a;
+  margin-top: 10px;
+}
+
+
 // .campaign-show-page {
 //   max-width: 1250;
 //   display: flex;
@@ -38,76 +113,3 @@
 //   width: 327px;
 //   flex-direction: column;
 // }
-
-.campaign-show-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: 'Libre Franklin', sans-serif;
-  color: #2a2a2a;
-  -webkit-font-smoothing: antialiased;
-  letter-spacing: 0px;
-}
-
-.top-half-campaign-show-page {
-  display: flex;
-  flex-direction: row;
-}
-
-.top-half-campaign-show-page > div {
-  margin: 20px;
-}
-
-.bottom-half-campaign-show-page > div {
-  margin: 20px;
-}
-
-.bottom-half-campaign-show-page {
-  display: flex;
-  flex-direction: row;
-}
-
-.campaign-show-left {
-  width: 695px;
-  border: solid 1px black;
-}
-
-.campaign-show-right {
-  width: 485px;
-  border: solid 1px black;
-}
-
-.perks {
-  border: solid 1px black;
-  width: 485px;
-  height: 1000px;
-}
-
-.campaign-details {
-  border: solid 1px black;
-  height: 1000px;
-}
-
-.media-box {
-  border: solid 1px black;
-  height: 465px;
-}
-
-.campaign-summary {
-  border: solid 1px black;
-  height: 465px;
-}
-
-.campaign-title {
-  font-size: 28px;
-  line-height: 35px;
-  font-weight: 600;
-}
-
-.campaign-tagline {
-  font-size: 20px;
-  line-height: 26px;
-  font-weight: 400;
-  color: #6a6a6a;
-  margin-top: 10px;
-}

@@ -16,7 +16,10 @@ class CampaignShowPage extends React.Component {
   }
 
   render() {
-    const { campaign } = this.props;
+    if (this.props.campaign.user_id === null) {
+      return (<div>Loading...</div>);
+    }
+
     return (
       <div className="campaign-show-page">
         <div className="top-half-campaign-show-page">

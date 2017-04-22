@@ -1,0 +1,39 @@
+.campaigner-details {
+  margin-top: 30px;
+  display: flex;
+  align-items: flex-start;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  align-self: flex-start;
+  font-family: 'Libre Franklin', sans-serif;
+  line-height: 18px;
+  letter-spacing: 0;
+  font-size: 14px;
+  color: #6a6a6a;
+}
+
+.campaigner-details > img {
+  border-radius: 50%;
+  width: 50px;
+  vertical-align: middle;
+  border: 0;
+}
+
+.deets {
+  margin-left: 10px;
+  margin-right: 5px;
+  white-space: normal;
+}
+
+.campaigner-details-name {
+  font-weight: 600;
+}
+
+.campaigner-details-about {
+  color: #eb1478;
+}
+
+.campaigner-details-about:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

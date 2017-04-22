@@ -7,6 +7,7 @@ const App = ({ children }) => (
   <div>
     <ModalContainer/>
     <NavigationBar/>
+    <hr/>
     { children }
   </div>
 );
