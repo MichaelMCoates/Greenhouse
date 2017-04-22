@@ -15,7 +15,7 @@ bill_nye = User.create({
   first_name: "Bill",
   last_name: "Nye",
   city: "Hollywood",
-  country: "USA"
+  country: "United States"
 })
 
 
@@ -26,7 +26,7 @@ tv_show = Campaign.create({
   title: "Bill Nye The Science Guy",
   tagline: "It's my show!",
   city: "Hollywood",
-  country: "USA",
+  country: "United States",
   duration: 60,
   overview: "This is some overview text",
   campaign_story: "This is a huge campaign story"
