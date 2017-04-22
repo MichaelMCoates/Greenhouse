@@ -1,5 +1,6 @@
 .campaign-overview {
   display: flex;
+  margin-bottom: 30px;
 }
 
 .overview-img {
@@ -14,4 +15,18 @@
   white-space: pre-wrap;
   font-size: 14px;
   line-height: 20px;
+}
+
+.dynamic-header {
+  text-transform: uppercase;
+
+}
+
+.dynamic-header text:not(:first-child) {
+  padding-left: 10px;
+}
+
+.dynamic-header .active {
+  color: #eb1478;
+  font-weight: 700;
 }

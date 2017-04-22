@@ -1,4 +1,5 @@
 import React from 'react';
+import DynamicDetailsContainer from './dynamic_details/dynamic_details_container';
 
 class CampaignDetails extends React.Component {
 
@@ -10,7 +11,7 @@ class CampaignDetails extends React.Component {
           <img className="overview-img" src="http://lorempixel.com/320/240" />
           <text className="overview-text">{this.props.overview}</text>
         </div>
-        // DynamicDetails component, in a div
+        <DynamicDetailsContainer />
       </div>
     );
   }
