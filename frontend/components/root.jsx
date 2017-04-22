@@ -6,7 +6,11 @@ import LogInFormContainer from './log_in_form/log_in_form_container';
 import SignUpFormContainer from './sign_up_form/sign_up_form_container';
 import CampaignShowPageContainer from './campaign/campaign_show_page_container';
 
+//
+import {fetchUser} from '../actions/user_actions';
+window.fetchUser = fetchUser;
 
+//
 
 const Root = ({ store }) => {
 

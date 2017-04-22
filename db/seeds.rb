@@ -13,7 +13,9 @@ bill_nye = User.create({
   email: "BillNye@gmail.com",
   password: "thescienceguy",
   first_name: "Bill",
-  last_name: "Nye"
+  last_name: "Nye",
+  city: "Hollywood",
+  country: "USA"
 })
 
 
