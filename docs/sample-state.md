@@ -84,9 +84,9 @@
   },
 
 
-  user_info: {
-    1: {
-      username: "Redux",
+  user: {
+    user: {
+      email: "Redux",
       first_name: "aoijefia",
       last_name: "aoisjdfoa",
       country: "aojsdfojae",
