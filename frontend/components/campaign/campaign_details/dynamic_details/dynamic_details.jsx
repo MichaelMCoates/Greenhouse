@@ -1,6 +1,7 @@
 import React from 'react';
 
 import DynamicHeader from './dynamic_header';
+import DynamicBodyContainer from './dynamic_body/dynamic_body_container';
 
 
 class DynamicDetails extends React.Component {
@@ -15,10 +16,9 @@ class DynamicDetails extends React.Component {
     return (
       <div className="dynamic-details">
         <DynamicHeader selected={this.state.selected} setState={this.setState} />
+        <DynamicBodyContainer selected={this.state.selected} />
       </div>
     );
   }
 }
 export default DynamicDetails;
-
-// <DynamicBodyContainer selected={this.state.selected} />
