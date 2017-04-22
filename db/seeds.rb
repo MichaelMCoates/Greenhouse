@@ -20,9 +20,9 @@ bill_nye = User.create({
 
 
 tv_show = Campaign.create({
-  user_id: 1,
+  user_id: bill_nye.id,
   goal_amt: 10000,
-  current_amt: 0,
+  current_amt: 7486,
   title: "Bill Nye The Science Guy",
   tagline: "It's my show!",
   city: "Hollywood",

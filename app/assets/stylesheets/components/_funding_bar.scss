@@ -1,0 +1,37 @@
+.campaign-summary-funding-bar {
+  margin-top: 30px;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  font-family: 'Libre Franklin', sans-serif;
+  letter-spacing: 0;
+  color: #2a2a2a;
+}
+
+.csfb-top {
+  display: block;
+  font-size: 16px;
+}
+
+.csfb-bottom {
+  display: flex;
+  justify-content: space-between;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.csfb-dollabills {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.csfb-percent {
+  font-weight: 600;
+}
+
+.barbarbar {
+  height: 10px;
+  position:relative;
+  margin: 5px 0px;
+  bottom: 4px;
+}
