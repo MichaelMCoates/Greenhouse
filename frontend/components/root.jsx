@@ -11,6 +11,8 @@ import {fetchUser} from '../actions/user_actions';
 window.fetchUser = fetchUser;
 import {createContribution} from '../actions/contribution_actions';
 window.createContribution = createContribution;
+import {createPerk} from '../actions/perk_actions';
+window.createPerk = createPerk;
 
 //
 
