@@ -8,4 +8,6 @@ class Api::CampaignsController < ApplicationController
       render json: { message: 'not found', status: 404 }
     end
   end
+
+  # when doing campaign create, don't pass down user_id
 end

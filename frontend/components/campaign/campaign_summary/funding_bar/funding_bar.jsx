@@ -8,6 +8,7 @@ class FundingBar extends React.Component {
 
   render() {
     let percent = Math.round((this.props.current_amt / this.props.goal_amt) * 100);
+    let truePercent = percent;
     if (percent > 100) {
       percent = 100;
     }
@@ -25,7 +26,7 @@ class FundingBar extends React.Component {
         </div>
         <div className="csfb-bottom">
           <div className="percent-left">
-            <text className="csfb-percent">{percent}%</text>
+            <text className="csfb-percent">{truePercent}%</text>
             <text>&nbsp;of ${this.props.goal_amt.toLocaleString()} fixed goal</text>
           </div>
           <div>{timeLeft} left</div>

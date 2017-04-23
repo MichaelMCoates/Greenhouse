@@ -14,6 +14,8 @@
 #  avatar_img_content_type :string
 #  avatar_img_file_size    :integer
 #  avatar_img_updated_at   :datetime
+#  city                    :string
+#  country                 :string
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

@@ -21,4 +21,11 @@ class Campaign < ActiveRecord::Base
   validates :user_id, :goal_amt, :current_amt, :title, :tagline, :city, :country, :duration, :overview, :campaign_story, presence: true
 
   belongs_to :user
+  has_many :contributions
+
+
+  def add_contribution_amount(amount)
+    self.current_amt += amount
+    self.save!
+  end
 end

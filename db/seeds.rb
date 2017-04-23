@@ -15,7 +15,7 @@ bill_nye = User.create({
   first_name: "Bill",
   last_name: "Nye",
   city: "Hollywood",
-  country: "United States"
+  country: "United States",
 })
 
 
@@ -29,5 +29,12 @@ tv_show = Campaign.create({
   country: "United States",
   duration: 60,
   overview: "This is some overview text",
-  campaign_story: "This is a huge campaign story"
+  campaign_story: "This is a huge campaign story",
+})
+
+cont = Contribution.create({
+  user_id: bill_nye.id,
+  campaign_id: tv_show.id,
+  amount: 55,
+  appearance: (bill_nye.first_name + bill_nye.last_name),
 })

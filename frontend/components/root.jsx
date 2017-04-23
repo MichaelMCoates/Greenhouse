@@ -9,6 +9,8 @@ import CampaignShowPageContainer from './campaign/campaign_show_page_container';
 //
 import {fetchUser} from '../actions/user_actions';
 window.fetchUser = fetchUser;
+import {createContribution} from '../actions/contribution_actions';
+window.createContribution = createContribution;
 
 //
 

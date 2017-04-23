@@ -14,6 +14,8 @@
 #  avatar_img_content_type :string
 #  avatar_img_file_size    :integer
 #  avatar_img_updated_at   :datetime
+#  city                    :string
+#  country                 :string
 #
 
 class User < ActiveRecord::Base
@@ -29,9 +31,8 @@ class User < ActiveRecord::Base
   has_attached_file :avatar_img, default_url: "greenhouse-user-avatar.png"
   validates_attachment_content_type :avatar_img, content_type: /\Aimage\/.*\Z/
 
-
-
   has_many :campaigns
+  has_many :contributions
 
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
