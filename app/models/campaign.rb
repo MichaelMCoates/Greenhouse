@@ -22,7 +22,7 @@ class Campaign < ActiveRecord::Base
 
   belongs_to :user
   has_many :contributions
-
+  has_many :perks
 
   def add_contribution_amount(amount)
     self.current_amt += amount

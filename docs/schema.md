@@ -46,8 +46,9 @@ campaign_id      | integer   | not null, foreign key
 price            | integer   | not null
 title            | string    | not null
 description      | text      | not null
-number_available | integer   |
-delivery_date    | datetime  |
+number_available | integer   | not null
+number_claimed   | integer   | default("0")
+delivery_date    | date      | not null
 
 ## updates
 column name      | data type | details

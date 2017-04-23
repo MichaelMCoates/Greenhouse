@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :show]
     resources :campaigns, only: [:show]
     resources :contributions, only: [:create]
+    resources :perks, only: [:create]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
