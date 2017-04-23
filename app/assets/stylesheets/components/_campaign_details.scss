@@ -22,6 +22,10 @@
   cursor: pointer;
 }
 
+.dynamic-header text:hover {
+  color: #eb1478;
+}
+
 .dynamic-header text:not(:first-child) {
   padding-left: 10px;
 }
