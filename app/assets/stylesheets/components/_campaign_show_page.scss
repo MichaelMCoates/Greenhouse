@@ -17,7 +17,7 @@
 
 .top-half-campaign-show-page > div {
   margin: 20px;
-  margin-bottom: 29px;
+  margin-bottom: 34px;
 }
 
 .bottom-half-campaign-show-page > div {
@@ -47,11 +47,14 @@
 }
 
 .media-box {
-  height: 465px;
+  height: 460px;
 }
 
 .campaign-summary {
-  height: 465px;
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .campaign-title {

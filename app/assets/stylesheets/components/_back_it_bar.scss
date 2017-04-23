@@ -1,0 +1,98 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.back-it-bar {
+  line-height: 20px;
+  margin-top: 25px;
+  margin-bottom: 1px;
+  height: 40px;
+}
+
+.back-it-bar .pink-button {
+  border: 2px #eb1478 solid;
+  padding: 2px;
+  box-sizing: border-box;
+  height: 14px;
+  font-size: 14px;
+
+}
+
+.donation-bar .pink-button {
+  width: 235px;
+}
+
+.social-bar .pink-button {
+  margin-top: 0;
+  width: 200px;
+}
+
+.donation-bar {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.donation-input-div {
+  display: flex;
+  position: relative;
+}
+
+.donation-input {
+  position: relative;
+  margin-bottom: 0;
+  margin: auto;
+  margin-right: 15px;
+  width: 235px;
+  height: 40px;
+  padding: 5px 15px;
+  padding-left: 25px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  color: rgb(0, 0, 0);
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+.donation-input-close {
+  color: rgb(160, 160, 160);
+  position: absolute;
+  right: 32px;
+  top: 12px;
+}
+
+.donation-input-close:hover {
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder { /* Chrome */
+  color: rgb(160, 160, 160);
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #dddddd;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #dddddd;
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: #dddddd;
+  opacity: 1;
+}
+
+.donation-bar:last-child {
+  margin-right: 0;
+}
+
+.donation-input:focus {
+  border: 1px solid #2a2a2a;
+}
+
+.donation-bar .pink-button:hover {
+  background-color: #fa1681;
+}
