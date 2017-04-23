@@ -41,9 +41,21 @@ tv_show = Campaign.create({
   campaign_story: "HEXAGON makes any bike a safer and smarter by seamlessly connecting with your smartphone. View the traffic behind you, live stream your ride, & signal to cars all through smartphone integration. With our rear-facing camera, you can view traffic & stream your ride.HEXAGON has Automatic Stop, Turn, and Motion signals.iOS & Android app with activity tracker, navigation system, and more.Award-winning cyclist, Vittorio Brumotti, loves HEXAGON. Check out the video below to hear Vittorio's stamp of approval!HEXAGON is equipped with a rear-facing HD camera, Automatic Stop, Turn, and Motion signals. To navigate the turn signals, HEXAGON comes with a wireless remote that securely attaches to your handle bars. HEXAGON's social and recording features can be managed through the HEXAGON app.HEXAGON comes with two 18650 batteries and can easily be recharged with the complimentary Micro-USB cable. HEXAGON Light has all the great features of HEXAGON, minus the turn signals and the Wireless Remote Control. This slimmed down model has the same rear-facing HD camera, Automatic Stop, and Motion signals. All of HEXAGON Light's features and settings can be managed through the HEXAGON app, so there's no need for the remote!  HEXAGON Light comes with two 18650 batteries and can easily be recharged with the complimentary Micro-USB cable. ",
 })
 
+
+perk = Perk.create({
+  campaign_id: tv_show.id,
+  price: 99,
+  title: "GET (1) HEXAGON",
+  description:"EARLY BIRD PRICE: 50% OFF RETAIL! Get (1) HEXAGON, Color: Black body & Blue frame. (1) HD Rear Camera and Extended Lights module, (1) Wireless Remote Control, (2) Installed 18650 Batteries, (1) Mount to Frame, and (1) Charging Cable (micro-USB/USB). Free U.S. and Canada Shipping!",
+  number_available: 100,
+  number_claimed: 82,
+  delivery_date: Date.new(2017, 9),
+})
+
 cont = Contribution.create({
   user_id: bill_nye.id,
   campaign_id: tv_show.id,
-  amount: 55,
+  perk_id: perk.id,
+  amount: 99,
   appearance: (bill_nye.first_name + bill_nye.last_name),
 })

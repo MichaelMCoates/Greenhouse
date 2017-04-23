@@ -1,8 +1,10 @@
 class Api::PerksController < ApplicationController
   def create
     @perk = Perk.new(perk_params)
+    debugger
 
     if @perk.save
+      @campaign = @perk.campaign
       render "api/campaigns/show"
     else
       render json: { message: 'not found', status: 404 }
