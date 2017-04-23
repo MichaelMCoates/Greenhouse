@@ -1,0 +1,92 @@
+.perks {
+  width: 327px;
+  height: 1000px;
+  padding-right: 158px;
+}
+
+.perk-item {
+  cursor: pointer;
+  border: 1px solid rgb(221, 221, 221);
+  box-sizing: border-box;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.perk-body {
+  padding: 30px 20px 20px;
+  -webkit-font-smoothing: antialiased;
+  color: rgb(42, 42, 42);
+}
+
+.perk-cash-money {
+  padding-bottom: 10px;
+}
+
+.perk-cost {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  margin-bottom: 5px;
+  padding-right: 5px;
+}
+
+.perk-currency {
+  color: rgb(106, 106, 106);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.perk-title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+}
+
+.perk-description {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400px;
+  word-wrap: break-word;
+  display: block;
+}
+
+.claimed {
+  margin-top: 20px;
+  color: rgb(168, 168, 168);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.perk-date {
+  padding: 11px 18px;
+  background-color: #fafafa;
+  border: none;
+  border-radius: none;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  min-height: 40px;
+  color: #6a6a6a;
+}
+
+.perk-item:hover .perk-date {
+  display: none;
+}
+
+.perk-date-hidden {
+  display: none;
+}
+
+.perk-item:hover .perk-date-hidden {
+  display: block;
+  background-color: #fa1681;
+  color: #ffffff;
+}

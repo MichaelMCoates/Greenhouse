@@ -45,7 +45,7 @@ tv_show = Campaign.create({
 perk = Perk.create({
   campaign_id: tv_show.id,
   price: 99,
-  title: "GET (1) HEXAGON",
+  title: "Get (1) HEXAGON",
   description:"EARLY BIRD PRICE: 50% OFF RETAIL! Get (1) HEXAGON, Color: Black body & Blue frame. (1) HD Rear Camera and Extended Lights module, (1) Wireless Remote Control, (2) Installed 18650 Batteries, (1) Mount to Frame, and (1) Charging Cable (micro-USB/USB). Free U.S. and Canada Shipping!",
   number_available: 100,
   number_claimed: 82,
