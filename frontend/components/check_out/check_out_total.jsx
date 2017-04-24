@@ -6,13 +6,9 @@ class CheckOutTotal extends React.Component {
   constructor (props) {
     super(props);
 
-    this.state = {amount: this.props.amount};
-    this.updateAmount = this.updateAmount.bind(this);
   }
 
-  updateAmount(e) {
-    (this.setState({amount: e.target.value}));
-  }
+
 
 
   render() {
@@ -43,16 +39,20 @@ class CheckOutTotal extends React.Component {
             </div>
             <p>By clicking 'Submit Payment', you acknowledge you are contributing to <strong> a work-in-progress and not making a direct purchase</strong>. Perks are managed by campaigners and cannot be guaranteed by Indiegogo. You also acknowledge and agree to our Terms of Use and Privacy Policy.</p>
 
-            <input type="submit" className="pink-button-check-out" value="SUBMIT PAYMENT"/>
+            <input onClick={this.props.handleSubmit} type="submit" className="pink-button-check-out" value="SUBMIT PAYMENT"/>
           </div>
         </div>
       );
+
+
     } else {
+
+
       return (
         <div className="check-out-total">
           <div className="top-square">
             <div>
-              <div className="check-out-header-top-square">Your Contribution <Link className="add-perk-link" to={'/campaigns/' + this.props.campaign_id}>Add Perk</Link></div>
+              <div className="check-out-header-top-square">Your Contribution <Link className="add-perk-link" to={'/campaigns/' + this.props.campaign_id}> Add Perk</Link></div>
 
             </div>
             <div className="codi">
@@ -60,8 +60,8 @@ class CheckOutTotal extends React.Component {
               <span className="codi-currency">USD</span>
               <input className="check-out-donation-input"
                 type="number"
-                value={this.state.amount}
-                onChange={this.updateAmount}/>
+                value={this.props.amount}
+                onChange={this.props.updateAmount}/>
 
             </div>
           </div>
@@ -73,18 +73,18 @@ class CheckOutTotal extends React.Component {
               </div>
               <div className="price">
                 <div>
-                  <div>${Number(this.state.amount).toLocaleString()} <text className="currency">USD</text></div>
+                  <div>${Number(this.props.amount).toLocaleString()} <text className="currency">USD</text></div>
                 </div>
               </div>
             </div>
             <hr className="divider"/>
             <div className="total">
               <div className="check-out-header">Total</div>
-              <div>${Number(this.state.amount).toLocaleString()} <text className="currency">USD</text></div>
+              <div>${Number(this.props.amount).toLocaleString()} <text className="currency">USD</text></div>
             </div>
             <p>By clicking 'Submit Payment', you acknowledge you are contributing to a work-in-progress and not making a direct purchase. Perks are managed by campaigners and cannot be guaranteed by Indiegogo. You also acknowledge and agree to our Terms of Use and Privacy Policy.</p>
 
-            <input type="submit" className="pink-button-check-out" value="SUBMIT PAYMENT"/>
+            <input onClick={this.props.handleSubmit} type="submit" className="pink-button-check-out" value="SUBMIT PAYMENT"/>
           </div>
         </div>
       );

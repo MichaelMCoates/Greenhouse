@@ -1,17 +1,17 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router';
+import { Link, withRouter, hashHistory } from 'react-router';
 import CurrentUserDetails from './current_user_details';
 import CheckOutTotal from './check_out_total';
-// import CampaignerDetailsContainer from '../campaign/campaign_summary/campaigner_details/campaigner_details_container';
-// currentuserdetailscontainer
 
 class CheckOut extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {appearance: null, };
+		this.state = {appearance: null, amount: this.props.amount || this.props.perk.price};
 		this.handleSubmit = this.handleSubmit.bind(this);
+    this.updateAmount = this.updateAmount.bind(this);
+    this.setState = this.setState.bind(this);
+    this.updateAppearance = this.updateAppearance.bind(this);
 	}
-
 
 	update(field) {
 		return e => this.setState({
@@ -21,18 +21,53 @@ class CheckOut extends React.Component {
 
 	handleSubmit(e) {
 		e.preventDefault();
+    if (this.props.perk) {
+      let mycontribution = Object.assign(
+        this.state,
+        {perk_id: this.props.perk.id,
+          campaign_id: this.props.campaign.id,
+          user_id: this.props.currentUser.id
+        }
+      );
 
+      return this.props.createContribution({contribution: mycontribution})
+        .then(() => hashHistory.push('/campaigns/' + this.props.campaign.id));
+
+    } else {
+      let mycontribution = Object.assign(
+        this.state,
+        {campaign_id: this.props.campaign.id,
+          user_id: this.props.currentUser.id
+        }
+      );
+
+      return this.props.createContribution({contribution: mycontribution})
+        .then(() => hashHistory.push('/campaigns/' + this.props.campaign.id));
+    }
 	}
 
+  updateAmount(e) {
+    (this.setState({amount: e.target.value}));
+  }
 
+  updateAppearance(e) {
+    (this.setState({appearance: e.target.value}));
+  }
 
 	render() {
-    // <CurrentUserDetailsContainer user_id={this.props.currentUser.id} />
     let checkouttotal;
     if (this.props.perk) {
-      checkouttotal = <CheckOutTotal perk={this.props.perk}/>;
+      checkouttotal = <CheckOutTotal
+          perk={this.props.perk}
+          handleSubmit={this.handleSubmit}
+        />;
     } else {
-      checkouttotal = <CheckOutTotal campaign_id={this.props.campaign.id} amount={this.props.amount}/>;
+      checkouttotal = <CheckOutTotal
+          handleSubmit={this.handleSubmit}
+          updateAmount={this.updateAmount}
+          campaign_id={this.props.campaign.id}
+          amount={this.state.amount}
+        />;
     }
 
 		return (
@@ -65,15 +100,29 @@ class CheckOut extends React.Component {
             <br/>
             <text>Choose a name to be displayed publicly next to your contribution on the campaign page.</text>
 
-            <form className="appearance-form">
+            <form className="appearance-form" onChange={this.updateAppearance}>
+
               <label className="appearance-radio">
-                <input type="radio" name="appearance" value={this.props.currentUser.first_name}/><text className="radio-text">{this.props.currentUser.first_name}</text><br/>
+                <input type="radio"
+                  name="appearance"
+                  value={this.props.currentUser.first_name}
+                />
+                <text className="radio-text">
+                  {this.props.currentUser.first_name}
+                </text>
+                <br/>
               </label>
+
               <label className="appearance-radio">
-                <input type="radio" name="appearance" value="Anonymous"/><text className="radio-text">Anonymous</text><br/>
-              </label>
-              <label className="appearance-radio">
-                <input type="radio" name="appearance" className="other" value="other"/><text className="radio-text">Other</text><br/>
+                <input
+                  type="radio"
+                  name="appearance"
+                  value="Anonymous"
+                />
+                <text className="radio-text">
+                  Anonymous
+                </text>
+                <br/>
               </label>
             </form>
     			</div>
@@ -89,3 +138,21 @@ class CheckOut extends React.Component {
 }
 
 export default CheckOut;
+
+
+
+
+
+
+{/* <label className="appearance-radio">
+  <input
+    type="radio"
+    name="appearance"
+    className="other"
+    value="other"
+  />
+  <text className="radio-text">
+    Other
+  </text>
+  <br/>
+</label> */}
