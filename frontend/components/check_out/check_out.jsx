@@ -32,39 +32,49 @@ class CheckOut extends React.Component {
     if (this.props.perk) {
       checkouttotal = <CheckOutTotal perk={this.props.perk}/>;
     } else {
-      checkouttotal = <CheckOutTotal amount={this.props.amount}/>;
+      checkouttotal = <CheckOutTotal campaign_id={this.props.campaign.id} amount={this.props.amount}/>;
     }
 
 		return (
       <div className="check-out-page">
         <header>
-          <h2 className="check-out-h2"> You're contributing to {this.props.user.user.first_name} {this.props.user.user.last_name}'s</h2>
+          <h2 className="check-out-h2">
+            You're contributing to {this.props.user.user.first_name} {this.props.user.user.last_name}'s
+          </h2>
           <h1 className="check-out-h1"> {this.props.campaign.title}</h1>
         </header>
         <div className="check-out-bottom">
     			<div className="check-out-form">
-            <CurrentUserDetails currentUser={this.props.currentUser} />
-            <text>Debit or Credit Card</text>
-            <form>
-              <div>
-                <input className="name-on-card" placeholder="Name on Card" />
-                <input className="card-num" placeholder="Debit or Credit Card Number" />
+            <CurrentUserDetails className="current-user-details" currentUser={this.props.currentUser} />
+            <text className="check-out-sub-title">Debit or Credit Card</text>
+            <br/>
+            <text>Fields have been disabled</text>
+            <form className="credit-card-deets">
+              <div className="credit-card-deets-top">
+                <input className="name-on-card" placeholder="Name on Card" disabled/>
+                <input className="card-num" placeholder="Debit or Credit Card Number" disabled/>
               </div>
-              <div>
-                <input className="exp-date" placeholder="Expiration Date (MM/YY)" />
-                <input className="sec-code" placeholder="Security Code" />
-                <input className="post-code" placeholder="Billing Postal Code" />
+              <div className="credit-card-deets-bottom">
+                <input className="exp-date" placeholder="Expiration Date (MM/YY)" disabled/>
+                <input className="sec-code" placeholder="Security Code" disabled/>
+                <input className="post-code" placeholder="Billing Postal Code" disabled/>
               </div>
             </form>
 
-            <text>Contribution Appearance</text>
+            <text className="check-out-sub-title">Contribution Appearance</text>
+            <br/>
             <text>Choose a name to be displayed publicly next to your contribution on the campaign page.</text>
 
-            <form>
-              <input type="radio" name="appearance" value={this.props.currentUser.email}/> {this.props.currentUser.email}<br/>
-              <input type="radio" name="appearance" value="Anonymous"/> Anonymous<br/>
-              <input type="radio" name="appearance" className="other" value="other"/> Other <br/>
-              <input type="text" className="reveal-if-active" name="appearance" placeholder="Other Name"/>
+            <form className="appearance-form">
+              <label className="appearance-radio">
+                <input type="radio" name="appearance" value={this.props.currentUser.first_name}/><text className="radio-text">{this.props.currentUser.first_name}</text><br/>
+              </label>
+              <label className="appearance-radio">
+                <input type="radio" name="appearance" value="Anonymous"/><text className="radio-text">Anonymous</text><br/>
+              </label>
+              <label className="appearance-radio">
+                <input type="radio" name="appearance" className="other" value="other"/><text className="radio-text">Other</text><br/>
+              </label>
             </form>
     			</div>
 

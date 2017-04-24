@@ -1,11 +1,87 @@
-.reveal-if-active {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
+.check-out-page {
+  width: 1220px;
+  font-family: 'Libre Franklin', sans-serif;
+  color: #2a2a2a;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0px;
+  font-size: 14px;
+  margin-top: 41px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-input[class="other"]:checked ~ .reveal-if-active {
-  opacity: 1;
-  max-height: 100px; /* little bit of a magic number :( */
-  overflow: visible;
+.check-out-bottom {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.check-out-form {
+  width: 780px;
+}
+
+.check-out-h2 {
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.check-out-h1 {
+  font-weight: 700;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 38px;
+}
+
+.check-out-sub-title {
+  font-weight: 700;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+
+.credit-card-deets {
+  margin: 20px 0px;
+}
+
+
+.credit-card-deets input {
+  box-sizing: border-box;
+  border: 1px solid rgb(221, 221, 221);
+  margin-right: 10px;
+  margin-bottom: 10px;
+  height: 50px;
+  width: 100%;
+  padding-left: 14px;
+}
+
+.credit-card-deets-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.credit-card-deets-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.appearance-form {
+  margin: 20px 0px;
+}
+
+.appearance-radio {
+  display: flex;
+  align-items: center;
+  min-height: 20px;
+  padding: 14px 15px;
+  margin: 10px 0;
+  border: 1px solid rgb(221, 221, 221);
+}
+
+.radio-text {
+  margin-left: 10px;
+}
+
+.totaling-comp {
+  width: 338px;
+  box-sizing: border-box;
 }

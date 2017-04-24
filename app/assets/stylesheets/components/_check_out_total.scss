@@ -1,0 +1,121 @@
+.check-out-total {
+  border: 1px solid rgb(221, 221, 221);
+}
+
+.top-square {
+  background-color: #DBF4F4;
+  padding: 30px 20px;
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.check-out-header-top-square {
+  font-weight: 700;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.check-out-header {
+  font-weight: 700;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+.review {
+  padding: 30px 20px;
+}
+
+.subtotals {
+  display: flex;
+  justify-content: space-between;
+  line-height: 20px;
+}
+
+.price {
+  text-align: right;
+}
+
+.review {
+  background-color: #f5f5f5;
+}
+
+.total {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.divider {
+  margin: 20px 0px;
+}
+
+.currency {
+  font-size: 12px;
+}
+
+.check-out-total p {
+  font-size: 12px;
+  line-height: 18px;
+  color: #a8a8a8;
+  margin-top: 20px;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.pink-button-check-out {
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: #eb1478;
+  border: 2px solid #eb1478;
+  padding: 0 18px;
+  border-radius: 2px;
+  color: #ffffff;
+  text-align: center;
+  height: 50px;
+  font-weight: 700;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+}
+
+.add-perk-link {
+  cursor: pointer;
+  margin-right: 5px;
+  color: #eb1478;
+}
+
+.add-perk-link:hover {
+  text-decoration: underline;
+}
+
+.check-out-donation-input {
+  height: 50px;
+  padding: 5px 15px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  padding-left: 30px;
+  width: 100%;
+}
+
+.codi {
+  position: relative;
+}
+
+.codi-currency {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  line-height: 20px;
+}
+
+.codi-sign {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  line-height: 20px;
+}

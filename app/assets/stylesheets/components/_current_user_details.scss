@@ -1,0 +1,40 @@
+.current-user-details {
+  margin-top: 0px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: flex-start;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  align-self: flex-start;
+  font-family: 'Libre Franklin', sans-serif;
+  line-height: 18px;
+  letter-spacing: 0;
+  font-size: 14px;
+  color: #6a6a6a;
+}
+
+.current-user-details > img {
+  border-radius: 50%;
+  width: 50px;
+  vertical-align: middle;
+  border: 0;
+}
+
+.current-user-deets {
+  margin-left: 10px;
+  margin-right: 5px;
+  white-space: normal;
+}
+
+.current-user-details-name {
+  font-weight: 600;
+}
+
+.current-user-details-about {
+  color: #eb1478;
+}
+
+.current-user-details-about:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
