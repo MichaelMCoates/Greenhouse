@@ -19,7 +19,7 @@
 }
 
 .perk-cash-money {
-  padding-bottom: 10px;
+  padding-bottom: 4px;
 }
 
 .perk-cost {
@@ -57,10 +57,11 @@
 
 .claimed {
   margin-top: 20px;
-  color: rgb(168, 168, 168);
+  color: rgb(148, 148, 148);
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 18px;
+  -webkit-font-smoothing: antialiased;
 }
 
 .perk-date {

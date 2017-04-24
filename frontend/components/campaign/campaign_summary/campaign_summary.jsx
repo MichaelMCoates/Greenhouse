@@ -16,7 +16,7 @@ class CampaignSummary extends React.Component {
 
     return (
       <div className="campaign-summary campaign-show-right">
-        <div>
+        <div className="campaign-summary-top">
           <h1 className="campaign-title">{this.props.title}</h1>
           <h2 className="campaign-tagline">{this.props.tagline}</h2>
           <CampaignerDetailsContainer user_id={this.props.user_id} />

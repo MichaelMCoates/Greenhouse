@@ -10,7 +10,7 @@ class PerkItem extends React.Component {
         <div className="perk-body">
           <div className="perk-cash-money">
             <text className="perk-cost">${perk.price}</text>
-            <text className="perk-currency">&nbsp;USD</text>
+            <text className="perk-currency">&nbsp;USD + Shipping</text>
           </div>
           <div className="perk-title">{perk.title}</div>
           <p className="perk-description">{perk.description}</p>
