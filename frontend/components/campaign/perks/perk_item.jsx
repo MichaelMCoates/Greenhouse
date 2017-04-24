@@ -1,12 +1,23 @@
 import React from 'react';
 import moment from 'moment';
+import { Link, hashHistory } from 'react-router';
 
 class PerkItem extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.onClickCO = this.onClickCO.bind(this);
+  }
+
+  onClickCO() {
+    this.props.setPerk(this.props.perk);
+    hashHistory.push('/check_out')
+  }
 
   render() {
     let perk = this.props.perk;
     return (
-      <li className="perk-item">
+      <li className="perk-item" onClick={this.onClickCO}>
         <div className="perk-body">
           <div className="perk-cash-money">
             <text className="perk-cost">${perk.price}</text>

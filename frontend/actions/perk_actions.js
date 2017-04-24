@@ -8,6 +8,10 @@ export const createPerk = perk => dispatch => (
           err => dispatch(receiveErrors(err.responseJSON)))
 );
 
+// export const fetchPerk = perk => dispatch => (
+//
+// )
+
 export const receiveErrors = (errors) => ({
   type: RECEIVE_ERRORS,
   errors

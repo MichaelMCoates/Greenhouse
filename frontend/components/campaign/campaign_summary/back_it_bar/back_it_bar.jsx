@@ -1,6 +1,6 @@
 import React from 'react';
 import SocialBar from './social_bar';
-import { Link } from 'react-router';
+import { Link, hashHistory } from 'react-router';
 
 
 class BackItBar extends React.Component {
@@ -9,10 +9,17 @@ class BackItBar extends React.Component {
 
     this.state = {active: false, amount: undefined};
     this.setState = this.setState.bind(this);
+    this.updateAmount = this.updateAmount.bind(this);
+    this.onClickCO = this.onClickCO.bind(this);
   }
 
   updateAmount(e) {
     (this.setState({amount: e.target.value}));
+  }
+
+  onClickCO() {
+    (this.props.setAmount({amount: this.state.amount}));
+    hashHistory.push('/check_out');
   }
 
   render() {
@@ -33,9 +40,9 @@ class BackItBar extends React.Component {
             </span>
           </div>
 
-          <Link to={"/campaigns/1"}>
+          <div onClick={this.onClickCO}>
             <input className="pink-button" type="submit" value="CHECK OUT" />
-          </Link>
+          </div>
 
         </div>
       );

@@ -5,6 +5,7 @@ import App from './app';
 import LogInFormContainer from './log_in_form/log_in_form_container';
 import SignUpFormContainer from './sign_up_form/sign_up_form_container';
 import CampaignShowPageContainer from './campaign/campaign_show_page_container';
+import CheckOutContainer from './check_out/check_out_container';
 
 //
 import {fetchUser} from '../actions/user_actions';
@@ -30,6 +31,7 @@ const Root = ({ store }) => {
       <Router history={ hashHistory }>
         <Route path="/" component={ App } >
           <Route path="/campaigns/:campaignId" component={CampaignShowPageContainer}/>
+          <Route path="/check_out" component={CheckOutContainer}/>
         </Route>
       </Router>
     </Provider>

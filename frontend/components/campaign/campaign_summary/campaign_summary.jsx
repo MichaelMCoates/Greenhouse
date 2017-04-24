@@ -3,6 +3,7 @@ import CampaignerDetailsContainer from './campaigner_details/campaigner_details_
 import FundingBarContainer from './funding_bar/funding_bar_container';
 import BackItBarContainer from './back_it_bar/back_it_bar_container';
 import { Line, Circle } from 'rc-progress';
+import { Link } from 'react-router';
 
 
 class CampaignSummary extends React.Component {
