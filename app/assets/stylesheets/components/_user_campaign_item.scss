@@ -1,0 +1,54 @@
+.user-campaign-item {
+  border-top: 1px solid rgb(221, 221, 221);
+  padding: 20px 0;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+}
+
+.uci-tile-img {
+  height: 200px;
+  width: 200px;
+}
+
+.uci-body {
+  margin-top: 3px;
+  margin-left: 20px;
+}
+
+.uci-title {
+  margin-top: 7px;
+  color: #2a2a2a;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.uci-title:hover {
+  text-decoration: underline;
+}
+
+.uci-user {
+  color: #6a6a6a;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 500;
+}
+
+.uci-link {
+  cursor: pointer;
+  color: #eb1478;
+}
+
+.uci-link:hover {
+  text-decoration: underline;
+}
+
+.uci-tagline {
+  color: #6a6a6a;
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+}
