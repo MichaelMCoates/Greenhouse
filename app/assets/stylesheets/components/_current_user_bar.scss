@@ -17,14 +17,10 @@
 .cub-links {
   width: 1220px;
   margin: 0 auto;
-
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
-
 }
-
-
 
 .cub-button {
   padding: 15px 0;
@@ -35,12 +31,10 @@
   font-weight: 500;
   font-size: 14px;
   color: #a8a8a8;
-
-
 }
+
 .cub-button:hover {
   color: #fafafa;
-
 }
 
 .cub-button-selected {
@@ -52,5 +46,4 @@
   letter-spacing: 0px;
   font-weight: 600;
   font-size: 14px;
-
 }
