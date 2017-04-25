@@ -12,10 +12,9 @@ class UserProfile extends React.Component {
 
     return (
       <div className="user-profile">
-        <div>User Profile</div>
         <div className="user-profile-left">
-          <div>{this.user.tagline}</div>
-          <div>{this.user.about_me}</div>
+          <div className="tagline">{this.user.tagline}</div>
+          <div className="about-me">{this.user.about_me}</div>
         </div>
 
         <div className="user-profile-right">

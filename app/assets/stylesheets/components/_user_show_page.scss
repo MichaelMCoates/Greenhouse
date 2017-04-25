@@ -46,6 +46,22 @@
   border-bottom: 3px solid #eb1478;
 }
 
-.usp-header-item-selected:after {
+.tagline {
+  margin: 20px 0;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 46px;
+}
 
+.about-me {
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.user-profile {
+  display: flex;
+  justify-content: space-between;
 }

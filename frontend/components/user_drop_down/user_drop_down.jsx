@@ -1,10 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, hashHistory } from 'react-router';
 
 
 class UserDropDown extends React.Component {
   constructor (props){
     super(props);
+
+    this.redirectToProfile = this.redirectToProfile.bind(this);
+  }
+
+  redirectToProfile () {
+    hashHistory.push('/users/' + this.props.currentUser.id);
   }
 
   render() {
@@ -12,7 +18,7 @@ class UserDropDown extends React.Component {
       <div className="user-drop-down udd ">
         <ul>
           <li>My Contributions</li>
-          <li>My Profile</li>
+          <li onClick={this.redirectToProfile}>My Profile</li>
           <li>My Settings</li>
           <li onClick={this.props.logout}>Log Out</li>
         </ul>
