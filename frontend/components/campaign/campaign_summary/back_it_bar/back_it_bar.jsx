@@ -18,8 +18,12 @@ class BackItBar extends React.Component {
   }
 
   onClickCO() {
-    (this.props.setAmount({amount: this.state.amount}));
-    hashHistory.push('/check_out');
+    if (!this.props.loggedIn) {
+      alert("Must be logged in to check out!");
+    } else {
+      (this.props.setAmount({amount: this.state.amount}));
+      hashHistory.push('/check_out');
+    }
   }
 
   render() {

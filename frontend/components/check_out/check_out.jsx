@@ -74,9 +74,7 @@ class CheckOut extends React.Component {
           amount={this.state.amount}
         />;
     }
-
-    debugger
-
+    
 		return (
       <div className="check-out-page">
         <header>

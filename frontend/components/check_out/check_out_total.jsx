@@ -82,7 +82,7 @@ class CheckOutTotal extends React.Component {
               <div className="check-out-header">Total</div>
               <div>${Number(this.props.amount).toLocaleString()} <text className="currency">USD</text></div>
             </div>
-            <p>By clicking 'Submit Payment', you acknowledge you are contributing to a work-in-progress and not making a direct purchase. Perks are managed by campaigners and cannot be guaranteed by Indiegogo. You also acknowledge and agree to our Terms of Use and Privacy Policy.</p>
+            <p>By clicking 'Submit Payment', you acknowledge you are contributing to <strong> a work-in-progress and not making a direct purchase </strong>. Perks are managed by campaigners and cannot be guaranteed by Indiegogo. You also acknowledge and agree to our Terms of Use and Privacy Policy.</p>
 
             <input onClick={this.props.handleSubmit} type="submit" className="pink-button-check-out" value="SUBMIT PAYMENT"/>
           </div>
