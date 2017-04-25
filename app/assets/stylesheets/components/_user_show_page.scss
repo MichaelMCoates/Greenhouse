@@ -39,12 +39,14 @@
   text-align: center;
   padding: 3px 5px;
   display: block;
+  cursor: pointer;
 }
 
 .usp-header-item-selected {
   color: #eb1478;
   border-bottom: 3px solid #eb1478;
 }
+
 
 .tagline {
   margin: 20px 0;
@@ -61,7 +63,69 @@
   font-weight: 400;
 }
 
+.user-show-page-body {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
 .user-profile {
   display: flex;
   justify-content: space-between;
+}
+
+.user-profile-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 380px;
+}
+
+.user-stats-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user-stats-header-am {
+  margin-left: 12px;
+  vertical-align: middle;
+  font-size: 24px;
+  line-height: 35px;
+  letter-spacing: 0;
+  color: #6a6a6a;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+
+}
+
+.user-stats-header > img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  vertical-align: middle;
+  border: 0;
+}
+
+.user-stat {
+  display: flex;
+  margin-bottom: 2px;
+
+}
+
+.user-stat-num {
+  font-size: 24px;
+  line-height: 24px;
+  color: #2a2a2a;
+  margin-right: 2px;
+  font-weight: 900;
+  width: 24px;
+  text-align: center;
+}
+
+.user-stat-title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0;
+  color: #6a6a6a;
 }

@@ -31,8 +31,9 @@ class UserShowPage extends React.Component {
     // }
     return (
       <div className="user-show-page">
-        <div className="user-show-name">
-          <h2 >{this.props.user.user.first_name} {this.props.user.user.last_name}</h2>
+        <div >
+          <h2 className="user-show-name">{this.props.user.user.first_name} {this.props.user.user.last_name}</h2>
+          <div></div>
         </div>
 
         <UserShowPageHeaderContainer profileShown={this.state.profile_shown} setState={this.setState} />

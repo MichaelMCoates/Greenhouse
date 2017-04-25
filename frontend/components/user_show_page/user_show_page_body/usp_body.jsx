@@ -8,7 +8,6 @@ class UserShowPageBody extends React.Component {
 
     return (
       <div className="user-show-page-body">
-        <div>User Show Page Body</div>
         <UserProfileContainer />
       </div>
     );

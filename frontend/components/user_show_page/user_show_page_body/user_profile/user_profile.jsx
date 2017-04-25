@@ -4,7 +4,7 @@ class UserProfile extends React.Component {
   constructor (props) {
     super(props);
 
-    this.user = this.props.user.user;
+    this.user = this.props.user;
   }
 
 
@@ -13,12 +13,23 @@ class UserProfile extends React.Component {
     return (
       <div className="user-profile">
         <div className="user-profile-left">
-          <div className="tagline">{this.user.tagline}</div>
-          <div className="about-me">{this.user.about_me}</div>
+          <div className="tagline">{this.user.user.tagline}</div>
+          <div className="about-me">{this.user.user.about_me}</div>
         </div>
 
         <div className="user-profile-right">
-          <div>About Me</div>
+          <div className="user-stats-header">
+            <img src={this.user.user.avatar_img} />
+            <div className="user-stats-header-am">About Me</div>
+          </div>
+          <div className="user-stat">
+            <div className="user-stat-num">{this.user.campaigns.founded.length}</div>
+            <div className="user-stat-title">{this.user.campaigns.founded.length === 1 ? "Campaign" : "Campaigns"}</div>
+          </div>
+          <div className="user-stat">
+            <div className="user-stat-num">{this.user.campaigns.funded.length}</div>
+            <div className="user-stat-title">{this.user.campaigns.funded.length === 1 ? "Contribution" : "Contributions"}</div>
+          </div>
         </div>
       </div>
     );
