@@ -74,7 +74,7 @@ class CheckOut extends React.Component {
           amount={this.state.amount}
         />;
     }
-    
+
 		return (
       <div className="check-out-page">
         <header>
@@ -107,7 +107,7 @@ class CheckOut extends React.Component {
 
             <form className="appearance-form" onChange={this.updateAppearance}>
 
-              <label className="appearance-radio">
+              <label className={this.state.appearance == this.props.currentUser.first_name ? "appearance-radio appearance-radio-selected" : "appearance-radio"}>
                 <input type="radio"
                   name="appearance"
                   value={this.props.currentUser.first_name}
@@ -118,7 +118,7 @@ class CheckOut extends React.Component {
                 <br/>
               </label>
 
-              <label className="appearance-radio">
+              <label className={this.state.appearance == "Anonymous" ? "appearance-radio appearance-radio-selected" : "appearance-radio"}>
                 <input
                   type="radio"
                   name="appearance"

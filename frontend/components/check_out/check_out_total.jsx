@@ -52,7 +52,7 @@ class CheckOutTotal extends React.Component {
         <div className="check-out-total">
           <div className="top-square">
             <div>
-              <div className="check-out-header-top-square">Your Contribution <Link className="add-perk-link" to={'/campaigns/' + this.props.campaign_id}> Add Perk</Link></div>
+              <div className="check-out-header-top-square">Your Contribution &nbsp;&nbsp; <Link className="add-perk-link" to={'/campaigns/' + this.props.campaign_id}> Add Perk</Link></div>
 
             </div>
             <div className="codi">
