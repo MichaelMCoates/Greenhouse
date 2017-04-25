@@ -52,10 +52,18 @@ perk = Perk.create({
   delivery_date: Date.new(2017, 9),
 })
 
-cont = Contribution.create({
+Contribution.create({
   user_id: bill_nye.id,
   campaign_id: tv_show.id,
   perk_id: perk.id,
   amount: 99,
   appearance: (bill_nye.first_name + bill_nye.last_name),
+})
+
+Contribution.create({
+  user_id: hexagon_user.id,
+  campaign_id: tv_show.id,
+  perk_id: perk.id,
+  amount: 99,
+  appearance: (hexagon_user.first_name + hexagon_user.last_name),
 })

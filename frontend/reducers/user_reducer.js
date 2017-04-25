@@ -1,8 +1,9 @@
-import {RECEIVE_USER} from '../actions/user_actions';
+import {RECEIVE_USER, RECEIVE_CAMPAIGNS} from '../actions/user_actions';
 import merge from 'lodash/merge';
 
 const _nullUser = Object.freeze({
   user: null,
+  campaigns: null,
 });
 
 const UserReducer = (state = _nullUser, action) => {
@@ -11,6 +12,9 @@ const UserReducer = (state = _nullUser, action) => {
     case RECEIVE_USER:
       const user = action.user;
       return Object.assign({}, _nullUser, {user});
+    case RECEIVE_CAMPAIGNS:
+      const campaigns = action.campaigns;
+      return Object.assign({}, {campaigns: null}, {campaigns})
     default:
       return state;
   }

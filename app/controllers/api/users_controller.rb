@@ -15,6 +15,19 @@ class Api::UsersController < ApplicationController
     render "api/users/show"
   end
 
+  def campaigns
+    @user = User.find(params[:user_id])
+
+    if @user
+      @founded = @user.founded_campaigns_and_user
+      @funded = @user.funded_campaigns_and_user
+      render partial: 'api/users/campaigns', locals: {founded: @founded, funded: @funded}
+    else
+      render json: @user.errors.full_messages, status: 422
+    end
+  end
+
+
   private
 
   def user_params

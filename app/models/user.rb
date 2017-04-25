@@ -61,4 +61,13 @@ class User < ActiveRecord::Base
   def ensure_session_token
     self.session_token ||= User.generate_session_token
   end
+
+  def founded_campaigns_and_user
+    self.campaigns.order('created_at DESC').includes(:user)
+  end
+
+  def funded_campaigns_and_user
+    self.contributions.includes(campaign: :user)
+  end
+
 end
