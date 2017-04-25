@@ -1,6 +1,7 @@
 import React from 'react';
 import UserShowPageHeaderContainer from './user_show_page_header/usp_header_container';
 import UserShowPageBodyContainer from './user_show_page_body/usp_body_container';
+import CurrentUserBar from './current_user_bar';
 
 class UserShowPage extends React.Component {
   constructor (props) {
@@ -26,18 +27,23 @@ class UserShowPage extends React.Component {
       return (<div>Loading...</div>);
     }
 
-    // if (this.props.user.id === this.props.currentUser.id) {
-    //
-    // }
-    return (
-      <div className="user-show-page">
-        <div >
-          <h2 className="user-show-name">{this.props.user.user.first_name} {this.props.user.user.last_name}</h2>
-          <div></div>
-        </div>
+    let currentUserBar;
+    if (this.props.user.user.id === this.props.currentUser.id) {
+      currentUserBar = <CurrentUserBar userId={this.props.currentUser.id} page="show-page" />;
+    }
 
-        <UserShowPageHeaderContainer profileShown={this.state.profile_shown} setState={this.setState} />
-        <UserShowPageBodyContainer profileShown={this.state.profile_shown} />
+    return (
+      <div className="cub-sizer">
+        {currentUserBar}
+        <div className="user-show-page">
+          <div >
+            <h2 className="user-show-name">{this.props.user.user.first_name} {this.props.user.user.last_name}</h2>
+            <div></div>
+          </div>
+
+          <UserShowPageHeaderContainer profileShown={this.state.profile_shown} setState={this.setState} />
+          <UserShowPageBodyContainer profileShown={this.state.profile_shown} />
+        </div>
       </div>
     );
   }
