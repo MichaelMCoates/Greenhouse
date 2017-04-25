@@ -11,7 +11,7 @@ class PerkItem extends React.Component {
 
   onClickCO() {
     this.props.setPerk(this.props.perk);
-    hashHistory.push('/check_out')
+    hashHistory.push('/check_out');
   }
 
   render() {

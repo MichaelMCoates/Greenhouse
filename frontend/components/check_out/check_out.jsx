@@ -21,6 +21,11 @@ class CheckOut extends React.Component {
 
 	handleSubmit(e) {
 		e.preventDefault();
+    if (this.state.appearance === null || this.state.amount === null) {
+      alert('Must fill in all fields!');
+      return;
+    }
+
     if (this.props.perk) {
       let mycontribution = Object.assign(
         this.state,
@@ -69,6 +74,8 @@ class CheckOut extends React.Component {
           amount={this.state.amount}
         />;
     }
+
+    debugger
 
 		return (
       <div className="check-out-page">

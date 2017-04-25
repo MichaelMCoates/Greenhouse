@@ -5,7 +5,7 @@ import React from 'react';
 import { Link, hashHistory } from 'react-router';
 
 const mapStateToProps = ({session, checkOut, campaign, user}) => {
-  if (checkOut.perk) {
+ if (checkOut.perk) {
     return ({
       currentUser: session.currentUser,
       perk: checkOut.perk,
@@ -19,8 +19,6 @@ const mapStateToProps = ({session, checkOut, campaign, user}) => {
       campaign: campaign,
       user: user,
     });
-  } else {
-    return ({})
   }
 };
 
