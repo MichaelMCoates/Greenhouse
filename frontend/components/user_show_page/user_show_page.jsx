@@ -22,7 +22,6 @@ class UserShowPage extends React.Component {
   }
 
   render() {
-    debugger
     if (this.props.user.campaigns === null) {
       return (<div>Loading...</div>);
     }
@@ -30,14 +29,13 @@ class UserShowPage extends React.Component {
     // if (this.props.user.id === this.props.currentUser.id) {
     //
     // }
-
     return (
       <div className="user-show-page">
-        <div>
-          <h2>{this.props.user.user.first_name} {this.props.user.user.last_name}</h2>
+        <div className="user-show-name">
+          <h2 >{this.props.user.user.first_name} {this.props.user.user.last_name}</h2>
         </div>
-        
-        <UserShowPageHeaderContainer setState={this.setState} />
+
+        <UserShowPageHeaderContainer profileShown={this.state.profile_shown} setState={this.setState} />
         <UserShowPageBodyContainer profileShown={this.state.profile_shown} />
       </div>
     );

@@ -9,7 +9,6 @@ class UserProfile extends React.Component {
 
 
   render() {
-    debugger
 
     return (
       <div className="user-profile">

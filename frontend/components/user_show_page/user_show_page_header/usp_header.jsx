@@ -11,23 +11,23 @@ class UserShowPageHeader extends React.Component {
 
 
   setProfile(e) {
-    this.props.setState({profile_shown: true});
+    return this.props.setState({profile_shown: true});
   }
 
   setCampaigns(e) {
-    this.props.setState({profile_shown: false});
+    return this.props.setState({profile_shown: false});
   }
 
   render() {
 
     return (
       <div className="user-show-page-header">
-        <div>User Show Page Header</div>
-        <div>
+        <div className={ this.props.profileShown ? "usp-header-item usp-header-item-selected" : "usp-header-item" }>
           <div onClick={this.setProfile}>Profile</div>
+        </div>
+        <div className={ this.props.profileShown ? "usp-header-item" : "usp-header-item usp-header-item-selected" }>
           <div onClick={this.setCampaigns}>Campaigns</div>
         </div>
-
       </div>
     );
   }
