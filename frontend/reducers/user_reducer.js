@@ -14,7 +14,7 @@ const UserReducer = (state = _nullUser, action) => {
       return Object.assign({}, _nullUser, {user});
     case RECEIVE_CAMPAIGNS:
       const campaigns = action.campaigns;
-      return Object.assign({}, {campaigns: null}, {campaigns})
+      return Object.assign({}, state, {campaigns})
     default:
       return state;
   }

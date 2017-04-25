@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import UserShowPageHeader from './usp_header';
+import UserProfile from './user_profile';
 
 const mapStateToProps = ({user, session}) => {
   return ({
@@ -13,4 +13,4 @@ const mapDispatchToProps = (dispatch) => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(UserShowPageHeader);
+)(UserProfile);
