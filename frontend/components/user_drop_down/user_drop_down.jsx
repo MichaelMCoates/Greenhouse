@@ -7,19 +7,23 @@ class UserDropDown extends React.Component {
     super(props);
 
     this.redirectToProfile = this.redirectToProfile.bind(this);
+    this.redirectToEdit = this.redirectToEdit.bind(this);
   }
 
   redirectToProfile () {
     hashHistory.push('/users/' + this.props.currentUser.id);
   }
 
+  redirectToEdit () {
+    hashHistory.push('/users/' + this.props.currentUser.id + '/edit');
+  }
+
   render() {
     return (
       <div className="user-drop-down udd ">
         <ul>
-          <li>My Contributions</li>
           <li onClick={this.redirectToProfile}>My Profile</li>
-          <li>My Settings</li>
+          <li onClick={this.redirectToEdit}>Edit Profile</li>
           <li onClick={this.props.logout}>Log Out</li>
         </ul>
       </div>
