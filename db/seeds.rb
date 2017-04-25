@@ -16,6 +16,9 @@ bill_nye = User.create({
   last_name: "Nye",
   city: "Hollywood",
   country: "United States",
+  postal_code: 90111,
+  tagline: "Yeah this is a bill nye tagline",
+  about_me: "Yeah this is some about me stuff about bill nye yeah",
 })
 
 hexagon_user = User.create({
@@ -25,6 +28,9 @@ hexagon_user = User.create({
   last_name: "by Smart Bikes",
   city: "Los Angeles",
   country: "United States",
+  postal_code: 90210,
+  tagline: "Yeah this is a hexagon tagline",
+  about_me: "Yeah this is some about me stuff",
 })
 
 

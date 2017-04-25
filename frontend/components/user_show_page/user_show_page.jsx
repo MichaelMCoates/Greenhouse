@@ -10,12 +10,14 @@ class UserShowPage extends React.Component {
     this.setState = this.setState.bind(this);
   }
   componentDidMount() {
-    this.props.fetchUser(this.props.params.userId).then(() => this.props.fetchCampaigns(this.props.params.userId));
+    this.props.fetchUser(this.props.params.userId)
+    .then(() => this.props.fetchCampaigns(this.props.params.userId));
   }
 
   componentWillReceiveProps(nextProps) {
     if (this.props.params.userId !== nextProps.params.userId) {
-      this.props.fetchUser(nextProps.params.userId).then(() => this.props.fetchCampaigns(nextProps.params.userId));
+      this.props.fetchUser(nextProps.params.userId)
+      .then(() => this.props.fetchCampaigns(nextProps.params.userId));
     }
   }
 
@@ -31,9 +33,10 @@ class UserShowPage extends React.Component {
 
     return (
       <div className="user-show-page">
-        <div>User Show Page</div>
-        <h2>{this.props.user.user.first_name}</h2>
-        <h2>{this.props.user.user.last_name}</h2>
+        <div>
+          <h2>{this.props.user.user.first_name} {this.props.user.user.last_name}</h2>
+        </div>
+        
         <UserShowPageHeaderContainer setState={this.setState} />
         <UserShowPageBodyContainer profileShown={this.state.profile_shown} />
       </div>

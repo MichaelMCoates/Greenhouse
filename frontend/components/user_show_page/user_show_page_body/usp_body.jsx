@@ -5,15 +5,6 @@ import UserProfileContainer from './user_profile/user_profile_container';
 class UserShowPageBody extends React.Component {
 
   render() {
-    if (this.props.user.campaigns === null) {
-      return (<div>Loading...</div>);
-    }
-
-    // if (this.props.user.id === this.props.currentUser.id) {
-    //
-    // }
-
-    
 
     return (
       <div className="user-show-page-body">

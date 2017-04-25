@@ -11,8 +11,8 @@ first_name      | string    | not null
 last_name       | string    | not null
 country         | string    |
 city            | string    |
-postal_code     | string    |
-description     | text      |
+postal_code     | integer   |
+tagline         | string    |
 about_me        | text      |
 prof_img_url    | string    |
 avatar_img_url  | string    |

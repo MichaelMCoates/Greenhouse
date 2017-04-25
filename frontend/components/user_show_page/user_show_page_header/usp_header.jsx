@@ -20,11 +20,6 @@ class UserShowPageHeader extends React.Component {
 
   render() {
 
-    // if (this.props.user.id === this.props.currentUser.id) {
-    //
-    // }
-
-
     return (
       <div className="user-show-page-header">
         <div>User Show Page Header</div>
