@@ -1,0 +1,122 @@
+.user-edit-page {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Libre Franklin', sans-serif;
+  color: #2a2a2a;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0px;
+  width: 1220px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.user-edit-name {
+  margin-top: 32px;
+  margin-bottom: 46px;
+  margin-left: -30px;
+  margin-right: -20px;
+  font-size: 50px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  line-height: 58px;
+  color: rgb(42, 42, 42);
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.user-edit-page-header {
+  display: flex;
+  border-bottom: 1px solid #dddddd;
+}
+
+.uep-header-item {
+  box-sizing: border-box;
+  position: relative;
+  margin-right: 20px;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 600;
+  text-align: center;
+  padding: 3px 5px;
+  display: block;
+  cursor: pointer;
+}
+
+.uep-header-item-selected {
+  color: #eb1478;
+  border-bottom: 3px solid #eb1478;
+}
+
+.user-edit-box {
+  width: 1180px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #f5f5f5;
+}
+
+.user-edit-form {
+  width: 50%;
+}
+
+.edit-input {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 5px 15px;
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 2px;
+}
+
+.edit-input-textarea {
+  vertical-align: top;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 2px;
+  height: 422px;
+}
+
+.user-edit-page-header {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 35px;
+  letter-spacing: 0;
+  color: #2a2a2a;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.user-edit-label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(106, 106, 106);
+}
+
+.pink-button-edit {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: #eb1478;
+  border: 2px solid #eb1478;
+  padding: 0 18px;
+  border-radius: 2px;
+  color: #ffffff;
+  text-align: center;
+  min-height: 40px;
+  font-weight: 700;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  width: 82px;
+  align-self: flex-end;
+}

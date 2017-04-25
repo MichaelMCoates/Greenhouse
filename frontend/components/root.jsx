@@ -7,6 +7,7 @@ import SignUpFormContainer from './sign_up_form/sign_up_form_container';
 import CampaignShowPageContainer from './campaign/campaign_show_page_container';
 import CheckOutContainer from './check_out/check_out_container';
 import UserShowPageContainer from './user_show_page/user_show_page_container';
+import UserEditPageContainer from './user_edit_page/user_edit_page_container';
 
 //
 import {fetchUser} from '../actions/user_actions';
@@ -34,6 +35,7 @@ const Root = ({ store }) => {
           <Route path="/campaigns/:campaignId" component={CampaignShowPageContainer} />
           <Route path="/check_out" component={CheckOutContainer}/>
           <Route path="/users/:userId" component={UserShowPageContainer} />
+          <Route path="/users/:userId/edit" component={UserEditPageContainer} />
         </Route>
       </Router>
     </Provider>

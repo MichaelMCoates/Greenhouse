@@ -2,11 +2,18 @@ import * as APIUtil from '../util/user_api_util';
 
 export const RECEIVE_USER = "RECEIVE_USER";
 export const RECEIVE_CAMPAIGNS = "RECEIVE_CAMPAIGNS";
+import {receiveCurrentUser} from './session_actions';
 
 export const fetchUser = user_id => dispatch => (
   APIUtil.fetchUser(user_id)
     .then(user => dispatch(receiveUser(user)))
 );
+
+export const updateUser = user => dispatch => (
+  APIUtil.updateUser(user)
+    .then(currentUser => dispatch(receiveCurrentUser(currentUser)))
+);
+// may need to redirect here
 
 export const receiveUser = (user) => ({
   type: RECEIVE_USER,
