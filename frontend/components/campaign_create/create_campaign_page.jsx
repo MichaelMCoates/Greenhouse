@@ -39,7 +39,6 @@ class CreateCampaignPage extends React.Component {
 
 
   render() {
-    debugger
 
     return (
       <div className="create-campaign-page">

@@ -9,12 +9,10 @@ class CreateSidebar extends React.Component {
   }
 
   changeEditor(e) {
-    debugger
     this.props.setState({editor: e.target.getAttribute('value')});
   }
 
   render() {
-    debugger
 
     return (
       <div className="sidebar">

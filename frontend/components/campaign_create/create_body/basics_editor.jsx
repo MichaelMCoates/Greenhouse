@@ -3,7 +3,6 @@ import React from 'react';
 class BasicsEditor extends React.Component {
 
   render() {
-    debugger
 
     return (
       <div className="basics-editor">
@@ -25,10 +24,10 @@ class BasicsEditor extends React.Component {
         <div className="basics-editor-input-div">
           <div className="basics-editor-input-title">Campaign Tagline</div>
           <div className="basics-editor-input-description">Provide a short description that best describes your campaign to your audience.</div>
-          <input type="text"
+          <textarea type="text"
             value={this.props.state.tagline}
             onChange={this.props.update('tagline')}
-            className="basics-editor-input"
+            className="basics-editor-textarea"
             />
         </div>
 
@@ -59,7 +58,7 @@ class BasicsEditor extends React.Component {
           <input type="number"
             value={this.props.state.duration}
             onChange={this.props.update('duration')}
-            className="basics-editor-input"
+            className="basics-editor-input duration-input"
             />
         </div>
 

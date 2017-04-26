@@ -1,0 +1,105 @@
+
+
+.create-body {
+  padding: 30px 0 30px 50px;
+  width: 756px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+.basics-editor {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Libre Franklin', sans-serif;
+  color: #2a2a2a;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.basics-editor-header {
+  margin-bottom: 5px;
+  margin-left: -30px;
+  margin-right: -20px;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 34px;
+  color: rgb(42, 42, 42);
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.basics-editor-description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #2a2a2a;
+  max-width: 620px;
+}
+
+.basics-editor-input-div {
+  width: 100%;
+  margin-top: 60px;
+}
+
+.basics-editor-input {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  display: block;
+  width: 95.8%;
+  height: 38px;
+  padding: 5px 15px;
+  background: #ffffff;
+  border: 1px solid #c8c8c8;
+  border-radius: 2px;
+}
+
+.basics-editor-textarea {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  display: block;
+  width: 95.8%;
+  height: 50px;
+  padding: 5px 15px;
+  background: #ffffff;
+  border: 1px solid #c8c8c8;
+  border-radius: 2px;
+}
+
+
+.basics-editor-input-title {
+  margin-bottom: 5px;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgb(42, 42, 42);
+}
+
+.basics-editor-input-description {
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: #a8a8a8;
+  line-height: 20px;
+}
+
+.location {
+  display: flex;
+  justify-content: space-between;
+}
+
+.location > input:first-of-type {
+  margin-right: 5px;
+}
+
+.location > input:last-of-type {
+  margin-left: 5px;
+}
+
+.duration-input {
+  width: 50px;
+}
