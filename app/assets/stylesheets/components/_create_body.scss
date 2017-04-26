@@ -5,10 +5,11 @@
   width: 756px;
   display: flex;
   justify-content: flex-start;
+  height: 100%;
 }
 
 
-.basics-editor {
+.editor {
   display: flex;
   flex-direction: column;
   font-family: 'Libre Franklin', sans-serif;
@@ -19,7 +20,7 @@
   margin-right: auto;
 }
 
-.basics-editor-header {
+.editor-header {
   margin-bottom: 5px;
   margin-left: -30px;
   margin-right: -20px;
@@ -32,7 +33,22 @@
   padding-right: 30px;
 }
 
-.basics-editor-description {
+.editor-header-pitch {
+  border-top: 1px solid #c8c8c8;
+  padding-top: 60px;
+  margin-bottom: 5px;
+  margin-left: -30px;
+  margin-right: -20px;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 34px;
+  color: rgb(42, 42, 42);
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.editor-description {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -41,12 +57,27 @@
   max-width: 620px;
 }
 
-.basics-editor-input-div {
+.editor-description-pitch {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #2a2a2a;
+  max-width: 620px;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 10px;
+}
+
+.editor-input-div {
   width: 100%;
   margin-top: 60px;
 }
 
-.basics-editor-input {
+.editor-input-div-pitch {
+  width: 100%;
+}
+
+.editor-input {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -59,7 +90,7 @@
   border-radius: 2px;
 }
 
-.basics-editor-textarea {
+.editor-textarea {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -72,15 +103,41 @@
   border-radius: 2px;
 }
 
+.editor-textarea-pitch {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  display: block;
+  width: 95.8%;
+  height: 250px;
+  padding: 5px 15px;
+  background: #ffffff;
+  border: 1px solid #c8c8c8;
+  border-radius: 2px;
+}
 
-.basics-editor-input-title {
+.editor-textarea-overview {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  display: block;
+  width: 95.8%;
+  height: 200px;
+  padding: 5px 15px;
+  background: #ffffff;
+  border: 1px solid #c8c8c8;
+  border-radius: 2px;
+  margin-bottom: 55px;
+}
+
+.editor-input-title {
   margin-bottom: 5px;
   font-size: 16px;
   line-height: 24px;
   color: rgb(42, 42, 42);
 }
 
-.basics-editor-input-description {
+.editor-input-description {
   margin: 0 0 10px;
   font-size: 14px;
   color: #a8a8a8;

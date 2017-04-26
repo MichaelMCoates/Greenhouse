@@ -1,3 +1,7 @@
+body, html, main {
+   height: 100%;
+}
+
 .create-campaign-page {
   display: flex;
   justify-content: flex-start;
@@ -5,6 +9,8 @@
   color: #2a2a2a;
   -webkit-font-smoothing: antialiased;
   letter-spacing: 0px;
+  background: #fafafa;
+  min-height: 100%;
 }
 
 
@@ -23,7 +29,7 @@
 
 .ccp-main {
   width: 100%;
-  background: #fafafa;
+  height: 100%;
 }
 
 .ccp-main .navigation-bar {
