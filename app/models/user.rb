@@ -16,6 +16,9 @@
 #  avatar_img_updated_at   :datetime
 #  city                    :string
 #  country                 :string
+#  postal_code             :integer
+#  tagline                 :string
+#  about_me                :text
 #
 
 class User < ActiveRecord::Base

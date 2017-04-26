@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :show, :update] do
       get :campaigns, to: "users#campaigns"
     end
-    resources :campaigns, only: [:show]
+    resources :campaigns, only: [:show, :create]
     resources :contributions, only: [:create]
     resources :perks, only: [:create]
   end

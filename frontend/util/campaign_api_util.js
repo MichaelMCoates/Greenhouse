@@ -5,3 +5,11 @@ export const fetchCampaign = (campaignId) => {
     url: '/api/campaigns/' + campaignId
   });
 };
+
+export const createCampaign = (campaign) => {
+  return $.ajax({
+    method: 'POST',
+    url: '/api/campaigns/',
+    data: campaign
+  });
+};

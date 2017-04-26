@@ -7,6 +7,11 @@ export const fetchCampaign = campaignId => dispatch => (
     .then(campaign => dispatch(receiveCampaign(campaign)))
 );
 
+export const createCampaign = campaign => dispatch => (
+  APIUtil.createCampaign(campaign)
+    .then(campaign => dispatch(receiveCampaign(campaign)))
+);
+
 export const receiveCampaign = (campaign) => ({
   type: RECEIVE_CAMPAIGN,
   campaign
