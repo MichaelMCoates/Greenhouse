@@ -23,7 +23,6 @@ class UserDropDown extends React.Component {
       <div className="user-drop-down udd ">
         <ul>
           <li onClick={this.redirectToProfile}>My Profile</li>
-          <li onClick={this.redirectToEdit}>Edit Profile</li>
           <li onClick={this.props.logout}>Log Out</li>
         </ul>
       </div>

@@ -14,7 +14,7 @@ const NavigationBar = () => {
       </div>
 
       <div className="right">
-        <input className="pink-button-nav" type="submit" value="START A CAMPAIGN" />
+        <input onClick={() => hashHistory.push('/campaigns/start')} className="pink-button-nav" type="submit" value="START A CAMPAIGN" />
         <UserBarContainer />
       </div>
     </nav>
