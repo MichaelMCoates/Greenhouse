@@ -18,6 +18,8 @@ import {createContribution} from '../actions/contribution_actions';
 window.createContribution = createContribution;
 import {createPerk} from '../actions/perk_actions';
 window.createPerk = createPerk;
+import {createCampaign} from '../actions/campaign_actions';
+window.createCampaign = createCampaign;
 
 //
 

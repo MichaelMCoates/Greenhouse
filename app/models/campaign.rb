@@ -20,9 +20,11 @@
 class Campaign < ActiveRecord::Base
   validates :user_id, :goal_amt, :current_amt, :title, :tagline, :city, :country, :duration, :overview, :campaign_story, presence: true
 
-  belongs_to :user
-  has_many :contributions
-  has_many :perks
+  belongs_to :user, inverse_of: :campaigns
+  has_many :contributions, inverse_of: :campaign
+
+  has_many :perks, inverse_of: :campaign
+  accepts_nested_attributes_for :perks, allow_destroy: true
 
   def add_contribution_amount(amount)
     self.current_amt += amount

@@ -15,10 +15,12 @@
 #
 
 class Perk < ActiveRecord::Base
-  validates :campaign_id, :price, :title, :description, :number_available, :delivery_date, presence: true
+  validates :price, :title, :description, :number_available, :delivery_date, presence: true
 
-  belongs_to :campaign
-  has_many :contributions
+  has_many :contributions, inverse_of: :perk
+
+  belongs_to :campaign, inverse_of: :perks
+  validates_presence_of :campaign
 
   def available?
     self.number_available > self.number_claimed

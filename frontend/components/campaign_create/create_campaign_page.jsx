@@ -19,12 +19,15 @@ class CreateCampaignPage extends React.Component {
       duration: null,
       overview: '',
       campaign_story: '',
+      user_id: currentUser.id,
+      perks_attributes: [],
     };
 
     this.createCampaign = this.props.createCampaign.bind(this);
     this.setState = this.setState.bind(this);
     this.update = this.update.bind(this);
     this.triggerCreateCampaign = this.triggerCreateCampaign.bind(this);
+    this.addPerk = this.addPerk.bind(this);
   }
 
   triggerCreateCampaign() {
@@ -35,6 +38,17 @@ class CreateCampaignPage extends React.Component {
     return e => this.setState({
       [field]: e.currentTarget.value
     });
+  }
+
+  addPerk(perk_attributes) {
+    if (this.state.perks_attributes === undefined) {
+      this.setState({perks_attributes: [perk_attributes]});
+    } else {
+      const newPerksAttributes = this.state.perks_attributes.map(a => Object.assign({}, a));
+      newPerksAttributes.push(perk_attributes);
+      var dataArray = Object.keys(newPerksAttributes).map(val => newPerksAttributes[val]);
+      this.setState({perks_attributes: Object.values(newPerksAttributes)});
+    }
   }
 
 
@@ -48,7 +62,7 @@ class CreateCampaignPage extends React.Component {
         <div className="ccp-main">
           <NavigationBar />
           <CreateHeader editor={this.state.editor} triggerCreateCampaign={this.triggerCreateCampaign} />
-          <CreateBody state={this.state} update={this.update} />
+          <CreateBody state={this.state} addPerk={this.addPerk} update={this.update} />
         </div>
       </div>
     );

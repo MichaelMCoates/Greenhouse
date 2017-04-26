@@ -16,8 +16,6 @@
   color: #2a2a2a;
   -webkit-font-smoothing: antialiased;
   letter-spacing: 0px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .editor-header {
@@ -26,7 +24,7 @@
   margin-right: -20px;
   font-size: 24px;
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   line-height: 34px;
   color: rgb(42, 42, 42);
   padding-left: 30px;
@@ -96,8 +94,8 @@
   line-height: 20px;
   display: block;
   width: 95.8%;
-  height: 50px;
-  padding: 5px 15px;
+  height: 30px;
+  padding: 15px 15px;
   background: #ffffff;
   border: 1px solid #c8c8c8;
   border-radius: 2px;
@@ -109,8 +107,8 @@
   line-height: 20px;
   display: block;
   width: 95.8%;
-  height: 250px;
-  padding: 5px 15px;
+  height: 230px;
+  padding: 15px 15px;
   background: #ffffff;
   border: 1px solid #c8c8c8;
   border-radius: 2px;
@@ -122,8 +120,8 @@
   line-height: 20px;
   display: block;
   width: 95.8%;
-  height: 200px;
-  padding: 5px 15px;
+  height: 180px;
+  padding: 15px 15px;
   background: #ffffff;
   border: 1px solid #c8c8c8;
   border-radius: 2px;

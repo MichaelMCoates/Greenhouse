@@ -9,7 +9,7 @@ class CreateBody extends React.Component {
   render() {
     let editor;
     if (this.props.state.editor === 'Perks') {
-      editor = <PerksEditor state={this.props.state} update={this.props.update} />;
+      editor = <PerksEditor addPerk={this.props.addPerk} state={this.props.state} />;
     } else if (this.props.state.editor === 'Story') {
       editor = <StoryEditor state={this.props.state} update={this.props.update} />;
     } else {
