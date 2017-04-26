@@ -32,11 +32,17 @@ class CampaignStartPage extends React.Component {
         <h3 className="campaign-start-tagline">Raise funds for creative, entrepreneurial, or other passion projects.</h3>
 
         <h4 className="campaign-start-input-text">How much money would you like to raise?</h4>
-        <input type="number"
-          value={this.state.goal_amt}
-          onChange={this.update('goal_amt')}
-          className="campaign-start-input-cash"
-          />
+        <div className="USDDDD">
+          <span className="currency-label-cs">$</span>
+
+          <input type="number"
+            value={this.state.goal_amt}
+            onChange={this.update('goal_amt')}
+            className="campaign-start-input-cash"
+            />
+          <div className="us-div">USD</div>
+        </div>
+
         <h5 className="campaign-start-input-subtext">Minimum $500.</h5>
 
         <h4 className="campaign-start-input-text">What is the title of your campaign?</h4>
@@ -44,6 +50,7 @@ class CampaignStartPage extends React.Component {
           value={this.state.title}
           onChange={this.update('title')}
           className="campaign-start-input-title"
+          placeholder="My campaign title..."
           />
         <h5 className="campaign-start-input-subtext">50 characters maximum.</h5>
 
