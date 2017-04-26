@@ -1,9 +1,10 @@
 import React from 'react';
-import CurrentUserBar from '../user_show_page/current_user_bar';
 
 class BasicsEditor extends React.Component {
 
   render() {
+    debugger
+
     return (
       <div className="basics-editor">
         <div className="basics-editor-header">Basics</div>
@@ -33,18 +34,20 @@ class BasicsEditor extends React.Component {
 
 
         <div className="basics-editor-input-div">
-          <div className="basics-editor-input-title">Campaign Tagline</div>
-          <div className="basics-editor-input-description">Provide a short description that best describes your campaign to your audience.</div>
+          <div className="basics-editor-input-title">Location</div>
+          <div className="basics-editor-input-description">Choose the location where you are running the campaign. This location will be visible on your campaign page for your audience to see.</div>
           <div className="location">
             <input type="text"
               value={this.props.state.city}
               onChange={this.props.update('city')}
               className="basics-editor-input"
+              placeholder="City"
               />
             <input type="text"
               value={this.props.state.country}
               onChange={this.props.update('country')}
               className="basics-editor-input"
+              placeholder="Country"
               />
           </div>
         </div>

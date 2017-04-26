@@ -1,7 +1,8 @@
 import React from 'react';
-import NavigationBar from '../../navigation_bar/navigation_bar';
+import NavigationBar from '../navigation_bar/navigation_bar.jsx';
 import CreateHeader from './create_header/create_header';
 import CreateBody from './create_body/create_body';
+import CreateSidebar from './create_sidebar';
 
 class CreateCampaignPage extends React.Component {
   constructor(props) {
@@ -38,6 +39,8 @@ class CreateCampaignPage extends React.Component {
 
 
   render() {
+    debugger
+
     return (
       <div className="create-campaign-page">
         <div className="ccp-sidebar-div">

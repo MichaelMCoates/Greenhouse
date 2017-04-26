@@ -22,7 +22,7 @@ class CampaignStartPage extends React.Component {
 		e.preventDefault();
     sessionStorage.setItem('goal_amt', this.state.goal_amt);
     sessionStorage.setItem('title', this.state.title);
-    hashHistory.push('/campaigns/create');
+    hashHistory.push('/create-campaign');
 	}
 
   render() {
