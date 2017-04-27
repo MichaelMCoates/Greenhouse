@@ -9,18 +9,6 @@
 User.destroy_all
 Campaign.destroy_all
 
-bill_nye = User.create({
-  email: "BillNye@gmail.com",
-  password: "thescienceguy",
-  first_name: "Bill",
-  last_name: "Nye",
-  city: "Hollywood",
-  country: "United States",
-  postal_code: 90111,
-  tagline: "Yeah this is a bill nye tagline",
-  about_me: "Yeah this is some about me stuff about bill nye yeah",
-})
-
 hexagon_user = User.create({
   email: "HEXAGON@gmail.com",
   password: "HEXAGON",
@@ -33,6 +21,17 @@ hexagon_user = User.create({
   about_me: "Yeah this is some about me stuff",
 })
 
+bill_nye = User.create({
+  email: "BillNye@gmail.com",
+  password: "thescienceguy",
+  first_name: "Bill",
+  last_name: "Nye",
+  city: "Hollywood",
+  country: "United States",
+  postal_code: 90111,
+  tagline: "Yeah this is a bill nye tagline",
+  about_me: "Yeah this is some about me stuff about bill nye yeah",
+})
 
 tv_show = Campaign.create({
   user_id: hexagon_user.id,
@@ -72,4 +71,16 @@ Contribution.create({
   perk_id: perk.id,
   amount: 99,
   appearance: (hexagon_user.first_name + hexagon_user.last_name),
+})
+
+user_1 = User.create({
+  email: "HEXAGON@gmail.com",
+  password: "HEXAGON",
+  first_name: "HEXAGON",
+  last_name: "by Smart Bikes",
+  city: "Los Angeles",
+  country: "United States",
+  postal_code: 90210,
+  tagline: "Yeah this is a hexagon tagline",
+  about_me: "Yeah this is some about me stuff",
 })

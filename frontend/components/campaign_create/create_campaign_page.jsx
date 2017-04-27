@@ -32,7 +32,8 @@ class CreateCampaignPage extends React.Component {
   }
 
   triggerCreateCampaign() {
-    this.createCampaign({campaign: this.state}).then(({campaign: {id}}) => hashHistory.push('/campaigns/' + id));
+    this.createCampaign({campaign: this.state})
+    .then(({campaign: {id}}) => hashHistory.push('/campaigns/' + id));
   }
 
   update(field) {
