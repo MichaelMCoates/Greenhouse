@@ -16,20 +16,20 @@ class CreateSidebar extends React.Component {
 
     return (
       <div className="sidebar">
+        <div className="sidebar-campaign-title">{this.props.title.toUpperCase()}</div>
+        <div className="sidebar-campaign-editor-title">CAMPAIGN EDITOR</div>
         <ul>
-          <li className="sidebar-campaign-title">{this.props.title.toUpperCase()}</li>
-          <li className="sidebar-campaign-editor-title">CAMPAIGN EDITOR</li>
           <li value="Basics" className={this.props.editor == "Basics" ? "sidebar-button-selected sidebar-button" : "sidebar-button"}
             onClick={this.changeEditor}>
-            BASICS
+            1. BASICS
           </li>
           <li value="Story" className={this.props.editor == "Story" ? "sidebar-button-selected sidebar-button" : "sidebar-button"}
             onClick={this.changeEditor}>
-            STORY
+            2. STORY
           </li>
           <li value="Perks" className={this.props.editor == "Perks" ? "sidebar-button-selected sidebar-button" : "sidebar-button"}
             onClick={this.changeEditor}>
-            PERKS
+            3. PERKS
           </li>
         </ul>
       </div>
