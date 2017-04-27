@@ -11,24 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170427031255) do
+ActiveRecord::Schema.define(version: 20170427034852) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "campaigns", force: :cascade do |t|
-    t.integer  "user_id",        null: false
-    t.integer  "goal_amt",       null: false
-    t.integer  "current_amt",    null: false
-    t.string   "title",          null: false
-    t.text     "tagline",        null: false
-    t.string   "city",           null: false
-    t.string   "country",        null: false
-    t.integer  "duration",       null: false
-    t.text     "overview",       null: false
-    t.text     "campaign_story", null: false
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.integer  "user_id",                   null: false
+    t.integer  "goal_amt",                  null: false
+    t.integer  "current_amt",               null: false
+    t.string   "title",                     null: false
+    t.text     "tagline",                   null: false
+    t.string   "city",                      null: false
+    t.string   "country",                   null: false
+    t.integer  "duration",                  null: false
+    t.text     "overview",                  null: false
+    t.text     "campaign_story",            null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.string   "tile_img_file_name"
+    t.string   "tile_img_content_type"
+    t.integer  "tile_img_file_size"
+    t.datetime "tile_img_updated_at"
+    t.string   "overview_img_file_name"
+    t.string   "overview_img_content_type"
+    t.integer  "overview_img_file_size"
+    t.datetime "overview_img_updated_at"
+    t.string   "pitch_img_file_name"
+    t.string   "pitch_img_content_type"
+    t.integer  "pitch_img_file_size"
+    t.datetime "pitch_img_updated_at"
   end
 
   add_index "campaigns", ["user_id"], name: "index_campaigns_on_user_id", using: :btree

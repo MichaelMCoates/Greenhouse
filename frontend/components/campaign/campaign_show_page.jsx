@@ -23,7 +23,7 @@ class CampaignShowPage extends React.Component {
     return (
       <div className="campaign-show-page">
         <div className="top-half-campaign-show-page">
-          <MediaBox />
+          <MediaBox pitch_img={this.props.campaign.pitch_img} />
           <CampaignSummaryContainer  />
         </div>
 

@@ -4,6 +4,7 @@ import CampaignDetails from './campaign_details';
 const mapStateToProps = ({campaign, session}) => ({
   // needs overview image
   overview: campaign.overview,
+  overview_img: campaign.overview_img,
   campaign_story: campaign.campaign_story,
   current_user: session.current_user,
   // will need backers, comments, updates

@@ -8,7 +8,7 @@ class CampaignDetails extends React.Component {
       <div className="campaign-details campaign-show-left">
         <div className="campaign-show-headerTitle">OVERVIEW</div>
         <div className="campaign-overview">
-          <img className="overview-img" src="http://lorempixel.com/320/240" />
+          <img className="overview-img" src={this.props.overview_img} />
           <text className="overview-text">{this.props.overview}</text>
         </div>
         <DynamicDetailsContainer />

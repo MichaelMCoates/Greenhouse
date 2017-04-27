@@ -13,7 +13,7 @@ class UserCampaignItem extends React.Component {
     return (
       <li className="user-campaign-item">
         <div className="uci-tile-img">
-          <img src="http://lorempixel.com/200/200" />
+          <img src={campaign.tile_img} />
         </div>
         <div className="uci-body">
           <Link to={'/campaigns/' + campaign.id} className="uci-title">{campaign.title}</Link>

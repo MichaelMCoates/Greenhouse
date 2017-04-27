@@ -1,4 +1,7 @@
 json.extract! campaign, :id, :user_id, :goal_amt, :current_amt, :title, :tagline, :city, :country, :duration, :overview, :campaign_story, :created_at
+json.tile_img asset_path(campaign.tile_img.url)
+json.overview_img asset_path(campaign.overview_img.url)
+json.pitch_img asset_path(campaign.pitch_img.url)
 
 json.contributions do
   json.array! (campaign.contributions.order('created_at DESC') do |cont|
