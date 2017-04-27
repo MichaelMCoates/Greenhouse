@@ -4,7 +4,7 @@ class Api::ContributionsController < ApplicationController
 
     if @contribution.save
       @campaign = @contribution.campaign
-      @campaign.add_contribution_amount(@contribution.amount)
+      @campaign.add_to_current_amount(@contribution.amount)
       @contribution.perk.purchase! if @contribution.perk
       render "api/campaigns/show"
     else

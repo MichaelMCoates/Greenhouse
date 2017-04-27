@@ -1058,7 +1058,7 @@ hex_cont_6 = Contribution.create({
 })
 
 
-15.times do
+10.times do
   temp_user = users.sample
   temp_campaign = campaigns.sample
   temp_perk = temp_campaign.perks.sample
@@ -1108,7 +1108,7 @@ images = [
   "https://s3.amazonaws.com/the-greenhouse-dev/random_seeds/tent-camp-night-star-45241.jpeg"
 ]
 
-15.times do
+25.times do
   user = User.create({
     email: Faker::Internet.unique.email,
     password: "freemealpal",
@@ -1126,9 +1126,19 @@ images = [
   users.push(user)
 end
 
+10.times do
+  temp_user = users.sample
+  temp_campaign = campaigns.sample
+  temp_perk = temp_campaign.perks.sample
+  Contribution.create({
+    user_id: temp_user.id,
+    campaign_id: temp_campaign.id,
+    amount: temp_perk.price,
+    appearance: (temp_user.first_name + temp_user.last_name),
+  })
+end
 
-
-50.times do
+100.times do
   campaign_user = users.sample
 
   temp_campaign = Campaign.create({
@@ -1136,7 +1146,7 @@ end
     goal_amt: rand(10000..50000),
     current_amt: rand(250..1000),
     title: Faker::Commerce.unique.product_name,
-    tagline: Faker::Hipster.unique.sentence,
+    tagline: Faker::Company.catch_phrase,
     city: Faker::Address.city,
     country: Faker::Address.country,
     duration: rand(30..60),
@@ -1152,20 +1162,23 @@ end
       campaign_id: temp_campaign.id,
       price: rand(25..750),
       title: Faker::Commerce.unique.product_name,
-      description: Faker::Hipster.paragraph(rand(2..5)),
+      description: Faker::Hipster.paragraph(rand(2..4)),
       number_available: rand(100..300),
       delivery_date: Date.new(rand(2018..2020), rand(1..12)),
     })
 
-    rand(4..8).times do
+    rand(2..6).times do
       temp_user = users.sample
-      Contribution.create({
+      temp_cont = Contribution.create({
         user_id: temp_user.id,
         campaign_id: temp_campaign.id,
         perk_id: temp_perk.id,
         amount: temp_perk.price,
         appearance: (temp_user.first_name + temp_user.last_name),
       })
+
+      temp_campaign.add_to_current_amount(temp_cont.amount)
+      temp_perk.purchase!
     end
   end
 

@@ -47,8 +47,8 @@ class Campaign < ActiveRecord::Base
   has_attached_file :pitch_img, default_url: "gh-pitch-img.png"
   validates_attachment_content_type :pitch_img, content_type: /\Aimage\/.*\Z/
 
-  def add_contribution_amount(amount)
-    self.current_amt += amount
+  def add_to_current_amount(num)
+    self.current_amt += num
     self.save!
   end
 end
