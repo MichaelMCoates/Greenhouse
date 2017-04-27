@@ -41,8 +41,10 @@
   height: 1000px;
 }
 
-.media-box {
-  height: 460px;
+
+.media-box > img {
+  height: 100%;
+  width: 100%;
 }
 
 .campaign-summary {

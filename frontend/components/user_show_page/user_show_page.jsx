@@ -12,13 +12,15 @@ class UserShowPage extends React.Component {
   }
   componentDidMount() {
     this.props.fetchUser(this.props.params.userId)
-    .then(() => this.props.fetchCampaigns(this.props.params.userId));
+    .then(() => this.props.fetchCampaigns(this.props.params.userId))
+    .then(() => this.setState({profile_shown: true}));
   }
 
   componentWillReceiveProps(nextProps) {
     if (this.props.params.userId !== nextProps.params.userId) {
       this.props.fetchUser(nextProps.params.userId)
-      .then(() => this.props.fetchCampaigns(nextProps.params.userId));
+      .then(() => this.props.fetchCampaigns(nextProps.params.userId))
+      .then(() => this.setState({profile_shown: true}));
     }
   }
 

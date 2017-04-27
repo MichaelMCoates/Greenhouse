@@ -19,7 +19,7 @@ class FundingBar extends React.Component {
       <div className="campaign-summary-funding-bar">
         <div className="csfb-top">
           <text className="csfb-dollabills">${this.props.current_amt.toLocaleString()}</text>
-          <text>&nbsp;USD raised by x backers</text>
+          <text>&nbsp;USD raised by {this.props.backers} backers</text>
         </div>
         <div className="barbarbar">
           <Line percent={percent.toString()} trailWidth="2.1" strokeWidth="2.1" strokeColor="#0eb4b6" trailColor="#dddddd" strokeLinecap="square" />

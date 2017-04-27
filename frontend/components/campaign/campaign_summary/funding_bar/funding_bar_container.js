@@ -6,6 +6,7 @@ const mapStateToProps = ({campaign}) => ({
   current_amt: campaign.current_amt,
   created_at: campaign.created_at,
   duration: campaign.duration,
+  backers: campaign.contributions.length,
 });
 
 const mapDispatchToProps = (dispatch) => ({
