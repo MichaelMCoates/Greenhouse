@@ -88,6 +88,20 @@
   border-radius: 2px;
 }
 
+.editor-input-price-perk {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  display: block;
+  width: 95.8%;
+  height: 38px;
+  padding: 5px 15px;
+  padding-left: 26px;
+  background: #ffffff;
+  border: 1px solid #c8c8c8;
+  border-radius: 2px;
+}
+
 .editor-textarea {
   font-size: 14px;
   font-weight: 400;
@@ -157,4 +171,42 @@
 
 .duration-input {
   width: 50px;
+}
+
+
+.current-perks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.current-perks-title {
+  margin-right: 5px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 1px;
+  padding: 14px 15px;
+  background-color: #a8a8a8;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 2px;
+  margin-top: 15px;
+}
+
+.save-perk-button {
+  align-self: center;
+  margin-right: 5px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 1px;
+  padding: 14px 15px;
+  background-color: #7a69b3;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 2px;
+  margin-top: 15px;
+  cursor: pointer;
 }

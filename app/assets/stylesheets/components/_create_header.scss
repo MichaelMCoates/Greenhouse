@@ -31,3 +31,13 @@
   text-align: center;
   border-radius: 2px;
 }
+
+.current-perks li {
+  list-style: none;
+  width: 270px;
+
+}
+
+.current-perks .perk-item:hover {
+  cursor: default;
+}

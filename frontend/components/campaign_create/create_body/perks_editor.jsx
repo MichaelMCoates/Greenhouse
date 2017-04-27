@@ -1,22 +1,38 @@
 import React from 'react';
+import PerkItem from '../../campaign/perks/perk_item';
 
 class PerksEditor extends React.Component {
   constructor (props) {
     super(props);
 
     this.state = {
-      price: null,
+      price: '',
       title: '',
       description: '',
-      number_available: null,
-      delivery_date: null,
-      delivery_date_str: null,
+      number_available: '',
+      delivery_date: '',
+      delivery_date_str: '',
     };
 
     this.setState = this.setState.bind(this);
     this.setPerkDate = this.setPerkDate.bind(this);
     this.update = this.update.bind(this);
     this.savePerk = this.savePerk.bind(this);
+    this.reset = this.reset.bind(this);
+  }
+
+  reset() {
+
+    this.initialState = {
+      price: '',
+      title: '',
+      description: '',
+      number_available: '',
+      delivery_date: '',
+      delivery_date_str: '',
+    };
+
+    this.setState(this.initialState);
   }
 
   setPerkDate (e) {
@@ -31,24 +47,38 @@ class PerksEditor extends React.Component {
 
   savePerk () {
     this.props.addPerk(this.state);
+    this.reset();
   }
 
 
 
   render() {
     let currentPerks;
+    let divCurrentPerks;
     if (this.props.state.perks_attributes.length > 0) {
-      currentPerks = this.props.state.perks_attributes.map ((perk) => (
-        <div>{perk.title}</div>
-      ));
+      currentPerks = this.props.state.perks_attributes.map ((perk) => {
+        perk.number_claimed = 0;
+        return (<PerkItem perk={perk} />);
+      });
+
+      divCurrentPerks = (
+        <div className="current-perks">
+          <div className="current-perks-title">CURRENT PERKS</div>
+          {currentPerks}
+
+        </div>
+      );
     }
+
+
+
 
     return (
       <div className="editor">
         <div className="editor-header">Perks</div>
         <div className="editor-description">Perks are incentives offered to backers in exchange for their support. You may edit your perk details until the perk is claimed.</div>
-        <div>CURRENT PERKS</div>
-        {currentPerks}
+        {divCurrentPerks}
+
 
         <div className="editor-input-div">
           <div className="editor-input-title">Price</div>
@@ -59,7 +89,7 @@ class PerksEditor extends React.Component {
             <input type="number"
               value={this.state.price}
               onChange={this.update('price')}
-              className="editor-input"
+              className="editor-input-price-perk"
               />
             <div className="us-div">USD</div>
           </div>
