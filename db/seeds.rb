@@ -14,7 +14,6 @@ Contribution.destroy_all
 users = []
 campaigns = []
 perks = []
-contributions = []
 
 hexagon_user = User.create({
   email: "HEXAGON@gmail.com",
@@ -92,10 +91,6 @@ hex_cont_2 = Contribution.create({
   amount: 99,
   appearance: (hexagon_user.first_name + hexagon_user.last_name),
 })
-
-contributions.push(hex_cont_1)
-contributions.push(hex_cont_2)
-
 
 sobro_user = User.create({
   email: "StoreBound@gmail.com",
@@ -216,9 +211,6 @@ hex_cont_3 = Contribution.create({
   amount: 649,
   appearance: (hexagon_user.first_name + hexagon_user.last_name),
 })
-
-contributions.push(hex_cont_3)
-
 
 
 
@@ -495,9 +487,6 @@ hex_cont_4 = Contribution.create({
   appearance: (hexagon_user.first_name + hexagon_user.last_name),
 })
 
-contributions.push(hex_cont_4)
-
-
 
 
 
@@ -764,9 +753,6 @@ hex_cont_5 = Contribution.create({
   amount: 109,
   appearance: (hexagon_user.first_name + hexagon_user.last_name),
 })
-
-contributions.push(hex_cont_5)
-
 
 
 
@@ -1072,11 +1058,18 @@ hex_cont_6 = Contribution.create({
   appearance: (hexagon_user.first_name + hexagon_user.last_name),
 })
 
-contributions.push(hex_cont_6)
 
-
-
-
+15.times do
+  temp_user = users.sample
+  temp_campaign = campaigns.sample
+  temp_perk = temp_campaign.perks.sample
+  Contribution.create({
+    user_id: temp_user.id,
+    campaign_id: temp_campaign.id,
+    amount: temp_perk.price,
+    appearance: (temp_user.first_name + temp_user.last_name),
+  })
+end
 
 
 
@@ -1115,3 +1108,66 @@ images = [
   "https://s3.amazonaws.com/the-greenhouse-dev/random_seeds/technology-keyboard-desktop-book.jpg",
   "https://s3.amazonaws.com/the-greenhouse-dev/random_seeds/tent-camp-night-star-45241.jpeg"
 ]
+
+5.times do
+  user = User.create({
+    email: Faker::Internet.unique.email,
+    password: "freemealpal",
+    first_name: Faker::Name.unique.first_name,
+    last_name: Faker::Name.unique.last_name,
+    city: Faker::Address.city,
+    country: Faker::Address.country
+    postal_code: Faker::Address.postcode,
+    tagline: Faker::Company.catch_phrase,
+    about_me: Faker::Hipster.paragraph,
+    avatar_img: images.sample,
+    prof_img: images.sample,
+  })
+
+  users.push(user)
+end
+
+
+
+20.times do
+  campaign_user = users.sample
+
+  temp_campaign = Campaign.create({
+    user_id: campaign_user.id,
+    goal_amt: rand(10000..500000),
+    title: Faker::Commerce.unique.product_name,
+    tagline: Faker::Hipster.unique.sentence,
+    city: Faker::Address.city,
+    country: Faker::Address.country,
+    duration: rand(30..60),
+    overview: Faker::Hipster.paragraph(rand(2..5)),
+    campaign_story: Faker::Hipster.paragraphs,
+    tile_img: images.sample,
+    overview_img: images.sample,
+    pitch_img: images.sample,
+  })
+
+  rand(1..3).times do
+    temp_perk = Perk.create({
+      campaign_id: temp_campaign.id,
+      price: rand(25..750),
+      title: Faker::Commerce.unique.product_name,
+      description: Faker::Hipster.paragraph(rand(2..5)),
+      number_available: rand(100..300),
+      delivery_date: Date.new(rand(2018..2020), rand(1..12)),
+    })
+
+    rand(4..8).times do
+      temp_user = users.sample
+      Contribution.create({
+        user_id: temp_user.id,
+        campaign_id: temp_campaign.id,
+        perk_id: temp_perk.id,
+        amount: temp_perk.price,
+        appearance: (temp_user.first_name + temp_user.last_name),
+      })
+    end
+  end
+
+  campaigns.push(temp_campaign)
+end
