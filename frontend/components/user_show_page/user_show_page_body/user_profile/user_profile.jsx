@@ -13,7 +13,7 @@ class UserProfile extends React.Component {
     return (
       <div className="user-profile">
         <div className="user-profile-left">
-          <img className="user-profile-img" src="http://lorempixel.com/460/285" />
+          <img className="user-profile-img" src={this.user.user.prof_img} />
           <div className="tagline">{this.user.user.tagline}</div>
           <div className="about-me">{this.user.user.about_me}</div>
         </div>

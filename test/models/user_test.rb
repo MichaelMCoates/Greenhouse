@@ -19,6 +19,10 @@
 #  postal_code             :integer
 #  tagline                 :string
 #  about_me                :text
+#  prof_img_file_name      :string
+#  prof_img_content_type   :string
+#  prof_img_file_size      :integer
+#  prof_img_updated_at     :datetime
 #
 
 require 'test_helper'

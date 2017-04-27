@@ -19,6 +19,10 @@
 #  postal_code             :integer
 #  tagline                 :string
 #  about_me                :text
+#  prof_img_file_name      :string
+#  prof_img_content_type   :string
+#  prof_img_file_size      :integer
+#  prof_img_updated_at     :datetime
 #
 
 class User < ActiveRecord::Base
@@ -33,6 +37,9 @@ class User < ActiveRecord::Base
 
   has_attached_file :avatar_img, default_url: "greenhouse-user-avatar.png"
   validates_attachment_content_type :avatar_img, content_type: /\Aimage\/.*\Z/
+
+  has_attached_file :prof_img, default_url: "gh-prof-img.png"
+  validates_attachment_content_type :prof_img, content_type: /\Aimage\/.*\Z/
 
   has_many :campaigns
   has_many :contributions
