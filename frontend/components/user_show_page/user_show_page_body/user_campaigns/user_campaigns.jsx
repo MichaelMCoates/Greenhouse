@@ -32,7 +32,7 @@ class UserCampaigns extends React.Component {
 
     return (
       <div className="user-campaigns-funded">
-        <div className="user-campaigns-header">Campaigns I've Funded</div>
+        <div className="user-campaigns-header user-campaigns-header-funded">Campaigns I've Funded</div>
         <ul className="user-campaigns-funded-ul">
           {funded_camps}
         </ul>

@@ -766,7 +766,6 @@ river_user = User.create({
   city: "Shenzhen",
   country: "China",
   postal_code: 58496,
-  tagline: "e",
   about_me: "Founded in 2016, EcoFlow Tech is a revolutionary battery company.",
   avatar_img: "https://s3.amazonaws.com/the-greenhouse-dev/main_seed_campaigns/river/river-avatar-img.jpg",
   prof_img: "https://s3.amazonaws.com/the-greenhouse-dev/main_seed_campaigns/river/river-prof-img.jpg",
@@ -1109,14 +1108,14 @@ images = [
   "https://s3.amazonaws.com/the-greenhouse-dev/random_seeds/tent-camp-night-star-45241.jpeg"
 ]
 
-5.times do
+15.times do
   user = User.create({
     email: Faker::Internet.unique.email,
     password: "freemealpal",
     first_name: Faker::Name.unique.first_name,
     last_name: Faker::Name.unique.last_name,
     city: Faker::Address.city,
-    country: Faker::Address.country
+    country: Faker::Address.country,
     postal_code: Faker::Address.postcode,
     tagline: Faker::Company.catch_phrase,
     about_me: Faker::Hipster.paragraph,
@@ -1129,19 +1128,20 @@ end
 
 
 
-20.times do
+50.times do
   campaign_user = users.sample
 
   temp_campaign = Campaign.create({
     user_id: campaign_user.id,
-    goal_amt: rand(10000..500000),
+    goal_amt: rand(10000..50000),
+    current_amt: rand(250..1000),
     title: Faker::Commerce.unique.product_name,
     tagline: Faker::Hipster.unique.sentence,
     city: Faker::Address.city,
     country: Faker::Address.country,
     duration: rand(30..60),
     overview: Faker::Hipster.paragraph(rand(2..5)),
-    campaign_story: Faker::Hipster.paragraphs,
+    campaign_story: Faker::Hipster.paragraph(rand(10..25)),
     tile_img: images.sample,
     overview_img: images.sample,
     pitch_img: images.sample,

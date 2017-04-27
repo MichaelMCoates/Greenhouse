@@ -9,7 +9,33 @@
 .uci-tile-img {
   height: 200px;
   width: 200px;
+  position: relative;
+  overflow: hidden;
 }
+
+.uci-tile-img img {
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+// .uci-tile-img {
+//   height: 200px;
+//   width: 200px;
+//   display: block;
+//   position: relative;
+//   overflow: hidden;
+// }
+//
+// .uci-tile-img img {
+//   position: relative;
+//   top: 0;
+//   left: 0;
+//   width: auto;
+//   height: 100%;
+// }
 
 .uci-body {
   margin-top: 3px;
