@@ -1,5 +1,6 @@
 import React from 'react';
 import CurrentUserBar from '../user_show_page/current_user_bar';
+import {hashHistory} from 'react-router';
 
 class UserEditPage extends React.Component {
   constructor (props) {
@@ -49,7 +50,8 @@ class UserEditPage extends React.Component {
   handleSubmit(e) {
 		e.preventDefault();
 		const user = this.state;
-		this.props.updateUser({user});
+		this.props.updateUser({user})
+    .then(hashHistory.push('/users/' + this.props.currentUser.id));
 	}
 
   render() {
@@ -64,6 +66,7 @@ class UserEditPage extends React.Component {
           <div>
             <h2 className="user-edit-name">{this.state.first_name} {this.state.last_name}</h2>
             <div></div>
+            <input onClick={this.handleSubmit} className="pink-button-edit" type="submit" value="SAVE EDITS" />
           </div>
 
           <div className="user-edit-page-header">
@@ -134,7 +137,6 @@ class UserEditPage extends React.Component {
             </div>
           </div>
 
-          <input onClick={this.handleSubmit} className="pink-button-edit" type="submit" value="SAVE" />
         </div>
       </div>
     );
