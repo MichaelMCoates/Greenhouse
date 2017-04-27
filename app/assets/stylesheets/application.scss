@@ -21,8 +21,46 @@
      border-top: 1px solid rgb(221, 221, 221);
      padding: 0;
  }
+//
+.slider {
+  margin: 0 auto;
+  padding: 40px;
+  width: 80%;
+  color: #333;
+  background: #419be0;
+}
+
+.slick-slide img {
+  height: 100%;
+  width: 100%;
+}
+
+.slick-slide img:hover {
+  height: 110%;
+  width: 110%;
+}
+
+.slick-slide {
+  height: 350px;
+  width: 670px;
+}
 
 
+//
+// .slider-comp {
+//
+//   display: flex;
+//   flex-direction: row;
+// }
+//
+// .slick-track {
+//   display: flex;
+//   flex-direction: row;
+// }
+//
+// .slick-slide {
+//   height: 10px;
+// }
 // // Base
 //  @import "base/button";
  //

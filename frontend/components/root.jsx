@@ -10,7 +10,7 @@ import UserShowPageContainer from './user_show_page/user_show_page_container';
 import UserEditPageContainer from './user_edit_page/user_edit_page_container';
 import CampaignStartPage from './campaign_create/campaign_start_page';
 import CampaignCreatePageContainer from './campaign_create/create_campaign_page_container';
-// import HomePage from './home_page/home_page';
+import HomePage from './home_page/home_page';
 
 //
 import {fetchUser} from '../actions/user_actions';
@@ -37,6 +37,7 @@ const Root = ({ store }) => {
     <Provider store={ store }>
       <Router history={ hashHistory }>
         <Route path="/" component={ App } >
+        <IndexRoute component={HomePage} />
           <Route path="/campaigns/start" component={CampaignStartPage} />
           <Route path="/campaigns/:campaignId" component={CampaignShowPageContainer} />
           <Route path="/check_out" component={CheckOutContainer}/>
@@ -52,5 +53,4 @@ const Root = ({ store }) => {
 
 };
 
-// <IndexRoute component={HomePage} />
 export default Root;
