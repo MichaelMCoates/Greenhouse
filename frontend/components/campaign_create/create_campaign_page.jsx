@@ -20,7 +20,7 @@ class CreateCampaignPage extends React.Component {
       duration: null,
       overview: '',
       campaign_story: '',
-      user_id: currentUser.id,
+      user_id: props.currentUser.id,
       perks_attributes: [],
     };
 
