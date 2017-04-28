@@ -1,0 +1,61 @@
+.campaign-tile {
+  display: block;
+  color: #2a2a2a;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  cursor: pointer;
+  font-family: 'Libre Franklin', sans-serif;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  width: 275px;
+}
+
+.campaign-tile:hover {
+  border-color: #a8a8a8;
+}
+
+.tile-img {
+  width: 273px;
+  height: 273px;
+}
+
+.tile-body {
+  margin: 10px;
+  height: 220px;
+  max-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tile-category {
+  color: #a8a8a8;
+  font-size: 11px;
+  text-transform: uppercase;
+  line-height: 20px;
+
+}
+
+.tile-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  font-size: 14px;
+  line-height: 20px;
+  max-height: 40px;
+  font-weight: 600;
+}
+
+.tile-tagline {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  max-height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

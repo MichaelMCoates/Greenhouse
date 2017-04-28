@@ -15,7 +15,8 @@ class DynamicHeader extends React.Component {
 
   render() {
 
-    let headers = ["Story", "Updates", "Comments", "Backers"];
+    let headers = ["Story"];
+    // let headers = ["Story", "Updates", "Comments", "Backers"];
 
     this.headerHTML = headers.map( (header, idx) => (
       <text

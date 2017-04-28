@@ -1,5 +1,6 @@
 import React from 'react';
 import FeaturedCarouselContainer from './featured_carousel_container';
+import TileCarouselContainer from './tile_carousel_container';
 
 class HomePage extends React.Component {
   componentDidMount() {
@@ -18,6 +19,10 @@ class HomePage extends React.Component {
     return (
       <div className="home-page">
         <FeaturedCarouselContainer />
+
+        <br/>
+        <hr/>
+        <TileCarouselContainer />
       </div>
     );
   }

@@ -6,6 +6,7 @@ import CampaignReducer from './campaign_reducer';
 import UserReducer from './user_reducer';
 import CheckOutReducer from './check_out_reducer';
 import FeaturedCarouselReducer from './featured_carousel_reducer';
+import TileCarouselReducer from './tile_carousel_reducer';
 
 const RootReducer = combineReducers({
   session: SessionReducer,
@@ -14,6 +15,7 @@ const RootReducer = combineReducers({
   user: UserReducer,
   checkOut: CheckOutReducer,
   featuredCarousel: FeaturedCarouselReducer,
+  tileCarousel: TileCarouselReducer,
 });
 
 export default RootReducer;
