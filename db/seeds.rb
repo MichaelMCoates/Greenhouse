@@ -114,7 +114,7 @@ sobro = Campaign.create({
   goal_amt: 50000,
   current_amt: 1032354,
   title: "Sobro - A Cooler Coffee Table",
-  tagline: "With a full HD camera, power bank, crash sensor, & more HEXAGON is the ultimate safety device.",
+  tagline: "Designed with refrigerator, Bluetooth speakers, LED lights, charging ports, touch control and more.",
   city: "Hollywood",
   country: "United States",
   duration: 60,

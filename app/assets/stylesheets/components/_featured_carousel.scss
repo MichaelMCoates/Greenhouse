@@ -1,0 +1,280 @@
+
+
+.featured-carousel {
+  margin-top: -17px;
+  width: 100%;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Libre Franklin', sans-serif;
+  letter-spacing: 0;
+  color: #ffffff;
+  text-shadow: 1px;
+}
+
+.featured-carousel-link {
+  content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+}
+
+.featured-carousel-track {
+  display: flex;
+  justify-content: center;
+}
+
+.featured-carousel-div {
+  display: flex;
+  flex-shrink: 0;
+  width: 670px;
+  height: 350px;
+}
+
+
+//
+//
+// .featured-carousel-overlay {
+//   position: absolute;
+//   display: flex;
+//   align-items: center;
+//   color: #ffffff;
+//   z-index: 2;
+//   top: 250px;
+// }
+//
+// .featured-carousel-overlay * {
+//   position: relative;
+// }
+//
+// .featured-carousel-overlay-left {
+//   bottom: 30px;
+//   box-sizing: border-box;
+//   height: 65px;
+//   left: 40px;
+//   line-height: 20px;
+//   font-size: 15px;
+//   padding-right: 240px;
+//   position: absolute;
+//   background: black;
+//   width: 630px;
+//   z-index: 2;
+//
+// }
+//
+// .featured-carousel-title {
+//   margin-bottom: 0px;
+//   font-weight: 600;
+//   font-size: 16px;
+//   line-height: 25px;
+//   opacity: 0;
+// }
+//
+// .featured-carousel-tagline {
+//   line-height: 20px;
+//   opacity: 0;
+//
+// }
+//
+// .see-campaign {
+//   color: #ffffff;
+//   opacity: 0;
+//   text-decoration: none;
+//   right: 40px;
+//   bottom: 30px;
+//   z-index: 2;
+//   font-size: 14px;
+//   line-height: 14px;
+//   letter-spacing: 1px;
+//   cursor: pointer;
+//   display: inline-block;
+//   padding: 11px 18px;
+//   border: 2px solid #ffffff;
+//   border-radius: 2px;
+//   text-align: center;
+//   vertical-align: middle;
+//   min-height: 40px;
+//   display: table-cell;
+//
+// }
+//
+
+
+.featured-carousel-overlay {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 670px;
+  height: 350px;
+  align-items: flex-end;
+  opacity: 0;
+}
+
+.grey {
+  position: absolute;
+  width: 670px;
+  height: 350px;
+  background-color: #000000;
+  opacity: 0.35;
+}
+
+.featured-carousel-overlay-left {
+  margin: 30px 30px 32px 32px;
+  padding-right: 120px;
+}
+
+.featured-carousel-title {
+  margin-bottom: 0px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+
+}
+
+.featured-carousel-tagline {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+
+}
+
+.middle, .middle * {
+  opacity: 1
+}
+
+.featured-carousel-overlay-right {
+  position: relative;
+  bottom: 30px;
+  right: 40px;
+}
+
+.see-campaign {
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  padding: 11px 18px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-decoration: none;
+  right: 40px;
+  bottom: 30px;
+  font-size: 14px;
+  line-height: 14px;
+  width: 122px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+.featured-carousel-link {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+}
+
+
+.shift-featured-carousel-right {
+  animation-duration: 0.4s;
+  animation-name: shift-featured-carousel-right;
+}
+
+@keyframes shift-featured-carousel-right {
+  from {}
+
+  to {
+    transform: translate(670px);
+  }
+}
+
+.shift-featured-carousel-left {
+  animation-duration: 0.4s;
+  animation-name: shift-featured-carousel-left;
+}
+
+@keyframes shift-featured-carousel-left {
+  from {}
+
+  to {
+    transform: translate(-670px);
+  }
+}
+
+
+
+
+.featured-carousel-fade-in-right {
+  animation-duration: 0.4s;
+  animation-name: featured-carousel-fade-in-right;
+}
+
+@keyframes featured-carousel-fade-in-right {
+  0% {
+    opacity: 0.1;
+  }
+
+  5% {
+    opacity: 0.5;
+    transform: translate(670px);
+  }
+
+  100% {
+    transform: translate(670px);
+    opacity: 1;
+  }
+}
+
+.featured-carousel-fade-in-left {
+  animation-duration: 0.4s;
+  animation-name: featured-carousel-fade-in-left;
+}
+
+@keyframes featured-carousel-fade-in-left {
+  0% {
+    opacity: 0.1;
+  }
+
+  5% {
+    opacity: 0.5;
+    transform: translate(-670px);
+  }
+
+  100% {
+    transform: translate(-670px);
+    opacity: 1;
+  }
+}
+
+
+.featured-carousel-fade-out-right {
+  animation-duration: 0.4s;
+  animation-name: featured-carousel-fade-out-right;
+}
+
+@keyframes featured-carousel-fade-out-right {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(670px);
+    opacity: 0;
+  }
+}
+
+.featured-carousel-fade-out-left {
+  animation-duration: 0.4s;
+  animation-name: featured-carousel-fade-out-left;
+}
+
+@keyframes featured-carousel-fade-out-left {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-670px);
+    opacity: 0;
+  }
+}

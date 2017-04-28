@@ -5,6 +5,7 @@ import ModalReducer from './modal_reducer';
 import CampaignReducer from './campaign_reducer';
 import UserReducer from './user_reducer';
 import CheckOutReducer from './check_out_reducer';
+import FeaturedCarouselReducer from './featured_carousel_reducer';
 
 const RootReducer = combineReducers({
   session: SessionReducer,
@@ -12,6 +13,7 @@ const RootReducer = combineReducers({
   campaign: CampaignReducer,
   user: UserReducer,
   checkOut: CheckOutReducer,
+  featuredCarousel: FeaturedCarouselReducer,
 });
 
 export default RootReducer;
