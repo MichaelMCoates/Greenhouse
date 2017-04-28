@@ -32,7 +32,7 @@ class TileFundingBar extends React.Component {
           <text>&nbsp;USD</text>
         </div>
         <div className="tfb-barbarbar">
-          <Line percent={percent.toString()} trailWidth="2.1" strokeWidth="2.1" strokeColor="#eb1478" trailColor="#dddddd" strokeLinecap="square" />
+          <Line className="tfb-line" percent={percent.toString()} trailWidth="3.8" strokeWidth="3.8" strokeColor="#eb1478" trailColor="#dddddd" strokeLinecap="square" />
         </div>
         <div className="tfb-bottom">
           <div className="tfb-percent-left">
