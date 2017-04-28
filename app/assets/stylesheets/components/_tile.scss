@@ -20,6 +20,11 @@
 .tile-img {
   width: 273px;
   height: 273px;
+  overflow: hidden;
+}
+.tile-img >img {
+  width: auto;
+  height: 100%
 }
 
 .tile-body {
@@ -86,4 +91,10 @@
 
 .tfb-line {
   margin-bottom: 10px;
+}
+
+.tile-carousel-list {
+  height: 550px;
+  width: 1280px;
+  margin: 0 auto;
 }

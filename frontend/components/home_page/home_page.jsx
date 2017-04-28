@@ -20,8 +20,6 @@ class HomePage extends React.Component {
       <div className="home-page">
         <FeaturedCarouselContainer />
 
-        <br/>
-        <hr/>
         <TileCarouselContainer />
       </div>
     );

@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link, hashHistory} from 'react-router';
 import CampaignTile from './campaign_tile';
+import TileCarouselSlider from './tile_carousel_slider';
 
 class TileCarousel extends React.Component {
   constructor(props) {
@@ -27,7 +28,7 @@ class TileCarousel extends React.Component {
     return (
       <div className="tile-carousel">
         <div className="tile-carousel-list">
-          {campaignTiles}
+          <TileCarouselSlider campaignTiles={campaignTiles} />
         </div>
       </div>
     );
