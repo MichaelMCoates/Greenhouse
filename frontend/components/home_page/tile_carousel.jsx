@@ -27,7 +27,13 @@ class TileCarousel extends React.Component {
 
     return (
       <div className="tile-carousel">
+
         <div className="tile-carousel-list">
+          <div className="user-show-page-header">
+            <div className={"usp-header-item usp-header-item-selected"}>
+              <div>Top picks for you</div>
+            </div>
+          </div>
           <TileCarouselSlider campaignTiles={campaignTiles} />
         </div>
       </div>

@@ -21,8 +21,33 @@ hr {
   border-top: 1px solid rgb(221, 221, 221);
   padding: 0;
 }
+.slick-prev:after {
+  color: grey !important;
+  font-size: 80px !important;
+  z-index: 50000 !important;
+}
 
+.slick-next:before {
+  color: grey !important;
+  font-size: 80px !important ;
+  z-index: 50000 !important;
+}
 
+.slick-prev:before {
+  color: grey !important;
+  font-size: 80px !important;
+  z-index: 50000 !important;
+}
+
+.slick-next:after {
+  color: grey !important;
+  font-size: 80px !important ;
+  z-index: 50000 !important;
+}
+
+.slick-prev {
+  left: -120px !important;
+}
 
 // // Base
 //  @import "base/button";

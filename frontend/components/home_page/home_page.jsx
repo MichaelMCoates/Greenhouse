@@ -19,7 +19,6 @@ class HomePage extends React.Component {
     return (
       <div className="home-page">
         <FeaturedCarouselContainer />
-
         <TileCarouselContainer />
       </div>
     );

@@ -93,8 +93,23 @@
   margin-bottom: 10px;
 }
 
+.tile-carousel {
+  margin-top: 10px;
+  height: 550px;
+  width: 100%;
+}
+
 .tile-carousel-list {
+
+  margin: 0 auto;
   height: 550px;
   width: 1280px;
-  margin: 0 auto;
+}
+
+.slick-list {
+  width: 1280px !important;
+}
+
+.inner-carousel {
+  width: 1280px !important;
 }
