@@ -17,3 +17,11 @@ body {
 .slick-prev:before, .slick-next:before {
   content: "" !important;
 }
+
+.slider-chevron-img {
+  width: 54px;
+}
+
+.prev-chevron-img {
+  transform: rotate(180deg);
+}
