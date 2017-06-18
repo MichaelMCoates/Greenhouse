@@ -1,6 +1,45 @@
 import React from 'react';
 import Slider from 'react-slick';
 
+// function NextArrow(props) {
+//   const {className, style, onClick} = props;
+//   return (
+//     <div
+//       className={className}
+//       style={{display: 'block', background: 'red'}}
+//       onClick={onClick}
+//     ><img src='/assets/chevron.svg' /></div>
+//   );
+// }
+//
+// function PrevArrow(props) {
+//   const {className, style, onClick} = props;
+//   return (
+//     <div
+//       className={className}
+//       style={{display: 'block', background: 'green'}}
+//       onClick={onClick}
+//     ></div>
+//   );
+// }
+
+
+const NextArrow = function(props) {
+  return (
+    <div {...props}>
+      <img src='/assets/chevron.svg' />
+    </div>
+  );
+};
+
+const PrevArrow = function(props) {
+  return (
+    <div {...props}>
+      <img src='/assets/chevron.svg' />
+    </div>
+  );
+};
+
 class TileCarouselSlider extends React.Component {
 
   render () {
@@ -12,6 +51,8 @@ class TileCarouselSlider extends React.Component {
       speed: 500,
       slidesToShow: 4,
       slidesToScroll: 4,
+      nextArrow: <NextArrow />,
+      prevArrow: <PrevArrow />
     };
 
     const wrapper = this.props.campaignTiles.map ((tile) => (
