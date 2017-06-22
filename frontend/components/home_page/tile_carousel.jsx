@@ -18,7 +18,7 @@ class TileCarousel extends React.Component {
   render () {
 
     if (this.props.tileCarouselCampaigns[0] === undefined) {
-      return (<div>Loading...</div>);
+      return (<div> </div>);
     }
 
     const campaignTiles = this.props.tileCarouselCampaigns.map ((campaign, idx) => (

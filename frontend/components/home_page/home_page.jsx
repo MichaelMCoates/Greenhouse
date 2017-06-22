@@ -13,7 +13,7 @@ class HomePage extends React.Component {
 
   render() {
     // if (this.props.campaign.user_id === null) {
-    //   return (<div>Loading...</div>);
+    //   return (<div> </div>);
     // }
 
     return (

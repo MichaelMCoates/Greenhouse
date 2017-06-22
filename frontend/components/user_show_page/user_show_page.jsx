@@ -26,7 +26,7 @@ class UserShowPage extends React.Component {
 
   render() {
     if (this.props.user.campaigns === null) {
-      return (<div>Loading...</div>);
+      return (<div> </div>);
     }
 
     let currentUserBar;

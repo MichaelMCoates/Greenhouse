@@ -19,7 +19,7 @@ class CampaignerDetails extends React.Component {
 
   render() {
     if (this.props.user === null) {
-      return (<div>Loading...</div>);
+      return (<div> </div>);
     }
 
 

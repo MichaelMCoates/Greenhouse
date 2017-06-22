@@ -12,7 +12,7 @@ class TileFundingBar extends React.Component {
     // debugger
 
     if (this.props.current_amt === undefined) {
-      return (<div>Loading...</div>);
+      return (<div> </div>);
     }
 
     // debugger

@@ -56,7 +56,7 @@ class UserEditPage extends React.Component {
 
   render() {
     if (this.state.first_name === undefined) {
-      return (<div>Loading...</div>);
+      return (<div> </div>);
     }
 
     return (

@@ -105,7 +105,7 @@ class FeaturedCarousel extends React.Component {
   render () {
 
     if (this.props.featuredCarouselCampaigns[0] === undefined) {
-      return (<div>Loading...</div>);
+      return (<div> </div>);
     }
 
     return (
