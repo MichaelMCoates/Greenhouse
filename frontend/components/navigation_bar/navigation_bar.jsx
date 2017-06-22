@@ -8,8 +8,8 @@ const NavigationBar = () => {
       <div className="left">
         <a className="logo" onClick={() => hashHistory.push('/')} ></a>
         <button >Explore</button>
-        <button >How It Works</button>
-        <button >Equity Offerings</button>
+        <a className="my-links" href="https://www.linkedin.com/in/michaelmcoates">My LinkedIn</a>
+        <a className="my-links" href="https://github.com/michaelmcoates/greenhouse">GitHub Repo</a>
           <input className="search-bar" type="text" placeholder="Search..."></input>
       </div>
 
