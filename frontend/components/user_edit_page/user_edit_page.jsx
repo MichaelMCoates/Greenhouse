@@ -11,7 +11,6 @@ class UserEditPage extends React.Component {
     if (user === null) {
       this.state = {};
     } else {
-
       this.state = {
         id: user.id,
         email: user.email,
@@ -25,7 +24,6 @@ class UserEditPage extends React.Component {
       };
     }
 
-
     this.setState = this.setState.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
@@ -33,6 +31,23 @@ class UserEditPage extends React.Component {
 
   componentDidMount() {
     this.props.fetchUser(this.props.currentUser.id);
+  }
+
+  componentWillReceiveProps(newProps) {
+    if (newProps.user.user) {
+      const user = newProps.user.user;
+      this.setState({
+        id: user.id,
+        email: user.email,
+        first_name: user.first_name,
+        last_name: user.last_name,
+        city: user.city,
+        country: user.country,
+        tagline: user.tagline,
+        about_me: user.about_me,
+        postal_code: user.postal_code
+      })
+    }
   }
 
   // componentWillReceiveProps(nextProps) {
