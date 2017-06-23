@@ -15,10 +15,12 @@ export const updateUser = user => dispatch => (
 );
 // may need to redirect here
 
-export const receiveUser = (user) => ({
-  type: RECEIVE_USER,
-  user
-});
+export const receiveUser = (user) => {
+  return {
+    type: RECEIVE_USER,
+    user
+  }
+};
 
 export const receiveCampaigns = (campaigns) => ({
   type: RECEIVE_CAMPAIGNS,
