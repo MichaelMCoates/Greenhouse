@@ -20,6 +20,8 @@ class BackItBar extends React.Component {
   onClickCO() {
     if (!this.props.loggedIn) {
       alert("Must be logged in to check out!");
+    } else if (this.state.amount <= 0) {
+      alert("Must enter a valid value!");
     } else {
       (this.props.setAmount({amount: this.state.amount}));
       hashHistory.push('/check_out');
