@@ -1,0 +1,26 @@
+.footer-bar-container {
+  background: black;
+  color: white;
+  padding: 0 10px;
+  padding-top: 30px;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.footer-bar {
+  margin: 0 auto;
+  width: 1220px;
+}
+
+
+.footer-bar-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-bar-header {
+  font-size: 16px;
+}
+
+.footer-bar-links {
+  font-size: 14px;
+}

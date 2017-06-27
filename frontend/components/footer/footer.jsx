@@ -3,13 +3,18 @@ import { Link, hashHistory } from 'react-router';
 
 const Footer = () => {
   return (
-    <nav className="footer-bar">
-      <div className="left">
-        <a className="my-links" href="https://www.linkedin.com/in/michaelmcoates">My LinkedIn</a>
-        <a className="my-links" href="https://github.com/michaelmcoates/greenhouse">GitHub Repo</a>
-      </div>
+    <nav className="footer-bar-container">
+      <div className="footer-bar">
+        <div className="footer-bar-left">
+          <h2 className="footer-bar-header">
+            CONTRIBUTING
+          </h2>
+          <a className="footer-bar-links" href="https://www.linkedin.com/in/michaelmcoates">My LinkedIn</a>
+          <a className="footer-bar-links" href="https://github.com/michaelmcoates/greenhouse">GitHub Repo</a>
+        </div>
 
-      <div className="right">
+        <div className="right">
+        </div>
       </div>
     </nav>
   );
