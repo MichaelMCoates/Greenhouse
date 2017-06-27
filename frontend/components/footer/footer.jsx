@@ -7,11 +7,13 @@ const Footer = () => {
       <div className="footer-bar">
         <div className="footer-bar-left">
           <h2 className="footer-bar-header">
-            CONTRIBUTING
+            ABOUT MICHAEL COATES
           </h2>
           <a className="footer-bar-links" href="https://www.linkedin.com/in/michaelmcoates">My LinkedIn</a>
           <a className="footer-bar-links" href="https://github.com/michaelmcoates/greenhouse">GitHub Repo</a>
         </div>
+
+        <hr/>
 
         <div className="right">
         </div>
