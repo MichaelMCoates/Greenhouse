@@ -229,16 +229,10 @@
 
 @keyframes featured-carousel-fade-in-right {
   0% {
-    opacity: 0.1;
-  }
-
-  5% {
-    opacity: 0.5;
-    transform: translate(670px);
+    opacity: 0;
   }
 
   100% {
-    transform: translate(670px);
     opacity: 1;
   }
 }
@@ -250,16 +244,10 @@
 
 @keyframes featured-carousel-fade-in-left {
   0% {
-    opacity: 0.1;
-  }
-
-  5% {
-    opacity: 0.5;
-    transform: translate(-670px);
+    opacity: 0;
   }
 
   100% {
-    transform: translate(-670px);
     opacity: 1;
   }
 }
@@ -276,7 +264,6 @@
   }
 
   100% {
-    transform: translate(670px);
     opacity: 0;
   }
 }
@@ -292,7 +279,6 @@
   }
 
   100% {
-    transform: translate(-670px);
     opacity: 0;
   }
 }
