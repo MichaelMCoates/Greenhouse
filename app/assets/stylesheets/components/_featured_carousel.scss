@@ -44,15 +44,19 @@
 }
 
 .featured-carousel-div:hover > img {
-  transform: scale(1.02);
-  -moz-transform: scale(1.02);
-  -webkit-transform: scale(1.02);
+  transform: scale(1.00);
+  -moz-transform: scale(1.00);
+  -webkit-transform: scale(1.00);
   cursor: pointer;
 }
 
-.middle:hover {
-  transform: scale(1.0);
+.featured-carousel-div > img {
+  transform: scale(1.006);
+  -moz-transform: scale(1.006);
+  -webkit-transform: scale(1.006);
 }
+
+
 //
 //
 // .featured-carousel-overlay {
