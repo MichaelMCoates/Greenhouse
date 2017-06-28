@@ -38,10 +38,15 @@
 
 .tile-category {
   color: #a8a8a8;
+  font-weight: 500;
   font-size: 11px;
   text-transform: uppercase;
   line-height: 20px;
+}
 
+.tile-category:hover {
+  cursor: pointer;
+  color: #eb1478
 }
 
 .tile-title {

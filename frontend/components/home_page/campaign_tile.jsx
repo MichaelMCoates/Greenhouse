@@ -23,7 +23,7 @@ class TileCarousel extends React.Component {
         <div className="tile-body">
           <div className="tile-body-top">
             <div className="tile-category">
-              CATEGORY
+              {camp.category}
             </div>
             <div className="tile-title">
               {camp.title}
