@@ -7,11 +7,11 @@ const NavigationBar = () => {
     <nav className="navigation-bar">
       <div className="left">
         <a className="logo" onClick={() => hashHistory.push('/')} ></a>
-        <button >Explore</button>
         <a className="my-links" href="https://www.linkedin.com/in/michaelmcoates">My LinkedIn</a>
         <a className="my-links" href="https://github.com/michaelmcoates/greenhouse">GitHub Repo</a>
-          <input className="search-bar" type="text" placeholder="Search..."></input>
+        <input className="search-bar" type="text" placeholder="Search..."></input>
       </div>
+
 
       <div className="right">
         <input onClick={() => hashHistory.push('/campaigns/start')} className="pink-button-nav" type="submit" value="START A CAMPAIGN" />
