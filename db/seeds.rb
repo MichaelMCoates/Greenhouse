@@ -14,6 +14,7 @@ Contribution.destroy_all
 users = []
 campaigns = []
 perks = []
+categories = ["Home", "Phones & Accessories", "Travel & Outdoors", "Film", "Health & Fitness", "Fashion & Wearables", "Tabletop Games", "Music", "Art", "Food & Beverages"]
 
 hexagon_user = User.create({
   email: "HEXAGON@gmail.com",
@@ -59,6 +60,7 @@ hexagon = Campaign.create({
   tile_img: "https://s3.amazonaws.com/the-greenhouse-dev/main_seed_campaigns/hexagon/dyxkxehtill4pk3zdqqt.jpg",
   overview_img: "https://s3.amazonaws.com/the-greenhouse-dev/main_seed_campaigns/hexagon/hexagon-rear-view-camera.jpg",
   pitch_img: "https://s3.amazonaws.com/the-greenhouse-dev/main_seed_campaigns/hexagon/hexagon-pitch-img.jpg",
+  category: categories.sample,
 })
 
 campaigns.push(hexagon)
@@ -187,6 +189,7 @@ sobro = Campaign.create({
   tile_img: "https://s3.amazonaws.com/the-greenhouse-dev/main_seed_campaigns/sobro/sobro-tile-img.jpg",
   overview_img: "https://s3.amazonaws.com/the-greenhouse-dev/main_seed_campaigns/sobro/sobro-overview-img.jpg",
   pitch_img: "https://s3.amazonaws.com/the-greenhouse-dev/main_seed_campaigns/sobro/sobro-pitch-img.jpg",
+  category: categories.sample,
 })
 
 campaigns.push(sobro)
@@ -462,6 +465,7 @@ As with any physical product, there are challenges involved in getting it perfec
   tile_img: "https://s3.amazonaws.com/the-greenhouse-dev/main_seed_campaigns/juisir/juisir-tile-img.jpg",
   overview_img: "https://s3.amazonaws.com/the-greenhouse-dev/main_seed_campaigns/juisir/juisir-overview-img.jpg",
   pitch_img: "https://s3.amazonaws.com/the-greenhouse-dev/main_seed_campaigns/juisir/juisir-pitch-img.jpg",
+  category: categories.sample,
 })
 
 campaigns.push(juisir)
@@ -727,6 +731,7 @@ What if I have more questions?",
   tile_img: "https://s3.amazonaws.com/the-greenhouse-dev/main_seed_campaigns/revolar/revolar-tile-img.jpg",
   overview_img: "https://s3.amazonaws.com/the-greenhouse-dev/main_seed_campaigns/revolar/revolar-overview-img.jpg",
   pitch_img: "https://s3.amazonaws.com/the-greenhouse-dev/main_seed_campaigns/revolar/revolar-pitch-img.jpg",
+  category: categories.sample,
 })
 
 campaigns.push(revolar)
@@ -1031,6 +1036,7 @@ Whats your return policy?	Dont return your RIVER Mobile Power Station to the sto
   tile_img: "https://s3.amazonaws.com/the-greenhouse-dev/main_seed_campaigns/river/river-tile-img.jpg",
   overview_img: "https://s3.amazonaws.com/the-greenhouse-dev/main_seed_campaigns/river/river-overview-img.jpg",
   pitch_img: "https://s3.amazonaws.com/the-greenhouse-dev/main_seed_campaigns/river/river-pitch-img.jpg",
+  category: categories.sample,
 })
 
 campaigns.push(river)
@@ -1156,6 +1162,7 @@ end
     tile_img: images.sample,
     overview_img: images.sample,
     pitch_img: images.sample,
+    category: categories.sample,
   })
 
   rand(1..3).times do
