@@ -72,7 +72,7 @@
   margin-top: 10px;
 }
 
-.campaign-show-headerTitle {
+.campaign-show-header {
   margin: 20px 0px;
   padding: 5px 0px;
   border-bottom: 1px rgb(221, 221, 221) solid;
@@ -82,6 +82,31 @@
   font-size: 16px;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.campaign-show-headerTitle {
+
+}
+
+.campaign-show-category {
+  font-size: 12px;
+  line-height: 12px;
+  height: 12px;
+  letter-spacing: 1px;
+  padding: 5px;
+  font-weight: 400;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  color: #6a6a6a;
+}
+
+.campaign-show-category:hover {
+  color: #a8a8a8;
+  cursor: pointer;
 }
 
 

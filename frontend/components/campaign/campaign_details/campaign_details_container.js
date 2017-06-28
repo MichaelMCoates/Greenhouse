@@ -6,6 +6,7 @@ const mapStateToProps = ({campaign, session}) => ({
   overview: campaign.overview,
   overview_img: campaign.overview_img,
   campaign_story: campaign.campaign_story,
+  category: campaign.category,
   current_user: session.current_user,
   // will need backers, comments, updates
 });
