@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170427034852) do
+ActiveRecord::Schema.define(version: 20170628014555) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20170427034852) do
     t.string   "pitch_img_content_type"
     t.integer  "pitch_img_file_size"
     t.datetime "pitch_img_updated_at"
+    t.string   "category"
   end
 
   add_index "campaigns", ["user_id"], name: "index_campaigns_on_user_id", using: :btree
