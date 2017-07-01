@@ -1,6 +1,26 @@
 import React from 'react';
+import CategorySelectDropdown from './category_select_drop_down';
 
 class BasicsEditor extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      categoryDDShow: false,
+    }
+
+    this.setState = this.setState.bind(this);
+    this.onClick = this.onClick.bind(this);
+  }
+
+  onClick() {
+    this.setState({categoryDDShow: false}, () => {window.removeEventListener('click', this.onClick, false );});
+  }
+
+  dropDownToggle(e) {
+    this.setState({categoryDDShow: true}, () => {window.addEventListener('click', this.onClick, false);});
+    e.stopPropagation();
+  }
 
   render() {
 
@@ -48,6 +68,17 @@ class BasicsEditor extends React.Component {
               className="editor-input"
               placeholder="Country"
               />
+          </div>
+        </div>
+
+        <div className="editor-input-div">
+          <div className="editor-input-title">Category</div>
+          <div className="editor-input-description">To help backers find your campaign, select a category that best represents your project.</div>
+          <div className="category">
+            <button className="category-create-button" onClick={this.dropDownToggle.bind(this)} >
+              Select A Category
+            </button>
+            {this.state.categoryDDShow ? <CategorySelectDropdown /> : <div className="csdd hidden"></div> }
           </div>
         </div>
 
