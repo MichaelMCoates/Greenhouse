@@ -13,7 +13,7 @@ class CreateBody extends React.Component {
     } else if (this.props.state.editor === 'Story') {
       editor = <StoryEditor state={this.props.state} update={this.props.update} />;
     } else {
-      editor = <BasicsEditor state={this.props.state} update={this.props.update} />;
+      editor = <BasicsEditor state={this.props.state} update={this.props.update} setState={this.props.setState} />;
     }
 
     return (

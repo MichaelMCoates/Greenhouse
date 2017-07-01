@@ -64,7 +64,7 @@ class CreateCampaignPage extends React.Component {
         <div className="ccp-main">
           <NavigationBar />
           <CreateHeader editor={this.state.editor} triggerCreateCampaign={this.triggerCreateCampaign} />
-          <CreateBody state={this.state} addPerk={this.addPerk} update={this.update} />
+          <CreateBody setState={this.setState} state={this.state} addPerk={this.addPerk} update={this.update} />
         </div>
       </div>
     );

@@ -76,9 +76,9 @@ class BasicsEditor extends React.Component {
           <div className="editor-input-description">To help backers find your campaign, select a category that best represents your project.</div>
           <div className="category">
             <button className="category-create-button" onClick={this.dropDownToggle.bind(this)} >
-              Select A Category
+              thispropsstatecategory
             </button>
-            {this.state.categoryDDShow ? <CategorySelectDropdown /> : <div className="csdd hidden"></div> }
+            {this.state.categoryDDShow ? <CategorySelectDropdown setState={this.props.setState} /> : <div className="csdd hidden"></div> }
           </div>
         </div>
 
