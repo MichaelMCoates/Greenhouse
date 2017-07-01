@@ -36,9 +36,6 @@ class CategorySelectDropdown extends React.Component {
       )
     })
 
-
-
-
     return (
       <div className="category-select-dropdown">
         {techDivs}
