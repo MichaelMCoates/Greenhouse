@@ -23,6 +23,12 @@ class BasicsEditor extends React.Component {
   }
 
   render() {
+    let categoryText;
+    if (this.props.state.category == null) {
+      categoryText = "Select A Category";
+    } else {
+      categoryText = this.props.state.category;
+    }
 
     return (
       <div className="editor">
@@ -76,7 +82,7 @@ class BasicsEditor extends React.Component {
           <div className="editor-input-description">To help backers find your campaign, select a category that best represents your project.</div>
           <div className="category">
             <button className="category-create-button" onClick={this.dropDownToggle.bind(this)} >
-              thispropsstatecategory
+              {categoryText}
             </button>
             {this.state.categoryDDShow ? <CategorySelectDropdown setState={this.props.setState} /> : <div className="csdd hidden"></div> }
           </div>
