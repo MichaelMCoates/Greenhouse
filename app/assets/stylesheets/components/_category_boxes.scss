@@ -1,0 +1,36 @@
+.category-boxes-div {
+  padding-top: 60px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.explore-categories-header {
+  margin: 0 auto;
+  padding: 0 30px;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+  letter-spacing: 0;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  max-width: 1280px;
+}
+
+.box-container {
+  margin: 0 auto;
+  padding: 0 30px;
+  max-width: 1280px;
+  box-sizing: border-box;
+}
+.box-container-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.category-box {
+  height: 220px;
+  background: red;
+  width: 212px;
+  min-height: 1px;
+  display: block;
+}
