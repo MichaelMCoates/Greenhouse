@@ -43,6 +43,7 @@ class Api::CampaignsController < ApplicationController
       :overview,
       :campaign_story,
       :user_id,
+      :category,
       perks_attributes: [
         :price,
         :title,
