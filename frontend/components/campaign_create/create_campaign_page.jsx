@@ -34,7 +34,10 @@ class CreateCampaignPage extends React.Component {
 
   triggerCreateCampaign() {
     this.createCampaign({campaign: this.state})
-    .then(({campaign: {id}}) => hashHistory.push('/campaigns/' + id));
+    .then(
+      ({campaign: {id}}) => hashHistory.push('/campaigns/' + id),
+      ((errors) => alert("Must fill in all fields!"))
+    );
   }
 
   update(field) {

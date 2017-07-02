@@ -27,7 +27,7 @@ class Api::CampaignsController < ApplicationController
     if @campaign.save!
       render "api/campaigns/show"
     else
-      render json: { message: 'not found', status: 404 }
+      render json: @campaign.errors.full_messages, status: 422
     end
   end
 
