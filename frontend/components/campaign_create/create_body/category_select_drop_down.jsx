@@ -38,8 +38,14 @@ class CategorySelectDropdown extends React.Component {
 
     return (
       <div className="category-select-dropdown">
-        {techDivs}
-        {creativeDivs}
+        <div className="tech-innovation-dd csdd-col">
+          <h1 className="csdd-title">TECH & INNOVATION</h1>
+          {techDivs}
+        </div>
+        <div className="creative-works-dd csdd-col">
+          <h1 className="csdd-title">CREATIVE WORKS</h1>
+          {creativeDivs}
+        </div>
       </div>
     );
   }
