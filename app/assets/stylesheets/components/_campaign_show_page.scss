@@ -38,7 +38,7 @@
 }
 
 .campaign-details {
-  height: 1000px;
+  min-height: 1000px;
 }
 
 
@@ -88,7 +88,15 @@
 
 
 .campaign-show-headerTitle {
-
+  margin: 20px 0px;
+  padding: 5px 0px;
+  border-bottom: 1px rgb(221, 221, 221) solid;
+  color: rgb(168, 168, 168);
+  display: block;
+  line-height: 26px;
+  font-size: 16px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
 }
 
 .campaign-show-category {

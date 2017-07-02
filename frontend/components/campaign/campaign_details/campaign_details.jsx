@@ -7,7 +7,7 @@ class CampaignDetails extends React.Component {
     return (
       <div className="campaign-details campaign-show-left">
           <div className="campaign-show-header">
-            <div className="campaign-show-headerTitle">
+            <div className="overview">
               OVERVIEW
             </div>
             <div className="campaign-show-category">
