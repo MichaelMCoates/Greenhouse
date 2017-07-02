@@ -10,6 +10,7 @@
   box-sizing: border-box;
   margin-top: 20px;
   margin-bottom: 30px;
+  background: #ffffff;
 }
 
 .perk-body {
@@ -90,4 +91,15 @@
   display: block;
   background-color: #fa1681;
   color: #ffffff;
+}
+
+.current-perks {
+  .perk-item:hover .perk-date {
+    display: inherit;
+  }
+
+  .perk-item:hover .perk-date-hidden {
+    display: none;
+  }
+
 }
