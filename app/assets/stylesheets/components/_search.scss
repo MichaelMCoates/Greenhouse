@@ -1,0 +1,31 @@
+.search-page {
+  margin: 0 auto;
+  padding: 0 16px;
+  max-width: 1280px;
+  font-family: 'Libre Franklin', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.search-form-div {
+  margin-top: 45px;
+
+}
+
+.queryHeader {
+  margin: 0 auto;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+  letter-spacing: 0;
+  box-sizing: border-box;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  max-width: 1280px;
+}
+
+.queryLabel {
+  color: #0eb4b6;
+  padding-bottom: 5px;
+  border-bottom: 3px #0eb4b6 solid;
+}

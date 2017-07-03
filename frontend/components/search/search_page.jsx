@@ -42,7 +42,7 @@ class SearchPage extends React.Component {
 
   urlUpdate(e) {
     e.preventDefault();
-    
+
     let queryString;
     if (this.state.query && this.state.category) {
       queryString = `?searchText=${this.state.query}&category=${this.state.category}`
@@ -57,12 +57,11 @@ class SearchPage extends React.Component {
 
 
   render () {
-    debugger
     return (
       <div className="search-page">
 
         <div className="search-form-div">
-          <div>Results for <span className="queryLabel">{this.state.query}</span></div>
+          <div className="queryHeader">Results for <span className="queryLabel">{this.state.query}</span></div>
           <form onSubmit={this.urlUpdate.bind(this)}>
             <input value={this.state.query} onChange={this.update("query").bind(this)} />
           </form>
