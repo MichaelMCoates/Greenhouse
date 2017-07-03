@@ -11,18 +11,19 @@ import UserEditPageContainer from './user_edit_page/user_edit_page_container';
 import CampaignStartPage from './campaign_create/campaign_start_page';
 import CampaignCreatePageContainer from './campaign_create/create_campaign_page_container';
 import HomePageContainer from './home_page/home_page_container';
+import SearchPageContainer from './search/search_container';
 
 //
-import {fetchUser} from '../actions/user_actions';
-window.fetchUser = fetchUser;
-import {createContribution} from '../actions/contribution_actions';
-window.createContribution = createContribution;
-import {createPerk} from '../actions/perk_actions';
-window.createPerk = createPerk;
-import {createCampaign} from '../actions/campaign_actions';
-window.createCampaign = createCampaign;
-import {searchCampaigns} from '../actions/search_actions';
-window.searchCampaigns = searchCampaigns;
+// import {fetchUser} from '../actions/user_actions';
+// window.fetchUser = fetchUser;
+// import {createContribution} from '../actions/contribution_actions';
+// window.createContribution = createContribution;
+// import {createPerk} from '../actions/perk_actions';
+// window.createPerk = createPerk;
+// import {createCampaign} from '../actions/campaign_actions';
+// window.createCampaign = createCampaign;
+// import {searchCampaigns} from '../actions/search_actions';
+// window.searchCampaigns = searchCampaigns;
 
 //
 
@@ -45,6 +46,7 @@ const Root = ({ store }) => {
           <Route path="/check_out" component={CheckOutContainer}/>
           <Route path="/users/:userId" component={UserShowPageContainer} />
           <Route path="/users/:userId/edit" component={UserEditPageContainer} />
+          <Route path="/search" component={SearchPageContainer} />
         </Route>
         <Route path="/create-campaign" component={CampaignCreatePageContainer} />
       </Router>
