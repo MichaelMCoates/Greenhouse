@@ -21,6 +21,8 @@ import {createPerk} from '../actions/perk_actions';
 window.createPerk = createPerk;
 import {createCampaign} from '../actions/campaign_actions';
 window.createCampaign = createCampaign;
+import {searchCampaigns} from '../actions/search_actions';
+window.searchCampaigns = searchCampaigns;
 
 //
 

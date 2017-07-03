@@ -1,8 +1,14 @@
 class Api::SearchController < ApplicationController
 
   def search
-    query = search_params[:query]
-    @campaigns = Campaign.where("title % ? OR tagline % ? OR overview % ?", query, query, query)
+    if search_params[:query]
+      query = search_params[:query]
+      campaigns1 = Campaign.where("title % ? OR tagline % ? OR overview % ?", query, query, query)
+    else
+      campaigns1 = Campaign.all
+    end
+
+    @campaigns = campaigns1
     render "api/search/search"
   end
 
