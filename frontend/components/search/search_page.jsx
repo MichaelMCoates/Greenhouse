@@ -61,9 +61,9 @@ class SearchPage extends React.Component {
       <div className="search-page">
 
         <div className="search-form-div">
-          <div className="queryHeader">Results for <span className="queryLabel">{this.state.query}</span></div>
-          <form onSubmit={this.urlUpdate.bind(this)}>
-            <input value={this.state.query} onChange={this.update("query").bind(this)} />
+          <div className="query-header">Results for <span className="query-label">{this.state.query}</span></div>
+          <form className="search-form" onSubmit={this.urlUpdate.bind(this)}>
+            <input className="search-field" value={this.state.query} onChange={this.update("query").bind(this)} />
           </form>
         </div>
 
