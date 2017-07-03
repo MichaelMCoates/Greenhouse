@@ -1,7 +1,8 @@
-export const searchCampaigns = (search) => {
+export const searchCampaigns = (search = {}) => {
+  debugger
   return $.ajax({
     method: 'GET',
     url: '/api/search/',
-    data: {search},
+    data: {search: search},
   });
 };
