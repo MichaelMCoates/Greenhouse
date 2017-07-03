@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :perks, only: [:create]
     get 'featuredcarousel', to: 'carousels#featured'
     get 'tilecarousel', to: 'carousels#tile'
+    get 'search', to: 'search#search'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
