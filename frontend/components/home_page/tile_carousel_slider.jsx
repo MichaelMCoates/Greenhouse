@@ -26,8 +26,8 @@ import Slider from 'react-slick';
 
 const NextArrow = function(props) {
   return (
-    <div {...props} >
-      <img preserveAspectRatio="none" src='/assets/chevron.svg' className='slider-chevron-img next-chevron-img'/>
+    <div className='slider-chevron-img next-chevron-img' {...props} >
+      <div preserveAspectRatio="none" src='' className='slider-chevron-img next-chevron-img'/>
     </div>
   );
 };
@@ -35,7 +35,7 @@ const NextArrow = function(props) {
 const PrevArrow = function(props) {
   return (
     <div {...props} >
-      <img preserveAspectRatio="none" src='/assets/chevron.svg' className='slider-chevron-img prev-chevron-img'/>
+      <div preserveAspectRatio="none" src='' className='slider-chevron-img prev-chevron-img'/>
     </div>
   );
 };

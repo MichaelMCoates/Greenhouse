@@ -19,6 +19,11 @@ body {
 }
 
 .slider-chevron-img {
+  background-image: asset-url('chevron.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 90px;
   width: 54px;
 }
 
