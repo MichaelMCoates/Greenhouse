@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
 import UserBarContainer from '../user_bar/user_bar_container';
+import SearchInputContainer from './search_input_container';
 
 const NavigationBar = () => {
   return (
@@ -9,7 +10,7 @@ const NavigationBar = () => {
         <a className="logo" onClick={() => hashHistory.push('/')} ></a>
         <a className="my-links" href="https://www.linkedin.com/in/michaelmcoates">My LinkedIn</a>
         <a className="my-links" href="https://github.com/michaelmcoates/greenhouse">GitHub Repo</a>
-        <input className="search-bar" type="text" placeholder="Search..."></input>
+        <SearchInputContainer />
       </div>
 
 
