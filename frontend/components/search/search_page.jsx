@@ -55,6 +55,25 @@ class SearchPage extends React.Component {
     this.props.router.replace({ pathname: `/search${queryString}`});
   }
 
+  convertCategoryToString(category) {
+    switch (category) {
+      case "Phones":
+        return "Phones & Accessories";
+      case "Travel":
+        return "Travel & Outdoors";
+      case "Health":
+        return "Health & Fitness";
+      case "Fashion":
+        return "Fashion & Wearables";
+      case "Tabletop":
+        return "Tabletop Games";
+      case "Food":
+        return "Food & Beverages";
+      default:
+        return category;
+    }
+  }
+
 
   render () {
     let tiles;
@@ -65,8 +84,17 @@ class SearchPage extends React.Component {
         <CampaignTile campaign={campaign} key={idx} />
       ));
     }
+
+    let categoryTitle;
+    if (this.state.category) {
+      categoryTitle = this.convertCategoryToString(this.state.category);
+    }
+
     return (
       <div className="search-page">
+        <div className="search-category-title">
+          {categoryTitle}
+        </div>
 
         <div className="search-form-div">
           <div className="query-header">Results for <span className="query-label">{this.state.query}</span></div>
