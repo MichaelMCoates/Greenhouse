@@ -6,12 +6,14 @@ import PerksContainer from './perks/perks_container';
 
 class CampaignShowPage extends React.Component {
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.props.fetchCampaign(this.props.params.campaignId)
     .then(({campaign: {user_id}}) => this.props.fetchUser(user_id));
   }
 
   componentWillReceiveProps(nextProps) {
     if (this.props.params.campaignId !== nextProps.params.campaignId) {
+      window.scrollTo(0, 0);
       this.props.fetchCampaign(nextProps.params.campaignId)
       .then(({campaign: {user_id}}) => this.props.fetchUser(user_id));
     }

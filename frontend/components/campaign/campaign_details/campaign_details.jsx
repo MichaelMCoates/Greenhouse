@@ -1,7 +1,13 @@
 import React from 'react';
 import DynamicDetailsContainer from './dynamic_details/dynamic_details_container';
+import {Link, hashHistory, withRouter} from 'react-router';
 
 class CampaignDetails extends React.Component {
+
+  urlUpdate(category) {
+    let queryString = `?category=${category}`;
+    this.props.router.replace({ pathname: `/search${queryString}`});
+  }
 
   render() {
     return (
@@ -10,7 +16,7 @@ class CampaignDetails extends React.Component {
             <div className="overview">
               OVERVIEW
             </div>
-            <div className="campaign-show-category">
+            <div className="campaign-show-category" onClick={() => this.urlUpdate(`${this.props.category}`)}>
               {this.props.category}
             </div>
           </div>
@@ -23,4 +29,4 @@ class CampaignDetails extends React.Component {
     );
   }
 }
-export default CampaignDetails;
+export default withRouter(CampaignDetails);

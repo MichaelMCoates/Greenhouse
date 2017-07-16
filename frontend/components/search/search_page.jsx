@@ -36,6 +36,13 @@ class SearchPage extends React.Component {
         )
       );
     }
+
+    let nextSearchText = nextLocationQuery.searchText;
+    if (nextSearchText === undefined) {
+      nextSearchText = '';
+    }
+
+    this.setState({query: nextSearchText, category: nextLocationQuery.category});
   }
 
   update(field) {
@@ -87,10 +94,15 @@ class SearchPage extends React.Component {
       ));
     }
 
+    let placeholder = 'Search for campaigns';
+
     let categoryTitle;
     if (this.state.category) {
       categoryTitle = this.convertCategoryToString(this.state.category);
+      placeholder = `Search Within ${categoryTitle}`;
     }
+
+    let queryHeaderText = this.state.query ? this.state.query : 'nothing yet!';
 
     return (
       <div className="search-page">
@@ -99,16 +111,14 @@ class SearchPage extends React.Component {
         </div>
 
         <div className="search-form-div">
-          <div className="query-header">Results for <span className="query-label">{this.state.query}</span></div>
+          <div className="query-header">Results for <span className="query-label">{queryHeaderText}</span></div>
           <form className="search-form" onSubmit={this.urlUpdate.bind(this)}>
-            <input className="search-field" value={this.state.query} onChange={this.update("query").bind(this)} />
+            <input className="search-field" placeholder={placeholder} value={this.state.query} onChange={this.update("query").bind(this)} />
           </form>
         </div>
 
         <div className="search-tiles-div">
           {tiles}
-
-
         </div>
 
       </div>
