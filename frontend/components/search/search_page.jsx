@@ -15,6 +15,7 @@ class SearchPage extends React.Component {
   }
 
   componentDidMount () {
+    window.scrollTo(0, 0);
     let locationQuery = this.props.location.query;
     if (locationQuery.searchText === undefined && locationQuery.category === undefined) {
       return;
@@ -26,6 +27,7 @@ class SearchPage extends React.Component {
   componentWillReceiveProps(nextProps) {
     let locationQuery = this.props.location.query;
     let nextLocationQuery = nextProps.location.query;
+    window.scrollTo(0, 0);
     if (locationQuery.searchText !== nextLocationQuery.searchText || locationQuery.category !== nextLocationQuery.category ) {
       this.props.searchCampaigns(
         Object.assign(
@@ -56,7 +58,7 @@ class SearchPage extends React.Component {
   }
 
   convertCategoryToString(category) {
-    switch (category) {
+    switch (category.trim()) {
       case "Phones":
         return "Phones & Accessories";
       case "Travel":

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, hashHistory} from 'react-router';
+import {Link, hashHistory, withRouter} from 'react-router';
 import TileFundingBar from './tile_funding_bar';
 
 class TileCarousel extends React.Component {
@@ -7,6 +7,12 @@ class TileCarousel extends React.Component {
     super(props);
 
 
+  }
+
+  urlUpdate(e, category) {
+    e.stopPropagation();
+    let queryString = `?category=${category}`;
+    this.props.router.replace({ pathname: `/search${queryString}`});
   }
 
 
@@ -22,7 +28,7 @@ class TileCarousel extends React.Component {
         </div>
         <div className="tile-body">
           <div className="tile-body-top">
-            <div className="tile-category">
+            <div className="tile-category" onClick={(e) => this.urlUpdate(e, `${camp.category}`)}>
               {camp.category}
             </div>
             <div className="tile-title">
@@ -45,4 +51,4 @@ class TileCarousel extends React.Component {
   }
 }
 
-export default TileCarousel;
+export default withRouter(TileCarousel);
