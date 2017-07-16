@@ -33,7 +33,6 @@
 
 .search-form {
   position: relative;
-  margin-right: 15px;
   margin-bottom: 10px;
   max-height: 140px;
   overflow: hidden;
@@ -66,4 +65,13 @@
   left: 87.3%;
   margin-left: -24px;
   z-index: 10000;
+}
+
+.search-tiles-div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.search-tiles-div > div {
+  margin-top: 37px;
 }

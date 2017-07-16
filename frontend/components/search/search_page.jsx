@@ -11,13 +11,13 @@ class SearchPage extends React.Component {
     this.state = {
       query: locationQuery.searchText,
       category: locationQuery.category,
-    }
+    };
   }
 
   componentDidMount () {
     let locationQuery = this.props.location.query;
     if (locationQuery.searchText === undefined && locationQuery.category === undefined) {
-      return
+      return;
     }
 
     this.props.searchCampaigns(this.state);
@@ -45,18 +45,26 @@ class SearchPage extends React.Component {
 
     let queryString;
     if (this.state.query && this.state.category) {
-      queryString = `?searchText=${this.state.query}&category=${this.state.category}`
+      queryString = `?searchText=${this.state.query}&category=${this.state.category}`;
     } else if (this.state.query) {
-      queryString = `?searchText=${this.state.query}`
+      queryString = `?searchText=${this.state.query}`;
     } else if (this.state.category) {
-      queryString = `?category=${this.state.category}`
+      queryString = `?category=${this.state.category}`;
     }
 
-    this.props.router.replace({ pathname: `/search${queryString}`})
+    this.props.router.replace({ pathname: `/search${queryString}`});
   }
 
 
   render () {
+    let tiles;
+    if (this.props.search.length == 0) {
+      tiles = (<h1>"Search something!"</h1>);
+    } else {
+      tiles = this.props.search.map ((campaign, idx) => (
+        <CampaignTile campaign={campaign} key={idx} />
+      ));
+    }
     return (
       <div className="search-page">
 
@@ -65,6 +73,12 @@ class SearchPage extends React.Component {
           <form className="search-form" onSubmit={this.urlUpdate.bind(this)}>
             <input className="search-field" value={this.state.query} onChange={this.update("query").bind(this)} />
           </form>
+        </div>
+
+        <div className="search-tiles-div">
+          {tiles}
+
+
         </div>
 
       </div>
