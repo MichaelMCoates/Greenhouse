@@ -10,7 +10,8 @@ class Api::SearchController < ApplicationController
 
     if search_params[:category]
       category = search_params[:category]
-      campaigns2 = campaigns1.where("category % ? ", category)
+      category = category + '%'
+      campaigns2 = campaigns1.where("category LIKE ?", category)
     else
       campaigns2 = campaigns1
     end

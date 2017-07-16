@@ -26,12 +26,12 @@ class CategoryBoxes extends React.Component {
               <div className="cat-box-title">Home</div>
             </div>
 
-            <div className="category-box phones" onClick={() => this.urlUpdate('Phones & Accessories')}>
+            <div className="category-box phones" onClick={() => this.urlUpdate('Phones')}>
               <div className="cat-box-bg"/>
               <div className="cat-box-title">Phones & Accessories</div>
             </div>
 
-            <div className="category-box travel" onClick={() => this.urlUpdate('Travel & Outdoors')}>
+            <div className="category-box travel" onClick={() => this.urlUpdate('Travel')}>
               <div className="cat-box-bg"/>
               <div className="cat-box-title">Travel & Outdoors</div>
             </div>
@@ -48,17 +48,17 @@ class CategoryBoxes extends React.Component {
           </div>
 
           <div className="box-container-row">
-            <div className="category-box health" onClick={() => this.urlUpdate('Health & Fitness')}>
+            <div className="category-box health" onClick={() => this.urlUpdate('Health')}>
               <div className="cat-box-bg"/>
               <div className="cat-box-title">Health & Fitness</div>
             </div>
 
-            <div className="category-box fashion" onClick={() => this.urlUpdate('Fashion & Wearables')}>
+            <div className="category-box fashion" onClick={() => this.urlUpdate('Fashion')}>
               <div className="cat-box-bg"/>
               <div className="cat-box-title">Fashion & Wearables</div>
             </div>
 
-            <div className="category-box tabletop" onClick={() => this.urlUpdate('Tabletop Games')}>
+            <div className="category-box tabletop" onClick={() => this.urlUpdate('Tabletop')}>
               <div className="cat-box-bg"/>
               <div className="cat-box-title">Tabletop Games</div>
             </div>
@@ -68,7 +68,7 @@ class CategoryBoxes extends React.Component {
               <div className="cat-box-title">Music</div>
             </div>
 
-            <div className="category-box food" onClick={() => this.urlUpdate('Food & Beverages')}>
+            <div className="category-box food" onClick={() => this.urlUpdate('Food')}>
               <div className="cat-box-bg"/>
               <div className="cat-box-title">Food & Beverages</div>
             </div>
