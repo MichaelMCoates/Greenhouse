@@ -30,7 +30,7 @@ class UserShowPage extends React.Component {
     }
 
     let currentUserBar;
-    if (this.props.user.user.id === this.props.currentUser.id) {
+    if (this.props.currentUser !== null && this.props.user.user.id === this.props.currentUser.id) {
       currentUserBar = <CurrentUserBar userId={this.props.currentUser.id} page="show-page" />;
     }
 
