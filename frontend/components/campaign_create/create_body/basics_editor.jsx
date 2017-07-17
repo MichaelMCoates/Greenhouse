@@ -63,7 +63,7 @@ class BasicsEditor extends React.Component {
           <div className="category-wrapping-div">
             <button className="category-create-button" onClick={this.dropDownToggle.bind(this)} >
               {categoryText}
-              <img preserveAspectRatio="none" src='/assets/downcaret.svg' className='downcaret-category'/>
+              <div preserveAspectRatio="none" className='downcaret-category'/>
             </button>
             {this.state.categoryDDShow ? <CategorySelectDropdown setState={this.props.setState} /> : <div className="csdd hidden"></div> }
           </div>

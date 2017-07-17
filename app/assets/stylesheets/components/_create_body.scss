@@ -246,6 +246,10 @@
   margin-right: -15px;
   width: 14px;
   height: 12px;
+  background-image: asset-url('downcaret.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .category-select-dropdown {
