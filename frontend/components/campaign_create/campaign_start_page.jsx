@@ -20,9 +20,15 @@ class CampaignStartPage extends React.Component {
 
   handleSubmit(e) {
 		e.preventDefault();
-    sessionStorage.setItem('goal_amt', this.state.goal_amt);
-    sessionStorage.setItem('title', this.state.title);
-    hashHistory.push('/create-campaign');
+    if (this.props.currentUser) {
+      sessionStorage.setItem('goal_amt', this.state.goal_amt);
+      sessionStorage.setItem('title', this.state.title);
+      hashHistory.push('/create-campaign');
+    }
+    else {
+      this.props.clearErrors();
+      this.props.modalLogIn();
+    }
 	}
 
   render() {
