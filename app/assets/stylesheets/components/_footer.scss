@@ -1,6 +1,6 @@
 .footer-bar-container {
-  background: black;
-  color: white;
+  background: #000000;
+  color: #ffffff;
   margin-top: 50px;
   padding: 30px 10px;
   font-family: "Libre Franklin", sans-serif;
@@ -13,10 +13,16 @@
   width: 1220px;
 }
 
+.footer-bar-row {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 
-.footer-bar-left {
+.footer-bar-row-col {
   display: flex;
   flex-direction: column;
+  width: 25%;
 }
 
 .footer-bar-header {
@@ -31,4 +37,30 @@
   color: #ffffff;
   line-height: 20px;
   margin-top: 5px;
+}
+
+.footer-hr {
+  border-top: 1px solid #2a2a2a;
+  margin: 0;
+}
+
+.footer-under-hr {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 18px;
+  color: #a8a8a8;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer-under-hr-left {
+  display: flex;
+  justify-content: space-between;
+  width: 28%;
+}
+
+.footer-under-hr-right {
+
 }
