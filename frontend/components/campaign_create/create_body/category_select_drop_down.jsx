@@ -10,7 +10,7 @@ class CategorySelectDropdown extends React.Component {
       "Travel & Outdoors",
       "Health & Fitness",
       "Fashion & Wearables",
-    ]
+    ];
 
     const creativeCategories = [
       "Film",
@@ -18,23 +18,23 @@ class CategorySelectDropdown extends React.Component {
       "Music",
       "Art",
       "Food & Beverages",
-    ]
+    ];
 
     const techDivs = techCategories.map ( (category, idx) => {
       return (
         <div key={idx} className="category-wrapper" onClick={() => this.props.setState({category})}>
           {category}
         </div>
-      )
-    })
+      );
+    });
 
     const creativeDivs = creativeCategories.map ( (category, idx) => {
       return (
         <div key={idx} className="category-wrapper" onClick={() => this.props.setState({category})}>
           {category}
         </div>
-      )
-    })
+      );
+    });
 
     return (
       <div className="category-select-dropdown">

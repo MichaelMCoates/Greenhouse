@@ -7,7 +7,7 @@ class BasicsEditor extends React.Component {
 
     this.state = {
       categoryDDShow: false,
-    }
+    };
 
     this.setState = this.setState.bind(this);
     this.onClick = this.onClick.bind(this);
