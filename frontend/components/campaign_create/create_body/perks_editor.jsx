@@ -46,8 +46,27 @@ class PerksEditor extends React.Component {
   }
 
   savePerk () {
-    this.props.addPerk(this.state);
-    this.reset();
+    let perkVals = [];
+    for(var key in this.state) {
+      console.log(this.state);
+      console.log(this.state[key]);
+      perkVals.push(this.state[key]);
+    }
+
+    console.log(perkVals);
+
+    if (this.fieldsFilled(perkVals)) {
+      this.props.addPerk(this.state);
+      this.reset();
+    } else {
+      alert("Must fill in all fields!");
+    }
+  }
+
+  fieldsFilled(array) {
+    return array.every((field) => {
+      return (field.length > 0 || field.toString().length > 0);
+    });
   }
 
 
