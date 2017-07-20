@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 class CreateSidebar extends React.Component {
   constructor (props) {
     super(props);
@@ -14,7 +13,6 @@ class CreateSidebar extends React.Component {
   }
 
   render() {
-
     return (
       <div className="sidebar">
         <div className="sidebar-campaign-title">{this.props.title.toUpperCase()}</div>
@@ -36,8 +34,6 @@ class CreateSidebar extends React.Component {
       </div>
     );
   }
-
 }
-
 
 export default CreateSidebar;

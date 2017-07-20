@@ -1,8 +1,6 @@
 import React from 'react';
 
-
 class CreateHeader extends React.Component {
-
   render() {
     return (
       <div className="campaign-create-header">
@@ -17,8 +15,6 @@ class CreateHeader extends React.Component {
       </div>
     );
   }
-
 }
-
 
 export default CreateHeader;

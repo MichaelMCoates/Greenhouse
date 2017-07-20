@@ -22,7 +22,6 @@ class PerksEditor extends React.Component {
   }
 
   reset() {
-
     this.initialState = {
       price: '',
       title: '',
@@ -153,4 +152,5 @@ class PerksEditor extends React.Component {
     );
   }
 }
+
 export default PerksEditor;

@@ -3,9 +3,7 @@ import BasicsEditor from './basics_editor';
 import PerksEditor from './perks_editor';
 import StoryEditor from './story_editor';
 
-
 class CreateBody extends React.Component {
-
   render() {
     let editor;
     if (this.props.state.editor === 'Perks') {
@@ -22,8 +20,6 @@ class CreateBody extends React.Component {
       </div>
     );
   }
-
 }
-
 
 export default CreateBody;

@@ -5,12 +5,11 @@ class CampaignStartPage extends React.Component {
   constructor (props) {
     super(props);
 
-    this.state = {goal_amt: 500, title: ''};
+    this.state = { goal_amt: 500, title: '' };
     this.setState = this.setState.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
   }
-
 
   update(field) {
     return e => this.setState({
@@ -65,4 +64,5 @@ class CampaignStartPage extends React.Component {
     );
   }
 }
+
 export default CampaignStartPage;

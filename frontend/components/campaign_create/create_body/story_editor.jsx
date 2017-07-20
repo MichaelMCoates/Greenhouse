@@ -1,9 +1,7 @@
 import React from 'react';
 
 class StoryEditor extends React.Component {
-
   render() {
-
     return (
       <div className="editor">
         <div className="editor-header">Campaign Overview</div>
@@ -21,7 +19,7 @@ class StoryEditor extends React.Component {
         </div>
 
         <hr/>
-        
+
         <div className="editor-header-pitch">Campaign Pitch</div>
         <div className="editor-description-pitch">Tell potential contributors more about your campaign. Provide details that will motivate people to contribute. A good pitch is compelling, informative, and easy to digest.</div>
 
@@ -32,11 +30,10 @@ class StoryEditor extends React.Component {
             className="editor-textarea-pitch"
             />
         </div>
-
         <hr/>
-
       </div>
     );
   }
 }
+
 export default StoryEditor;

@@ -47,17 +47,18 @@ class CreateCampaignPage extends React.Component {
   }
 
   addPerk(perk_attributes) {
+    console.log("in add perk");
     if (this.state.perks_attributes === undefined) {
       this.setState({perks_attributes: [perk_attributes]});
     } else {
       const newPerksAttributes = this.state.perks_attributes.map(a => Object.assign({}, a));
       newPerksAttributes.push(perk_attributes);
-      var dataArray = Object.keys(newPerksAttributes).map(val => newPerksAttributes[val]);
       this.setState({perks_attributes: Object.values(newPerksAttributes)});
     }
   }
 
   render() {
+    console.log(this.state);
     return (
       <div className="create-campaign-page">
         <div className="ccp-sidebar-div">

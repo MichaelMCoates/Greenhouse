@@ -1,8 +1,6 @@
 import React from 'react';
 
-
 class CategorySelectDropdown extends React.Component {
-
   render() {
     const techCategories = [
       "Home",
@@ -20,7 +18,7 @@ class CategorySelectDropdown extends React.Component {
       "Food & Beverages",
     ];
 
-    const techDivs = techCategories.map ( (category, idx) => {
+    const techDivs = techCategories.map( (category, idx) => {
       return (
         <div key={idx} className="category-wrapper" onClick={() => this.props.setState({category})}>
           {category}
@@ -28,7 +26,7 @@ class CategorySelectDropdown extends React.Component {
       );
     });
 
-    const creativeDivs = creativeCategories.map ( (category, idx) => {
+    const creativeDivs = creativeCategories.map( (category, idx) => {
       return (
         <div key={idx} className="category-wrapper" onClick={() => this.props.setState({category})}>
           {category}
@@ -49,8 +47,6 @@ class CategorySelectDropdown extends React.Component {
       </div>
     );
   }
-
 }
-
 
 export default CategorySelectDropdown;
