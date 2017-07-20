@@ -10,8 +10,14 @@ class PerkItem extends React.Component {
   }
 
   onClickCO() {
-    this.props.setPerk(this.props.perk);
-    hashHistory.push('/check_out');
+    console.log(this.props.currentUser);
+    if (this.props.currentUser) {
+      this.props.setPerk(this.props.perk);
+      hashHistory.push('/check_out');
+    } else {
+      this.props.clearErrors();
+      this.props.modalLogIn();
+    }
   }
 
   render() {

@@ -1,16 +1,14 @@
 import React from 'react';
-import PerkItem from './perk_item';
+import PerkItemContainer from './perk_item_container';
 
 class Perks extends React.Component {
   constructor (props) {
     super(props);
-
-    this.setPerk = this.props.setPerk.bind(this);
   }
 
   render() {
     const perks_arr = this.props.perks.map( (perk, idx) => (
-      <PerkItem key={idx} perk={perk} setPerk={this.setPerk}/>
+      <PerkItemContainer key={idx} perk={perk} />
     ));
 
     return (
