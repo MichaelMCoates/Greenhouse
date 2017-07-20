@@ -23,7 +23,6 @@
     "react-sidebar": "^2.3.2",
     "react-slick": "^0.14.11",
     "redux": "^3.6.0",
-    "redux-logger": "^3.0.1",
     "redux-thunk": "^2.2.0",
     "slick-carousel": "^1.6.0",
     "webpack": "^2.4.1"
@@ -32,7 +31,9 @@
     "node": "6.7.0",
     "npm": "3.10.7"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "redux-logger": "^3.0.1",
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack --watch",
