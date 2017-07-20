@@ -22,7 +22,7 @@ class DynamicHeader extends React.Component {
       <text
       key={idx}
       className={this.props.selected === header ? header + " active" : header}
-      onClick={this.props.selected === header ? console.log("") : this.onClickSS}
+      onClick={this.props.selected === header ? "" : this.onClickSS}
       >
         {header === "Story" ? header : header + " (#)"}
       </text>

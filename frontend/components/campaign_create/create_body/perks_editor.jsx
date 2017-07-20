@@ -48,8 +48,6 @@ class PerksEditor extends React.Component {
   savePerk () {
     let perkVals = [];
     for(var key in this.state) {
-      console.log(this.state);
-      console.log(this.state[key]);
       perkVals.push(this.state[key]);
     }
 
