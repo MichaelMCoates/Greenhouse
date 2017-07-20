@@ -79,7 +79,7 @@ class CheckOut extends React.Component {
       <div className="check-out-page">
         <header>
           <h2 className="check-out-h2">
-            You're contributing to {this.props.user.user.first_name} {this.props.user.user.last_name}'s
+            You're contributing to {this.props.user.user.first_name} {this.props.user.user.last_name + '\''}s
           </h2>
           <h1 className="check-out-h1"> {this.props.campaign.title}</h1>
         </header>
@@ -105,7 +105,7 @@ class CheckOut extends React.Component {
             <br/>
             <text>Choose a name to be displayed publicly next to your contribution on the campaign page.</text>
 
-            <form className="appearance-form" onChange={this.updateAppearance}>
+            <form className="appearance-form" onClick={this.updateAppearance}>
 
               <label className={this.state.appearance == this.props.currentUser.first_name ? "appearance-radio appearance-radio-selected" : "appearance-radio"}>
                 <input type="radio"
