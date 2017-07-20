@@ -1,29 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
 
-// function NextArrow(props) {
-//   const {className, style, onClick} = props;
-//   return (
-//     <div
-//       className={className}
-//       style={{display: 'block', background: 'red'}}
-//       onClick={onClick}
-//     ><img src='/assets/chevron.svg' /></div>
-//   );
-// }
-//
-// function PrevArrow(props) {
-//   const {className, style, onClick} = props;
-//   return (
-//     <div
-//       className={className}
-//       style={{display: 'block', background: 'green'}}
-//       onClick={onClick}
-//     ></div>
-//   );
-// }
-
-
 const NextArrow = function(props) {
   return (
     <div className='slider-chevron-img next-chevron-img' {...props} >
@@ -41,9 +18,7 @@ const PrevArrow = function(props) {
 };
 
 class TileCarouselSlider extends React.Component {
-
   render () {
-
     let settings = {
       dots: false,
       arrows: true,
@@ -67,10 +42,4 @@ class TileCarouselSlider extends React.Component {
   }
 }
 
-// <div><h3>1</h3></div>
-// <div><h3>2</h3></div>
-// <div><h3>3</h3></div>
-// <div><h3>4</h3></div>
-// <div><h3>5</h3></div>
-// <div><h3>6</h3></div>
 export default TileCarouselSlider;

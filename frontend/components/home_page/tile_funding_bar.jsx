@@ -1,7 +1,6 @@
 import React from 'react';
-import { Line, Circle } from 'rc-progress';
+import { Line } from 'rc-progress';
 import moment from 'moment';
-
 
 class TileFundingBar extends React.Component {
   constructor (props) {
@@ -12,7 +11,7 @@ class TileFundingBar extends React.Component {
     if (this.props.current_amt === undefined) {
       return (<div> </div>);
     }
-    
+
     let percent = Math.round((this.props.current_amt / this.props.goal_amt) * 100);
     let truePercent = percent;
     if (percent > 100) {

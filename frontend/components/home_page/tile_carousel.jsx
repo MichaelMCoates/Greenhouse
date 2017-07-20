@@ -7,16 +7,13 @@ class TileCarousel extends React.Component {
   constructor(props) {
     super(props);
 
-
   }
 
   componentDidMount () {
     this.props.fetchTileCarouselCampaigns();
   }
 
-
   render () {
-
     if (this.props.tileCarouselCampaigns[0] === undefined) {
       return (<div> </div>);
     }
@@ -27,7 +24,6 @@ class TileCarousel extends React.Component {
 
     return (
       <div className="tile-carousel">
-
         <div className="tile-carousel-list">
           <div className="user-show-page-header">
             <div className={"usp-header-item usp-header-item-selected"}>

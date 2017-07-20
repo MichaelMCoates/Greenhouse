@@ -5,8 +5,6 @@ import TileFundingBar from './tile_funding_bar';
 class TileCarousel extends React.Component {
   constructor(props) {
     super(props);
-
-
   }
 
   urlUpdate(e, category) {
@@ -14,7 +12,6 @@ class TileCarousel extends React.Component {
     let queryString = `?category=${category}`;
     this.props.router.replace({ pathname: `/search${queryString}`});
   }
-
 
   render () {
     const camp = this.props.campaign;
@@ -35,7 +32,6 @@ class TileCarousel extends React.Component {
               {camp.tagline}
             </div>
           </div>
-
 
           <div className="tile-body-bottom">
             <div className="tile-funding-bar">

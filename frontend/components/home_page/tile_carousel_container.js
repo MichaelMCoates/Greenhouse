@@ -4,7 +4,6 @@ import {fetchTileCarouselCampaigns} from '../../actions/tile_carousel_actions.js
 
 const mapStateToProps = ({tileCarousel}) => {
   return ({
-
     tileCarouselCampaigns: tileCarousel.tileCarouselCampaigns,
   })
 };

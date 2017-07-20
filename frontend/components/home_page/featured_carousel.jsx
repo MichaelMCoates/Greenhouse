@@ -5,8 +5,6 @@ class FeaturedCarousel extends React.Component {
   constructor(props) {
     super(props);
 
-
-
     this.shiftLeft = this.props.shiftLeft.bind(this);
     this.shiftRight = this.props.shiftRight.bind(this);
     this.updateFeaturedCarousel = this.updateFeaturedCarousel.bind(this);
@@ -103,7 +101,6 @@ class FeaturedCarousel extends React.Component {
 
 
   render () {
-
     if (this.props.featuredCarouselCampaigns[0] === undefined) {
       return (<div> </div>);
     }
