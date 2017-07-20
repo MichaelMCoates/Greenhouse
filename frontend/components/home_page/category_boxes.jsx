@@ -12,7 +12,6 @@ class CategoryBoxes extends React.Component {
   }
 
   render () {
-
     return (
       <div className="category-boxes-div">
         <div className="explore-categories-header">
