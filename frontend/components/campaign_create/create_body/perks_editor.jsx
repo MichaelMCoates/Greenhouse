@@ -66,8 +66,6 @@ class PerksEditor extends React.Component {
     });
   }
 
-
-
   render() {
     let currentPerks;
     let divCurrentPerks;
@@ -81,13 +79,9 @@ class PerksEditor extends React.Component {
         <div className="current-perks">
           <div className="current-perks-title">CURRENT PERKS</div>
           {currentPerks}
-
         </div>
       );
     }
-
-
-
 
     return (
       <div className="editor">

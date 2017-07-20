@@ -87,7 +87,7 @@ class SearchPage extends React.Component {
   render () {
     let tiles;
     if (this.props.search.length == 0) {
-      tiles = (<h1>"Search something!"</h1>);
+      tiles = (<h1>Search something!</h1>);
     } else {
       tiles = this.props.search.map ((campaign, idx) => (
         <CampaignTile campaign={campaign} key={idx} />

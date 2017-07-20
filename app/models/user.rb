@@ -79,5 +79,4 @@ class User < ActiveRecord::Base
   def funded_campaigns_and_user
     self.contributions.includes(campaign: :user)
   end
-
 end

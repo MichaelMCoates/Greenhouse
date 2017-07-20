@@ -1,5 +1,4 @@
 class Api::SearchController < ApplicationController
-
   def search
     if search_params[:query]
       query = search_params[:query]
@@ -9,14 +8,11 @@ class Api::SearchController < ApplicationController
     end
 
     if search_params[:category]
-      category = search_params[:category]
-      category = category + '%'
+      category = search_params[:category] + '%'
       campaigns2 = campaigns1.where("category LIKE ?", category)
     else
       campaigns2 = campaigns1
     end
-
-
 
     @campaigns = campaigns2
     render "api/search/search"
@@ -25,5 +21,4 @@ class Api::SearchController < ApplicationController
   def search_params
     params.require(:search).permit(:query, :category)
   end
-
 end

@@ -8,5 +8,4 @@ class Api::CarouselsController < ApplicationController
     @tile_carousel_campaigns = Campaign.order('id').limit(16)
     render "api/carousels/tile"
   end
-
 end

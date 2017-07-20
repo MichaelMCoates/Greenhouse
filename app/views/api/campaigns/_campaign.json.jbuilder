@@ -27,7 +27,3 @@ json.perks do
     json.delivery_date perk.delivery_date
   end)
 end
-
-
-# sort_by{|contribution| contribution[:created_at]})
-# Should do json.extract! perk, :id instead

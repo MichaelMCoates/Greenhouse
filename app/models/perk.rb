@@ -30,5 +30,4 @@ class Perk < ActiveRecord::Base
     self.number_claimed += 1
     self.save!
   end
-
 end
