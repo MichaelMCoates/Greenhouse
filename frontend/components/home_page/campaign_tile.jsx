@@ -18,9 +18,6 @@ class TileCarousel extends React.Component {
 
   render () {
     const camp = this.props.campaign;
-
-    // debugger
-
     return (
       <div className="campaign-tile" onClick={() => hashHistory.push('/campaigns/' + camp.id)}>
         <div className="tile-img">

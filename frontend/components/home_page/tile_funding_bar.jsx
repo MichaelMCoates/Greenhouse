@@ -9,14 +9,10 @@ class TileFundingBar extends React.Component {
   }
 
   render() {
-    // debugger
-
     if (this.props.current_amt === undefined) {
       return (<div> </div>);
     }
-
-    // debugger
-
+    
     let percent = Math.round((this.props.current_amt / this.props.goal_amt) * 100);
     let truePercent = percent;
     if (percent > 100) {
