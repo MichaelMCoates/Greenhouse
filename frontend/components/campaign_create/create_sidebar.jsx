@@ -10,6 +10,7 @@ class CreateSidebar extends React.Component {
 
   changeEditor(e) {
     this.props.setState({editor: e.target.getAttribute('value')});
+    window.scrollTo(0, 0);
   }
 
   render() {
