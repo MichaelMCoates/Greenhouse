@@ -8,8 +8,8 @@ const NavigationBar = () => {
     <nav className="navigation-bar">
       <div className="left">
         <a className="logo" onClick={() => hashHistory.push('/')} ></a>
-        <a className="my-links" href="https://www.linkedin.com/in/michaelmcoates">My LinkedIn</a>
-        <a className="my-links" href="https://github.com/michaelmcoates/greenhouse">GitHub Repo</a>
+        <a className="my-links" target="_blank" href="https://www.linkedin.com/in/michaelmcoates">My LinkedIn</a>
+        <a className="my-links" target="_blank" href="https://github.com/michaelmcoates/greenhouse">GitHub Repo</a>
         <SearchInputContainer />
       </div>
 
