@@ -20,15 +20,13 @@ class DynamicHeader extends React.Component {
 
     this.headerHTML = headers.map( (header, idx) => (
       <text
-      key={idx}
-      className={this.props.selected === header ? header + " active" : header}
-      onClick={this.props.selected === header ? "" : this.onClickSS}
+        key={idx}
+        className={this.props.selected === header ? header + " active" : header}
+        onClick={this.props.selected === header ? "" : this.onClickSS}
       >
         {header === "Story" ? header : header + " (#)"}
       </text>
-
     ));
-
 
     return (
       <div className="dynamic-header campaign-show-headerTitle">
