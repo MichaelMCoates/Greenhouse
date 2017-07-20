@@ -13,13 +13,12 @@ export const updateUser = user => dispatch => (
   APIUtil.updateUser(user)
     .then(currentUser => dispatch(receiveCurrentUser(currentUser)))
 );
-// may need to redirect here
 
 export const receiveUser = (user) => {
   return {
     type: RECEIVE_USER,
     user
-  }
+  };
 };
 
 export const receiveCampaigns = (campaigns) => ({

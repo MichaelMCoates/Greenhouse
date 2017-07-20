@@ -16,7 +16,6 @@ export const receiveFeaturedCarouselCampaigns = (featuredCarouselCampaigns) => (
   featuredCarouselCampaigns
 });
 
-
 export const fetchFeaturedCarouselCampaigns = () => dispatch => (
   APIUtil.fetchFeaturedCarouselCampaigns()
     .then(campaigns => dispatch(receiveFeaturedCarouselCampaigns(campaigns)))

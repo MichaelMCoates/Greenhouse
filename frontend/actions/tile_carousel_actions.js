@@ -6,7 +6,6 @@ export const receiveTileCarouselCampaigns = (tileCarouselCampaigns) => ({
   tileCarouselCampaigns
 });
 
-
 export const fetchTileCarouselCampaigns = () => dispatch => (
   APIUtil.fetchTileCarouselCampaigns()
     .then(campaigns => dispatch(receiveTileCarouselCampaigns(campaigns)))

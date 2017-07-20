@@ -13,22 +13,7 @@ import CampaignCreatePageContainer from './campaign_create/create_campaign_page_
 import HomePageContainer from './home_page/home_page_container';
 import SearchPageContainer from './search/search_container';
 
-//
-// import {fetchUser} from '../actions/user_actions';
-// window.fetchUser = fetchUser;
-// import {createContribution} from '../actions/contribution_actions';
-// window.createContribution = createContribution;
-// import {createPerk} from '../actions/perk_actions';
-// window.createPerk = createPerk;
-// import {createCampaign} from '../actions/campaign_actions';
-// window.createCampaign = createCampaign;
-// import {searchCampaigns} from '../actions/search_actions';
-// window.searchCampaigns = searchCampaigns;
-
-//
-
 const Root = ({ store }) => {
-
   const _redirectIfLoggedIn = (nextState, replace) => {
     const currentUser = store.getState().session.currentUser;
     if (currentUser) {
