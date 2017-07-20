@@ -18,9 +18,7 @@ class Api::CampaignsController < ApplicationController
       new_campaign_params = campaign_params
       new_campaign_params['user_id'] = current_user.id
       new_campaign_params['perks_attributes'] = new_perks_attributes
-      new_params = params
-      new_params[:campaign] = new_campaign_params
-      @campaign = Campaign.new(new_params[:campaign])
+      @campaign = Campaign.new(new_campaign_params)
     else
       @campaign = Campaign.new(campaign_params)
     end
