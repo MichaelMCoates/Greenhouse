@@ -52,6 +52,10 @@
   z-index: 0;
 }
 
+.category-box:hover .cat-box-bg {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
 .cat-box-title {
   margin-top: 5px;
   font-size: 16px;

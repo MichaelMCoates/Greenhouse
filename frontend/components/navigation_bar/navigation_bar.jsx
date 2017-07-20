@@ -10,7 +10,7 @@ const NavigationBar = () => {
         <a className="logo" onClick={() => hashHistory.push('/')} ></a>
         <a className="my-links" target="_blank" href="https://www.linkedin.com/in/michaelmcoates">My LinkedIn</a>
         <a className="my-links" target="_blank" href="https://github.com/michaelmcoates/greenhouse">GitHub Repo</a>
-        <a className="my-links" target="_blank" href="https://www.michaelmcoates.com">Portfolio</a>
+        <a className="my-links" target="_blank" href="http://www.michaelmcoates.com">Portfolio</a>
         <SearchInputContainer />
       </div>
 
