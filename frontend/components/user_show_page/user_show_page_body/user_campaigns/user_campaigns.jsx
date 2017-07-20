@@ -38,7 +38,6 @@ class UserCampaigns extends React.Component {
     );
   }
 
-
   render() {
     let camp_founded;
     if (this.user.campaigns.founded.length > 0) {

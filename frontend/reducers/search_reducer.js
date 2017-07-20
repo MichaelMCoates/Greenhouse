@@ -1,6 +1,6 @@
 import {RECEIVE_SEARCH_CAMPAIGNS} from '../actions/search_actions';
 
-const _nullSearch = []
+const _nullSearch = [];
 
 const SearchReducer = (state = _nullSearch, action) => {
   switch(action.type) {

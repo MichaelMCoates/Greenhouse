@@ -13,7 +13,6 @@ export const updateUser = (user) => {
   });
 };
 
-
 export const fetchCampaigns = (user_id) => {
   return $.ajax({
     method: 'GET',
