@@ -57,9 +57,7 @@ class CreateCampaignPage extends React.Component {
     }
   }
 
-
   render() {
-
     return (
       <div className="create-campaign-page">
         <div className="ccp-sidebar-div">
