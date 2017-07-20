@@ -16,12 +16,10 @@ class CampaignerDetails extends React.Component {
     hashHistory.push('/users/' + this.props.user_id);
   }
 
-
   render() {
     if (this.props.user === null) {
       return (<div> </div>);
     }
-
 
     return (
       <div className="campaigner-details">

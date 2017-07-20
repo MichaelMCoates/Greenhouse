@@ -9,12 +9,9 @@ import { Link } from 'react-router';
 class CampaignSummary extends React.Component {
   constructor (props) {
     super(props);
-
   }
 
   render() {
-
-
     return (
       <div className="campaign-summary campaign-show-right">
         <div className="campaign-summary-top">

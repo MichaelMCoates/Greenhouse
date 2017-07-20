@@ -10,14 +10,14 @@ class BackItBar extends React.Component {
     this.state = {active: false, amount: undefined};
     this.setState = this.setState.bind(this);
     this.updateAmount = this.updateAmount.bind(this);
-    this.onClickCO = this.onClickCO.bind(this);
+    this.onClickCheckOut = this.onClickCheckOut.bind(this);
   }
 
   updateAmount(e) {
     (this.setState({amount: e.target.value}));
   }
 
-  onClickCO() {
+  onClickCheckOut() {
     if (!this.props.loggedIn) {
       this.props.clearErrors();
       this.props.modalLogIn();
@@ -47,7 +47,7 @@ class BackItBar extends React.Component {
             </span>
           </div>
 
-          <div onClick={this.onClickCO}>
+          <div onClick={this.onClickCheckOut}>
             <input className="pink-button" type="submit" value="CHECK OUT" />
           </div>
 

@@ -6,10 +6,10 @@ class PerkItem extends React.Component {
   constructor(props) {
     super(props);
 
-    this.onClickCO = this.onClickCO.bind(this);
+    this.onClickCheckOut = this.onClickCheckOut.bind(this);
   }
 
-  onClickCO() {
+  onClickCheckOut() {
     if (this.props.currentUser) {
       this.props.setPerk(this.props.perk);
       hashHistory.push('/check_out');
@@ -22,7 +22,7 @@ class PerkItem extends React.Component {
   render() {
     let perk = this.props.perk;
     return (
-      <li className="perk-item" onClick={this.onClickCO}>
+      <li className="perk-item" onClick={this.onClickCheckOut}>
         <div className="perk-body">
           <div className="perk-cash-money">
             <text className="perk-cost">${perk.price}</text>

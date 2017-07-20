@@ -1,13 +1,11 @@
 import React from 'react';
 
-
 class SocialBar extends React.Component {
   constructor (props) {
     super(props);
 
     this.onClick = this.onClick.bind(this);
   }
-
 
   onClick() {
     this.props.setState({active: true});

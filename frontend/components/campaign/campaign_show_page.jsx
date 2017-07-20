@@ -8,20 +8,20 @@ class CampaignShowPage extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0);
     this.props.fetchCampaign(this.props.params.campaignId)
-    .then(({campaign: {user_id}}) => this.props.fetchUser(user_id));
+      .then(({campaign: {user_id}}) => this.props.fetchUser(user_id));
   }
 
   componentWillReceiveProps(nextProps) {
     if (this.props.params.campaignId !== nextProps.params.campaignId) {
       window.scrollTo(0, 0);
       this.props.fetchCampaign(nextProps.params.campaignId)
-      .then(({campaign: {user_id}}) => this.props.fetchUser(user_id));
+        .then(({campaign: {user_id}}) => this.props.fetchUser(user_id));
     }
   }
 
   render() {
     if (this.props.campaign.user_id === null) {
-      return (<div> </div>);
+      return (<div></div>);
     }
 
     return (

@@ -1,11 +1,9 @@
 import React from 'react';
-import { Line, Circle } from 'rc-progress';
+import { Line } from 'rc-progress';
 import moment from 'moment';
 
 
 class FundingBar extends React.Component {
-
-
   render() {
     let percent = Math.round((this.props.current_amt / this.props.goal_amt) * 100);
     let truePercent = percent;
