@@ -47,7 +47,6 @@ class CreateCampaignPage extends React.Component {
   }
 
   addPerk(perk_attributes) {
-    console.log("in add perk");
     if (this.state.perks_attributes === undefined) {
       this.setState({perks_attributes: [perk_attributes]});
     } else {
@@ -58,7 +57,6 @@ class CreateCampaignPage extends React.Component {
   }
 
   render() {
-    console.log(this.state);
     return (
       <div className="create-campaign-page">
         <div className="ccp-sidebar-div">

@@ -139,7 +139,6 @@ class CheckOut extends React.Component {
       </div>
 		);
 	}
-
 }
 
 export default CheckOut;

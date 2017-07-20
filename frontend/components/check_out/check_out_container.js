@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 import { createContribution } from '../../actions/contribution_actions';
 import CheckOut from './check_out';
 import React from 'react';
-import { Link, hashHistory } from 'react-router';
 
 const mapStateToProps = ({session, checkOut, campaign, user}) => {
  if (checkOut.perk) {

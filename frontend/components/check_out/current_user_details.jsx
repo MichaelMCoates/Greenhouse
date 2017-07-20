@@ -1,10 +1,7 @@
 import React from 'react';
 
 class CurrentUserDetails extends React.Component {
-
-
   render() {
-
     return (
       <div className="current-user-details">
         <img src={this.props.currentUser.avatar_img} />
@@ -17,4 +14,5 @@ class CurrentUserDetails extends React.Component {
     );
   }
 }
+
 export default CurrentUserDetails;

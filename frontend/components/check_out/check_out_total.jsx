@@ -8,11 +8,7 @@ class CheckOutTotal extends React.Component {
 
   }
 
-
-
-
   render() {
-
     if (this.props.perk) {
       return(
         <div className="check-out-total">
@@ -44,9 +40,7 @@ class CheckOutTotal extends React.Component {
         </div>
       );
 
-
     } else {
-
 
       return (
         <div className="check-out-total">
@@ -91,4 +85,5 @@ class CheckOutTotal extends React.Component {
     }
   }
 }
+
 export default CheckOutTotal;
