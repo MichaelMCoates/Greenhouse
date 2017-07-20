@@ -9,8 +9,13 @@ const Footer = () => {
           <h2 className="footer-bar-header">
             ABOUT MICHAEL COATES
           </h2>
-          <a className="footer-bar-links" href="https://www.linkedin.com/in/michaelmcoates">My LinkedIn</a>
-          <a className="footer-bar-links" href="https://github.com/michaelmcoates/greenhouse">GitHub Repo</a>
+          <a className="footer-bar-links" target="_blank" href="http://www.michaelmcoates.com">Portfolio</a>
+          <a className="footer-bar-links" target="_blank" href="https://www.linkedin.com/in/michaelmcoates">LinkedIn</a>
+          <a className="footer-bar-links" target="_blank" href="https://github.com/michaelmcoates">GitHub</a>
+          <a className="footer-bar-links" target="_blank" href="https://github.com/michaelmcoates/greenhouse">Greenhouse Repo</a>
+          <a className="footer-bar-links" target="_blank" href="https://angel.co/michael-m-coates">AngelList</a>
+          <a className="footer-bar-links" target="_blank" href="http://www.opusopus.co">Opus</a>
+          <a className="footer-bar-links" target="_blank" href="http://www.michaelmcoates.com/KeyDown">KeyDown</a>
         </div>
 
         <hr/>

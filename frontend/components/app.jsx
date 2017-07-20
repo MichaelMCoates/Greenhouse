@@ -9,7 +9,9 @@ const App = ({ children }) => (
     <ModalContainer/>
     <NavigationBar/>
     <hr/>
-    { children }
+    <div className="app-children">
+      { children }
+    </div>
     <Footer/>
   </div>
 );

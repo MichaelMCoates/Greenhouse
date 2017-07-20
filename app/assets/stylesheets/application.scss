@@ -57,6 +57,13 @@ hr {
   top: 44% !important;
 }
 
+.app-children {
+  min-height: 70%;
+  min-height: -webkit-calc(100vh - 398px);
+  min-height: -moz-calc(100vh - 398px);
+  min-height: calc(100vh - 398px);
+}
+
 
 // // Base
 //  @import "base/button";
