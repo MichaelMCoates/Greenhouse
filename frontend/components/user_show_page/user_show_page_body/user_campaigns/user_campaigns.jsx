@@ -9,7 +9,6 @@ class UserCampaigns extends React.Component {
   }
 
   campaignsFounded () {
-
     let founded_camps = this.user.campaigns.founded.map( (camp, idx) => (
       <UserCampaignItem key={idx} campaign={camp} />
     ));
@@ -25,7 +24,6 @@ class UserCampaigns extends React.Component {
   }
 
   campaignsFunded () {
-
     let funded_camps = this.user.campaigns.funded.map( (camp, idx) => (
       <UserCampaignItem key={idx} campaign={camp} />
     ));
@@ -56,7 +54,6 @@ class UserCampaigns extends React.Component {
       <div className="user-campaigns">
         {camp_founded}
         {camp_funded}
-
       </div>
     );
   }

@@ -8,16 +8,6 @@ class SignUpForm extends React.Component {
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
-	// componentDidUpdate() {
-	// 	this.redirectIfLoggedIn();
-	// }
-  //
-	// redirectIfLoggedIn() {
-	// 	if (this.props.loggedIn) {
-	// 		this.props.router.push("/");
-	// 	}
-	// }
-
 	update(field) {
 		return e => this.setState({
 			[field]: e.currentTarget.value
@@ -53,8 +43,6 @@ class SignUpForm extends React.Component {
 	}
 
 	render() {
-
-
 		return (
 			<div className="session-form-container">
 				<form onSubmit={this.handleSubmit} className="signup-form-box">
@@ -102,7 +90,6 @@ class SignUpForm extends React.Component {
 			</div>
 		);
 	}
-
 }
 
 export default withRouter(SignUpForm);

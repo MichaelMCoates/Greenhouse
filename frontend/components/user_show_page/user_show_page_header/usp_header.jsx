@@ -8,8 +8,6 @@ class UserShowPageHeader extends React.Component {
     this.setCampaigns = this.setCampaigns.bind(this);
   }
 
-
-
   setProfile(e) {
     return this.props.setState({profile_shown: true});
   }
@@ -19,7 +17,6 @@ class UserShowPageHeader extends React.Component {
   }
 
   render() {
-
     return (
       <div className="user-show-page-header">
         <div className={ this.props.profileShown ? "usp-header-item usp-header-item-selected" : "usp-header-item" }>
@@ -32,4 +29,5 @@ class UserShowPageHeader extends React.Component {
     );
   }
 }
+
 export default UserShowPageHeader;

@@ -18,7 +18,6 @@ class UserBar extends React.Component {
     e.stopPropagation();
   }
 
-
   render () {
     const sessionLinks = () => {
       return (
@@ -45,7 +44,6 @@ class UserBar extends React.Component {
         </nav>
       );
     };
-
 
     return (this.props.currentUser ? userNav() : sessionLinks());
   }

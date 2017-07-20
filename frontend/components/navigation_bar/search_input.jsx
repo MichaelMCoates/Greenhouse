@@ -29,7 +29,6 @@ class SearchInput extends React.Component {
     this.props.router.replace({ pathname: `/search${queryString}`});
   }
 
-
   render () {
     return (
       <form className="search-bar-form" onSubmit={this.urlUpdate.bind(this)}>

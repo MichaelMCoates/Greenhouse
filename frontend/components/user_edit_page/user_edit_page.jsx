@@ -46,15 +46,9 @@ class UserEditPage extends React.Component {
         tagline: user.tagline,
         about_me: user.about_me,
         postal_code: user.postal_code
-      })
+      });
     }
   }
-
-  // componentWillReceiveProps(nextProps) {
-  //   if (this.props.currentUser.id.toString() !== nextProps.params.userId) {
-  //     this.props.fetchUser(this.props.currentUser.id);
-  //   }
-  // }
 
   update(field) {
     return e => this.setState({
@@ -129,8 +123,6 @@ class UserEditPage extends React.Component {
                 />
             </div>
           </div>
-
-
 
           <div className="user-edit-box">
             <div className="user-edit-page-header">Your Story</div>

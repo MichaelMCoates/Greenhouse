@@ -28,7 +28,6 @@ class UserDropDown extends React.Component {
       </div>
     );
   }
-
 }
 
 

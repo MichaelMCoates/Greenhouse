@@ -13,7 +13,6 @@ const NavigationBar = () => {
         <SearchInputContainer />
       </div>
 
-
       <div className="right">
         <input onClick={() => hashHistory.push('/campaigns/start')} className="pink-button-nav" type="submit" value="START A CAMPAIGN" />
         <UserBarContainer />
