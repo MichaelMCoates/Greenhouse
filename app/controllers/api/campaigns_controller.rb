@@ -10,6 +10,7 @@ class Api::CampaignsController < ApplicationController
   end
 
   def create
+    debugger
     if campaign_params['perks_attributes']
       new_perks_attributes = campaign_params['perks_attributes'].map do |key, value|
         value

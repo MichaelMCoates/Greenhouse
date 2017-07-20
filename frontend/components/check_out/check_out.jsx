@@ -143,21 +143,3 @@ class CheckOut extends React.Component {
 }
 
 export default CheckOut;
-
-
-
-
-
-
-{/* <label className="appearance-radio">
-  <input
-    type="radio"
-    name="appearance"
-    className="other"
-    value="other"
-  />
-  <text className="radio-text">
-    Other
-  </text>
-  <br/>
-</label> */}

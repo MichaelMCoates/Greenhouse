@@ -13,7 +13,7 @@ class PerkItem extends React.Component {
     if (this.props.currentUser) {
       this.props.setPerk(this.props.perk);
       hashHistory.push('/check_out');
-    } else {
+    } else if (this.props.clearErrors) {
       this.props.clearErrors();
       this.props.modalLogIn();
     }
