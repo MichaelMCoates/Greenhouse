@@ -53,11 +53,10 @@ class PerksEditor extends React.Component {
       perkVals.push(this.state[key]);
     }
 
-    console.log(perkVals);
-
     if (this.fieldsFilled(perkVals)) {
       this.props.addPerk(this.state);
       this.reset();
+      window.scrollTo(0, 0);
     } else {
       alert("Must fill in all fields!");
     }

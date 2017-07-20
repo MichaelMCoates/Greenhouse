@@ -11,7 +11,7 @@ private
   def configure_connection
     default_configure_connection
     begin
-        execute("SELECT set_limit(0.05);")
+        execute("SELECT set_limit(0.07);")
     rescue ActiveRecord::StatementInvalid
         Rails.logger.warn("pg_trgm extension not enabled yet")
     end
