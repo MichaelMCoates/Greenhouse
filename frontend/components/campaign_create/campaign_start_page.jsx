@@ -19,7 +19,9 @@ class CampaignStartPage extends React.Component {
 
   handleSubmit(e) {
 		e.preventDefault();
-    if (this.props.currentUser) {
+    if (this.state.title.length === 0 || this.state.goal_amt < 500) {
+      alert("Please fill in all fields!");
+    } else if (this.props.currentUser) {
       sessionStorage.setItem('goal_amt', this.state.goal_amt);
       sessionStorage.setItem('title', this.state.title);
       hashHistory.push('/create-campaign');
