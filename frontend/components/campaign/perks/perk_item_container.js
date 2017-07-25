@@ -7,8 +7,8 @@ import { clearErrors } from '../../../actions/session_actions';
 import {addModalContent} from '../../../actions/modal_actions';
 
 
-const mapStateToProps = ({campaign, session}) => ({
-  currentUser: session.currentUser,
+const mapStateToProps = ({ session }) => ({
+  loggedIn: Boolean(session.currentUser)
 });
 
 const mapDispatchToProps = (dispatch) => ({

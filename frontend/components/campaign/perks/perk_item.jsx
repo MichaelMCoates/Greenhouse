@@ -10,7 +10,7 @@ class PerkItem extends React.Component {
   }
 
   onClickCheckOut() {
-    if (this.props.currentUser) {
+    if (this.props.loggedIn) {
       this.props.setPerk(this.props.perk);
       hashHistory.push('/check_out');
     } else if (this.props.clearErrors) {

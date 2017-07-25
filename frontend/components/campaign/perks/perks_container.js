@@ -7,7 +7,7 @@ import { clearErrors } from '../../../actions/session_actions';
 import {addModalContent} from '../../../actions/modal_actions';
 
 
-const mapStateToProps = ({campaign}) => ({
+const mapStateToProps = ({ campaign }) => ({
   perks: campaign.perks,
 });
 
