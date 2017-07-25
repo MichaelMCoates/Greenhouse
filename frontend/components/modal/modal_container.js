@@ -3,7 +3,7 @@ import React from 'react';
 import {closeModal} from '../../actions/modal_actions';
 import Modal from './modal';
 
-const mapStateToProps = ({modal: {active, content}}) => {
+const mapStateToProps = ({ modal: { active, content } }) => {
   return ({ active, content })
 };
 
