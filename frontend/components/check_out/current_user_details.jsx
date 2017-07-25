@@ -1,6 +1,17 @@
 import React from 'react';
+import {hashHistory} from 'react-router';
 
 class CurrentUserDetails extends React.Component {
+  constructor (props){
+    super(props);
+
+    this.redirectToProfile = this.redirectToProfile.bind(this);
+  }
+
+  redirectToProfile () {
+    hashHistory.push('/users/' + this.props.currentUser.id);
+  }
+
   render() {
     return (
       <div className="current-user-details">
@@ -8,7 +19,7 @@ class CurrentUserDetails extends React.Component {
         <div className="current-user-deets">
           <div className="current-user-details-name" >{this.props.currentUser.first_name} {this.props.currentUser.last_name}</div>
           <div className="current-user-details-location">{this.props.currentUser.city}, {this.props.currentUser.country}</div>
-          <div className="current-user-details-about">About</div>
+          <div className="current-user-details-about" onClick={this.redirectToProfile}>About</div>
         </div>
       </div>
     );
