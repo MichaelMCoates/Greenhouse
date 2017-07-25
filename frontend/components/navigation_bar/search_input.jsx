@@ -27,6 +27,7 @@ class SearchInput extends React.Component {
     }
 
     this.props.router.replace({ pathname: `/search${queryString}`});
+    this.setState({ query: '' });
   }
 
   render () {
