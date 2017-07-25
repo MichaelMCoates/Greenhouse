@@ -8,15 +8,18 @@ class FeaturedCarousel extends React.Component {
     this.shiftLeft = this.props.shiftLeft.bind(this);
     this.shiftRight = this.props.shiftRight.bind(this);
     this.updateFeaturedCarousel = this.updateFeaturedCarousel.bind(this);
+    this.interval = null;
   }
 
   componentDidMount () {
     this.props.fetchFeaturedCarouselCampaigns();
     window.addEventListener('animationend', this.updateFeaturedCarousel);
+    this.interval = setInterval(this.shiftLeft, 5000);
   }
 
   componentWillUnmount () {
     window.removeEventListener('animationend', this.updateFeaturedCarousel);
+    clearInterval(this.interval);
   }
 
   updateFeaturedCarousel(e) {
