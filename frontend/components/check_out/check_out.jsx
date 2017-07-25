@@ -6,11 +6,20 @@ import CheckOutTotal from './check_out_total';
 class CheckOut extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {appearance: null, amount: this.props.amount || this.props.perk.price};
-		this.handleSubmit = this.handleSubmit.bind(this);
-    this.updateAmount = this.updateAmount.bind(this);
-    this.setState = this.setState.bind(this);
-    this.updateAppearance = this.updateAppearance.bind(this);
+
+		if (props.currentUser) {
+			this.state = {appearance: null, amount: this.props.amount || this.props.perk.price};
+			this.handleSubmit = this.handleSubmit.bind(this);
+			this.updateAmount = this.updateAmount.bind(this);
+			this.setState = this.setState.bind(this);
+			this.updateAppearance = this.updateAppearance.bind(this);
+		}
+	}
+
+	componentWillMount() {
+		if (!this.props.currentUser) {
+			hashHistory.push('/');
+		}
 	}
 
 	update(field) {
@@ -29,13 +38,12 @@ class CheckOut extends React.Component {
     if (this.props.perk) {
       let mycontribution = Object.assign(
         this.state,
-        {perk_id: this.props.perk.id,
+        { perk_id: this.props.perk.id,
           campaign_id: this.props.campaign.id,
-          user_id: this.props.currentUser.id
-        }
+          user_id: this.props.currentUser.id }
       );
 
-      return this.props.createContribution({contribution: mycontribution})
+      return this.props.createContribution({ contribution: mycontribution })
         .then(() => hashHistory.push('/campaigns/' + this.props.campaign.id));
 
     } else {
@@ -60,6 +68,10 @@ class CheckOut extends React.Component {
   }
 
 	render() {
+		if (!this.props.currentUser) {
+			return(<div></div>);
+		}
+
     let checkouttotal;
     if (this.props.perk) {
       checkouttotal = <CheckOutTotal
