@@ -60,6 +60,15 @@
   border: 1px solid #dddddd;
 }
 
+.magnifying-glass-search-page-div {
+  color: #2a2a2a;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
 .query-label:after {
   display: block;
   width: 14px;
@@ -81,6 +90,7 @@
   flex-flow: row wrap;
   justify-content: space-around;
 }
+
 .search-tiles-div > div {
   margin-top: 37px;
 }
