@@ -39,15 +39,19 @@
   cursor: pointer;
 }
 
+.search-bar-form {
+  position: relative;
+}
+
 .search-bar {
   margin-left: 30px;
-  padding-left: 30px;
   width: 10em;
   height: 35px;
   font-size: 14px;
   line-height: 20px;
   display: block;
   padding: 5px 15px;
+  padding-left: 30px;
   background-color: #ffffff;
   border: 1px solid #dddddd;
   border-radius: 2px;
@@ -59,6 +63,15 @@
   width: 20em;
   border: 1px solid #2a2a2a;
   outline: none;
+}
+
+.magnifying-glass-div {
+  width: 18px;
+  height: 18px;
+  fill: #a8a8a8;
+  position: absolute;
+  top: 9px;
+  left: 37px;
 }
 
 .user-nav {
