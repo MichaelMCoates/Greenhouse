@@ -1,6 +1,6 @@
 import React from 'react';
 import CurrentUserBar from '../user_show_page/current_user_bar';
-import {hashHistory} from 'react-router';
+import {browserHistory} from 'react-router';
 
 class UserEditPage extends React.Component {
   constructor (props) {
@@ -60,7 +60,7 @@ class UserEditPage extends React.Component {
 		e.preventDefault();
 		const user = this.state;
 		this.props.updateUser({user})
-    .then(hashHistory.push('/users/' + this.props.currentUser.id));
+    .then(browserHistory.push('/users/' + this.props.currentUser.id));
 	}
 
   render() {

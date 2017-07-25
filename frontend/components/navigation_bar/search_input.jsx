@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, hashHistory, withRouter} from 'react-router';
+import {Link, browserHistory, withRouter} from 'react-router';
 
 class SearchInput extends React.Component {
   constructor(props) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import {hashHistory} from 'react-router';
+import {browserHistory} from 'react-router';
 
 class CampaignStartPage extends React.Component {
   constructor (props) {
@@ -24,7 +24,7 @@ class CampaignStartPage extends React.Component {
     } else if (this.props.currentUser) {
       sessionStorage.setItem('goal_amt', this.state.goal_amt);
       sessionStorage.setItem('title', this.state.title);
-      hashHistory.push('/create-campaign');
+      browserHistory.push('/create-campaign');
     } else {
       this.props.clearErrors();
       this.props.modalLogIn();

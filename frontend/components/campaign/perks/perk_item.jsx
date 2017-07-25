@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-import { Link, hashHistory } from 'react-router';
+import { Link, browserHistory } from 'react-router';
 
 class PerkItem extends React.Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class PerkItem extends React.Component {
   onClickCheckOut() {
     if (this.props.loggedIn) {
       this.props.setPerk(this.props.perk);
-      hashHistory.push('/check_out');
+      browserHistory.push('/check_out');
     } else if (this.props.clearErrors) {
       this.props.clearErrors();
       this.props.modalLogIn();

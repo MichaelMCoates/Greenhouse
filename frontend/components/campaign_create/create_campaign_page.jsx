@@ -3,7 +3,7 @@ import NavigationBar from '../navigation_bar/navigation_bar.jsx';
 import CreateHeader from './create_header/create_header';
 import CreateBody from './create_body/create_body';
 import CreateSidebar from './create_sidebar';
-import { hashHistory } from 'react-router';
+import { browserHistory } from 'react-router';
 
 class CreateCampaignPage extends React.Component {
   constructor(props) {
@@ -35,7 +35,7 @@ class CreateCampaignPage extends React.Component {
   triggerCreateCampaign() {
     this.createCampaign({campaign: this.state})
     .then(
-      ({campaign: {id}}) => hashHistory.push('/campaigns/' + id),
+      ({campaign: {id}}) => browserHistory.push('/campaigns/' + id),
       ((errors) => alert("Must fill in all fields!"))
     );
   }

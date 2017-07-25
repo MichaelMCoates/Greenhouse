@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, IndexRoute, hashHistory } from 'react-router';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { Provider } from 'react-redux';
 import App from './app';
 import LogInFormContainer from './log_in_form/log_in_form_container';
@@ -23,7 +23,7 @@ const Root = ({ store }) => {
 
   return (
     <Provider store={ store }>
-      <Router history={ hashHistory }>
+      <Router history={ browserHistory }>
         <Route path="/" component={ App } >
         <IndexRoute component={HomePageContainer} />
           <Route path="/campaigns/start" component={CampaignStartPageContainer} />
