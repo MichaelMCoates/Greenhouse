@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, browserHistory, withRouter} from 'react-router';
+import {Link, hashHistory, withRouter} from 'react-router';
 import CampaignTile from '../home_page/campaign_tile';
 
 class SearchPage extends React.Component {

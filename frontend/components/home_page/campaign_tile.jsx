@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, browserHistory, withRouter} from 'react-router';
+import {Link, hashHistory, withRouter} from 'react-router';
 import TileFundingBar from './tile_funding_bar';
 
 class TileCarousel extends React.Component {
@@ -16,7 +16,7 @@ class TileCarousel extends React.Component {
   render () {
     const camp = this.props.campaign;
     return (
-      <div className="campaign-tile" onClick={() => browserHistory.push('/campaigns/' + camp.id)}>
+      <div className="campaign-tile" onClick={() => hashHistory.push('/campaigns/' + camp.id)}>
         <div className="tile-img">
           <img src={camp.tile_img_url} />
         </div>

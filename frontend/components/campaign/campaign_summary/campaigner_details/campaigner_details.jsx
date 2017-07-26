@@ -1,5 +1,5 @@
 import React from 'react';
-import {browserHistory} from 'react-router';
+import {hashHistory} from 'react-router';
 
 class CampaignerDetails extends React.Component {
   constructor (props){
@@ -13,7 +13,7 @@ class CampaignerDetails extends React.Component {
   }
 
   redirectToProfile () {
-    browserHistory.push('/users/' + this.props.user_id);
+    hashHistory.push('/users/' + this.props.user_id);
   }
 
   render() {

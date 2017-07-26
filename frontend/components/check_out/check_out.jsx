@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter, browserHistory } from 'react-router';
+import { Link, withRouter, hashHistory } from 'react-router';
 import CurrentUserDetails from './current_user_details';
 import CheckOutTotal from './check_out_total';
 
@@ -18,7 +18,7 @@ class CheckOut extends React.Component {
 
 	componentWillMount() {
 		if (!this.props.currentUser) {
-			browserHistory.push('/');
+			hashHistory.push('/');
 		}
 	}
 
@@ -44,7 +44,7 @@ class CheckOut extends React.Component {
       );
 
       return this.props.createContribution({ contribution: mycontribution })
-        .then(() => browserHistory.push('/campaigns/' + this.props.campaign.id));
+        .then(() => hashHistory.push('/campaigns/' + this.props.campaign.id));
 
     } else {
       let mycontribution = Object.assign(
@@ -55,7 +55,7 @@ class CheckOut extends React.Component {
       );
 
       return this.props.createContribution({contribution: mycontribution})
-        .then(() => browserHistory.push('/campaigns/' + this.props.campaign.id));
+        .then(() => hashHistory.push('/campaigns/' + this.props.campaign.id));
     }
 	}
 

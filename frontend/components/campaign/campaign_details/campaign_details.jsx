@@ -1,6 +1,6 @@
 import React from 'react';
 import DynamicDetailsContainer from './dynamic_details/dynamic_details_container';
-import {Link, browserHistory, withRouter} from 'react-router';
+import {Link, hashHistory, withRouter} from 'react-router';
 
 class CampaignDetails extends React.Component {
 

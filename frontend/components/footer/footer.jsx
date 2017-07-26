@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, browserHistory } from 'react-router';
+import { Link, hashHistory } from 'react-router';
 
 const Footer = () => {
   return (

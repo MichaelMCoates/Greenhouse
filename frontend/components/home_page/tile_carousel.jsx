@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, browserHistory} from 'react-router';
+import {Link, hashHistory} from 'react-router';
 import CampaignTile from './campaign_tile';
 import TileCarouselSlider from './tile_carousel_slider';
 

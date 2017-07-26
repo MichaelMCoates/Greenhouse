@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, browserHistory} from 'react-router';
+import {Link, hashHistory} from 'react-router';
 
 class FeaturedCarousel extends React.Component {
   constructor(props) {
@@ -87,7 +87,7 @@ class FeaturedCarousel extends React.Component {
             </div>
           </div>
           <div className="featured-carousel-overlay-right">
-            <div onClick={() => browserHistory.push('/campaigns/' + campaign.id)} className={"see-campaign"}>
+            <div onClick={() => hashHistory.push('/campaigns/' + campaign.id)} className={"see-campaign"}>
               SEE CAMPAIGN
             </div>
           </div>

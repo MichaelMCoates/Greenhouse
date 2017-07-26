@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, browserHistory } from 'react-router';
+import { Link, hashHistory } from 'react-router';
 
 
 class UserDropDown extends React.Component {
@@ -11,11 +11,11 @@ class UserDropDown extends React.Component {
   }
 
   redirectToProfile () {
-    browserHistory.push('/users/' + this.props.currentUser.id);
+    hashHistory.push('/users/' + this.props.currentUser.id);
   }
 
   redirectToEdit () {
-    browserHistory.push('/users/' + this.props.currentUser.id + '/edit');
+    hashHistory.push('/users/' + this.props.currentUser.id + '/edit');
   }
 
   render() {

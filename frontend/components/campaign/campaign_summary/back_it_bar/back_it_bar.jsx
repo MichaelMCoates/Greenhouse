@@ -1,6 +1,6 @@
 import React from 'react';
 import SocialBar from './social_bar';
-import { Link, browserHistory } from 'react-router';
+import { Link, hashHistory } from 'react-router';
 
 
 class BackItBar extends React.Component {
@@ -25,7 +25,7 @@ class BackItBar extends React.Component {
       alert("Must enter a valid value!");
     } else {
       (this.props.setAmount({amount: this.state.amount}));
-      browserHistory.push('/check_out');
+      hashHistory.push('/check_out');
     }
   }
 
