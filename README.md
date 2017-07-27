@@ -38,10 +38,10 @@ When the user clicks on a campaign, they are taken to the campaign show page. Th
 
 *Funding Bar*
 
-The funding bar is 
+The funding bar is
 
 
-![Campaign Show Page](/docs/images/campaign_show.png)
+![Campaign Show Page](/docs/images/campaign_show_2.png)
 
 
 
