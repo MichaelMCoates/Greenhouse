@@ -36,6 +36,10 @@ Beneath the carousels, users can click on any of the category boxes to be taken 
 
 When the user clicks on a campaign, they are taken to the campaign show page. This page gives information about the campaign, from the user that created it, to the amount that it has been funded thus far.
 
+*Funding Bar*
+
+The funding bar is 
+
 
 ![Campaign Show Page](/docs/images/campaign_show.png)
 
