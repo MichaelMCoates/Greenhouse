@@ -31,6 +31,7 @@ The main feature of the home page is its two carousels. The top carousel shows G
 Beneath the carousels, users can click on any of the category boxes to be taken to the Search/Categories Page.
 
 ![Home Page](/docs/images/home_page.png)
+![Campaign Show Page](/docs/images/campaign_show.png)
 
 
 ## New Features Queue
