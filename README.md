@@ -56,7 +56,7 @@ The Campaign Overview section has a small summary of the campaign, and a clickab
 
 *Perks*
 
-Perks for a campaign are displayed in the bottom right corner. A user can click on a Perk to purchase it from the campaign. The perks have front-end validations to ensure that the user is logged in before they are redirected to the `Check Out Page`. Perks are fetched independently of campaigns, but their campaign_id* foreign key (which corresponds to the campaign they are associated with) is indexed in the database for fast lookup. Their information is updated automatically as they are purchased.
+Perks for a campaign are displayed in the bottom right corner. A user can click on a Perk to purchase it from the campaign. The perks have front-end validations to ensure that the user is logged in before they are redirected to the `Check Out Page`. Perks are fetched independently of campaigns, but their campaign_id foreign key (which corresponds to the campaign they are associated with) is indexed in the database for fast lookup. Their information is updated automatically as they are purchased.
 
 <br>
 
@@ -113,11 +113,21 @@ This page allows the user to create a campaign on Greenhouse. Here, they can edi
 
 <br>
 
+
 ## Perk Create Page
 
 ![Perk Create Page](/docs/images/perk_create.png)
 
-This page allows the user to create perks for their campaigns. They can customize the price, description, number available, and estimated date of delivery. If they save the perk to the campaign, it is previewed on the page (by re-using the component from the `Campaign Show Page`).
+This page allows the user to create perks for their campaigns. They can customize the price, description, number available, and estimated date of delivery. If they save the perk to the campaign, it is previewed on the page (by re-using the Perk component from the `Campaign Show Page`).
+
+<br>
+
+
+## Search/Categories Page
+
+![Search Categories Page](/docs/images/search_categories.png)
+
+If the user either searches using the Search Input in the Navigation Bar, or clicks on a category on a `Campaign Show Page` or Campaign Tile component, they are redirected to the Search/Categories Page. This page allows a user to search through campaigns on Greenhouse, and also search within a category for campaigns (which is a feature that Indiegogo does not have). This search uses Trigram Searching on the backend (using the pg_trgm gem) to enable fuzzy search. Even if a user misspells the word they are searching for, this search will still return the results they are looking for.
 
 <br>
 
@@ -131,4 +141,7 @@ There is still work to be done on Greenhouse. The following is a list of future 
 * Comments, Updates, and Backers for Campaigns
 * Rich-text formatting for Campaign Stories
 * Campaign editing and deletion
-* Perk deletion and editing
+* Perk editing and deletion
+* Campaign previewing
+* Campaign saving without launching
+* Search filters
