@@ -7,14 +7,14 @@ class BackItBar extends React.Component {
   constructor (props) {
     super(props);
 
-    this.state = {active: false, amount: undefined};
+    this.state = { active: false, amount: undefined };
     this.setState = this.setState.bind(this);
     this.updateAmount = this.updateAmount.bind(this);
     this.onClickCheckOut = this.onClickCheckOut.bind(this);
   }
 
   updateAmount(e) {
-    (this.setState({amount: e.target.value}));
+    this.setState({ amount: e.target.value });
   }
 
   onClickCheckOut() {
@@ -24,7 +24,7 @@ class BackItBar extends React.Component {
     } else if (this.state.amount <= 0) {
       alert("Must enter a valid value!");
     } else {
-      (this.props.setAmount({ amount: this.state.amount }));
+      this.props.setAmount({ amount: this.state.amount });
       hashHistory.push('/check_out');
     }
   }

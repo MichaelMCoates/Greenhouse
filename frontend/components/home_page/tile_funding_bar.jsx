@@ -26,7 +26,7 @@ class TileFundingBar extends React.Component {
           <text className="tfb-dollabills">${this.props.current_amt.toLocaleString()}</text>
           <text>&nbsp;USD</text>
         </div>
-        <div className="tfb-barbarbar">
+        <div className="tfb-funding-progress-bar">
           <Line className="tfb-line" percent={percent.toString()} trailWidth="3.8" strokeWidth="3.8" strokeColor="#eb1478" trailColor="#dddddd" strokeLinecap="square" />
         </div>
         <div className="tfb-bottom">

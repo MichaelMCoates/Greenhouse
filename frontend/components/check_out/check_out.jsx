@@ -35,28 +35,28 @@ class CheckOut extends React.Component {
       return;
     }
 
-    if (this.props.perk) {
-      let mycontribution = Object.assign(
-        this.state,
-        { perk_id: this.props.perk.id,
-          campaign_id: this.props.campaign.id,
-          user_id: this.props.currentUser.id }
-      );
+    let myContribution = this.createContributionObject();
 
-      return this.props.createContribution({ contribution: mycontribution })
-        .then(() => hashHistory.push('/campaigns/' + this.props.campaign.id));
+    return this.props.createContribution({ contribution: myContribution })
+      .then(() => hashHistory.push('/campaigns/' + this.props.campaign.id));
+	}
 
-    } else {
-      let mycontribution = Object.assign(
-        this.state,
-        {campaign_id: this.props.campaign.id,
-          user_id: this.props.currentUser.id
-        }
-      );
+	createContributionObject() {
+		let checkOutParams;
+		if (this.props.perk) {
+			checkOutParams = {
+				perk_id: this.props.perk.id,
+				campaign_id: this.props.campaign.id,
+				user_id: this.props.currentUser.id
+			};
+		} else {
+			checkOutParams = {
+				campaign_id: this.props.campaign.id,
+				user_id: this.props.currentUser.id
+			};
+		}
 
-      return this.props.createContribution({contribution: mycontribution})
-        .then(() => hashHistory.push('/campaigns/' + this.props.campaign.id));
-    }
+		return Object.assign(this.state, checkOutParams);
 	}
 
   updateAmount(e) {
@@ -67,25 +67,30 @@ class CheckOut extends React.Component {
     (this.setState({appearance: e.target.value}));
   }
 
+	checkOutTotal() {
+		if (this.props.perk) {
+      return (
+				<CheckOutTotal
+					perk={this.props.perk}
+					handleSubmit={this.handleSubmit} />
+			);
+    } else {
+			return (
+				<CheckOutTotal
+					handleSubmit={this.handleSubmit}
+					updateAmount={this.updateAmount}
+					campaign_id={this.props.campaign.id}
+					amount={this.state.amount} />
+			);
+    }
+	}
+
 	render() {
 		if (!this.props.currentUser) {
 			return(<div></div>);
 		}
 
-    let checkouttotal;
-    if (this.props.perk) {
-      checkouttotal = <CheckOutTotal
-          perk={this.props.perk}
-          handleSubmit={this.handleSubmit}
-        />;
-    } else {
-      checkouttotal = <CheckOutTotal
-          handleSubmit={this.handleSubmit}
-          updateAmount={this.updateAmount}
-          campaign_id={this.props.campaign.id}
-          amount={this.state.amount}
-        />;
-    }
+    let checkOutTotal = this.checkOutTotal();
 
 		return (
       <div className="check-out-page">
@@ -145,7 +150,7 @@ class CheckOut extends React.Component {
     			</div>
 
           <div className="totaling-comp">
-            {checkouttotal}
+            {checkOutTotal}
           </div>
         </div>
       </div>
