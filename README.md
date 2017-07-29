@@ -18,7 +18,6 @@ Greenhouse is a full-stack clone of Indiegogo, a crowdfunding application. It is
 
 # Features & Implementation
 
-
 ## Home Page
 
 ![Home Page](/docs/images/home_page.png)
@@ -28,6 +27,7 @@ The user will typically start at the Home Page of Greenhouse. The Home Page show
 *Carousels*
 
 The main feature of the Home Page is its two Carousels. The top carousel shows Greenhouse's featured campaigns, and is implemented using CSS3 Animations. The user can navigate through the campaigns by clicking on the neighboring campaigns, which triggers the animation. The bottom carousel shows suggested campaigns for the user, and is implemented using react-slick.
+
 
 *Category Boxes*
 
@@ -73,6 +73,7 @@ The right side of the page displays the Check Out Total component. This componen
 
 <br>
 
+
 ## User Show Page
 
 ![User Show Page](/docs/images/user_show.png)
@@ -83,16 +84,35 @@ When a user clicks on a user's name or clicks on "My Profile" in the navigation 
 
 If a user is viewing their own profile, the Current User Bar is displayed, which allows the user to edit their profile information.
 
+<br>
+
+
 ## User Campaigns Page
 
 ![User Campaigns Page](/docs/images/user_campaigns.png)
 
 If a user clicks on the Campaigns tab in the `User Show Page`, they are taken to the User Campaigns Page. Here, the user can see what campaigns that user has created and contributed to.
 
+<br>
 
 
+## Campaign Create Start Page
+
+![Campaign Create Start Page](/docs/images/campaign_create_start.png)
+
+If a user clicks on the Start A Campaign button in the Navigation Bar, they are redirected to the Campaign Create Start Page. Here, they can customize how much money they would like to raise and the title of their campaign. When the Create My Campaign button is clicked, the user is redirected to the `Campaign Create Page`. This page has front-end validations to prevent a user from creating a campaign if they are not logged in.
 
 <br>
+
+
+## Campaign Create Page
+
+![Campaign Create Page](/docs/images/campaign_create.png)
+
+If a user clicks on the Start A Campaign button in the Navigation Bar, they are redirected to the Campaign Create Start Page. Here, they can customize how much money they would like to raise and the title of their campaign. When the Create My Campaign button is clicked, the user is redirected to the `Campaign Create Page`. This page has front-end validations to prevent a user from creating a campaign if they are not logged in.
+
+<br>
+
 
 ## Upcoming Features
 
