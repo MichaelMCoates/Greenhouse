@@ -91,8 +91,8 @@ class PerksEditor extends React.Component {
       <div className="editor">
         <div className="editor-header">Perks</div>
         <div className="editor-description">Perks are incentives offered to backers in exchange for their support. You may edit your perk details until the perk is claimed.</div>
+        
         {divCurrentPerks}
-
 
         <div className="editor-input-div">
           <div className="editor-input-title">Price</div>
