@@ -109,7 +109,15 @@ If a user clicks on the Start A Campaign button in the Navigation Bar, they are 
 
 ![Campaign Create Page](/docs/images/campaign_create.png)
 
-If a user clicks on the Start A Campaign button in the Navigation Bar, they are redirected to the Campaign Create Start Page. Here, they can customize how much money they would like to raise and the title of their campaign. When the Create My Campaign button is clicked, the user is redirected to the `Campaign Create Page`. This page has front-end validations to prevent a user from creating a campaign if they are not logged in.
+This page allows the user to create a campaign on Greenhouse. Here, they can edit everything about a campaign, from the category it's in, to its story. All state information about the campaign is stored locally, at the top level, to ensure state preservation between pages, speed up state updating, and enforce input validations for the entire campaign. The user can navigate between pages using the Campaign Create Sidebar.
+
+<br>
+
+## Perk Create Page
+
+![Perk Create Page](/docs/images/perk_create.png)
+
+This page allows the user to create perks for their campaigns. They can customize the price, description, number available, and estimated date of delivery. If they save the perk to the campaign, it is previewed on the page (by re-using the component from the `Campaign Show Page`).
 
 <br>
 
@@ -123,3 +131,4 @@ There is still work to be done on Greenhouse. The following is a list of future 
 * Comments, Updates, and Backers for Campaigns
 * Rich-text formatting for Campaign Stories
 * Campaign editing and deletion
+* Perk deletion and editing
