@@ -18,18 +18,16 @@ Greenhouse is a full-stack clone of Indiegogo, a crowdfunding application. It is
 
 # Features & Implementation
 
-<br>
-
 
 ## Home Page
 
 ![Home Page](/docs/images/home_page.png)
 
-The user will typically start at the home page of Greenhouse. The `Home Page` shows featured campaigns, suggested campaigns, and campaign categories.
+The user will typically start at the Home Page of Greenhouse. The Home Page shows featured campaigns, suggested campaigns, and campaign categories.
 
 *Carousels*
 
-The main feature of the `Home Page` is its two Carousels. The top carousel shows Greenhouse's featured campaigns, and is implemented using CSS3 Animations. The user can navigate through the campaigns by clicking on the neighboring campaigns, which triggers the animation. The bottom carousel shows suggested campaigns for the user, and is implemented using react-slick.
+The main feature of the Home Page is its two Carousels. The top carousel shows Greenhouse's featured campaigns, and is implemented using CSS3 Animations. The user can navigate through the campaigns by clicking on the neighboring campaigns, which triggers the animation. The bottom carousel shows suggested campaigns for the user, and is implemented using react-slick.
 
 *Category Boxes*
 
@@ -58,14 +56,34 @@ The Campaign Overview section has a small summary of the campaign, and a clickab
 
 *Perks*
 
-Perks for a campaign are displayed in the bottom right corner. A user can click on a Perk to purchase it from the campaign. The perks have front-end validations to ensure that the user is logged in before they are redirected to the `Check Out Page`. Perks are fetched independently of campaigns, but their *campaign_id* foreign key (which corresponds to the campaign they are associated with) is indexed in the database for fast lookup. Their information is updated automatically as they are purchased.
+Perks for a campaign are displayed in the bottom right corner. A user can click on a Perk to purchase it from the campaign. The perks have front-end validations to ensure that the user is logged in before they are redirected to the `Check Out Page`. Perks are fetched independently of campaigns, but their campaign_id* foreign key (which corresponds to the campaign they are associated with) is indexed in the database for fast lookup. Their information is updated automatically as they are purchased.
 
 <br>
 
 
 ## Check Out Page
 
+![Check Out Page](/docs/images/check_out.png)
 
+After a user either clicks on a Perk, or on the Back It Button, they are redirected to the Check Out Page. Here, they can fill in their payment information, how they would like their contribution to be displayed, and edit their contribution amount. This page has front-end validations to prevent a user from contributing without choosing their appearances, and prevent a user from accessing the Check Out Page without logging in.
+
+*Check Out Total*
+
+The right side of the page displays the Check Out Total component. This component is rendered conditionally, depending on whether the user is purchasing a perk, or simply making a contribution. If the user is making a contribution, it allows the user to change their contribution, or add a perk. If they are purchasing a perk, it displays the perk information instead. Both instances display the total cost of the contribution the user is making, and the button to submit their payment.
+
+<br>
+
+## User Show/User Campaigns Page
+
+![User Show Page](/docs/images/user_show.png)
+
+
+
+*Current User Bar*
+
+
+
+<br>
 
 ## Upcoming Features
 
@@ -75,3 +93,4 @@ There is still work to be done on Greenhouse. The following is a list of future 
 * Campaign image upload
 * Comments, Updates, and Backers for Campaigns
 * Rich-text formatting for Campaign Stories
+* Campaign editing and deletion
