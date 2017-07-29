@@ -20,38 +20,53 @@ Greenhouse is a full-stack clone of Indiegogo, a crowdfunding application. It is
 
 ### Home Page
 
-The user will typically start at the home page of Greenhouse. The home page shows featured campaigns, suggested campaigns, and campaign categories.
+The user will typically start at the home page of Greenhouse. The `Home Page` shows featured campaigns, suggested campaigns, and campaign categories.
 
-*Carousels*
+**Carousels**
 
-The main feature of the home page is its two carousels. The top carousel shows Greenhouse's featured campaigns, and is implemented using CSS3 Animations. The user can navigate through the campaigns by clicking on the neighboring campaigns, which triggers the animation. The bottom carousel shows suggested campaigns for the user, and is implemented using react-slick.
+The main feature of the `Home Page` is its two Carousels. The top carousel shows Greenhouse's featured campaigns, and is implemented using CSS3 Animations. The user can navigate through the campaigns by clicking on the neighboring campaigns, which triggers the animation. The bottom carousel shows suggested campaigns for the user, and is implemented using react-slick.
 
-*Categories*
+**Category Boxes**
 
-Beneath the carousels, users can click on any of the category boxes to be taken to the Search/Categories Page.
+Beneath the carousels, users can click on any of the Category Boxes to be taken to the `Search/Categories Page`.
 
 ![Home Page](/docs/images/home_page.png)
 
+
+
 ### Campaign Show Page
 
-When the user clicks on a campaign, they are taken to the campaign show page. This page gives information about the campaign, from the user that created it, to the amount that it has been funded thus far.
+When the user clicks on a campaign, they are taken to the Campaign Show Page. This page gives information about the campaign, from the user that created it, to the amount that it has been funded thus far.
 
-*Funding Bar*
+**Funding Bar**
 
-The funding bar is
+The Funding Bar uses Moment.js and rc-progress to render campaign fundraising information. It updates automatically as time progresses, and if users purchase perks, or contribute to a campaign.
 
+**Back It Button**
+
+The Back It Button allows the user to contribute to a campaign. It has a click handler to toggle the input field for the user. It also has front-end validations to ensure that the user is logged in before they are redirected to the `Check Out Page`.
+
+**Campaign Overview**
+
+The Campaign Overview section has a small summary of the campaign, and a clickable category button that takes the user to the `Search/Categories Page`. Beneath the summary, the story of the campaign is displayed.
+
+**Perks**
+
+Perks for a campaign are displayed in the bottom right corner. A user can click on a Perk to purchase it from the campaign. The perks have front-end validations to ensure that the user is logged in before they are redirected to the `Check Out Page`. Perks are fetched independently of campaigns, but their *campaign_id* foreign key (which corresponds to the campaign they are associated with) is indexed in the database for fast lookup. Their information is updated automatically as they are purchased.
 
 ![Campaign Show Page](/docs/images/campaign_show_2.png)
 
 
 
-## New Features Queue
+### Check Out Page
 
-Some features missing from this iteration of Greenhouse that will hopefully see
-implementation at a future date include:
 
-* User profile modification
-* Direct deck exchange between users
-* Fancy text editing for flashcards
-* Timed grading (users will also graded on how long it takes to guess a card)
-* Larger Public Deck DataBase with an infinite scroll in the deck browser.
+
+## Upcoming Features
+
+There is still work to be done on Greenhouse. The following is a list of future features that still need implementation:
+
+* User profile image upload
+* Campaign image upload
+* Comments, Updates, and Backers for Campaigns
+* Rich-text formatting for Campaign Stories

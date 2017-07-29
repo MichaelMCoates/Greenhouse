@@ -24,7 +24,7 @@ class BackItBar extends React.Component {
     } else if (this.state.amount <= 0) {
       alert("Must enter a valid value!");
     } else {
-      (this.props.setAmount({amount: this.state.amount}));
+      (this.props.setAmount({ amount: this.state.amount }));
       hashHistory.push('/check_out');
     }
   }
