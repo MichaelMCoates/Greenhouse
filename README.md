@@ -16,9 +16,9 @@ Greenhouse is a full-stack clone of Indiegogo, a crowdfunding application. It is
 * View a user's profile, campaigns, and campaigns they've contributed to
 * Search for campaigns by both keywords and categories
 
-## Features & Implementation
+# Features & Implementation
 
-### Home Page
+## Home Page
 
 ![Home Page](/docs/images/home_page.png)
 
@@ -32,9 +32,7 @@ The main feature of the `Home Page` is its two Carousels. The top carousel shows
 
 Beneath the carousels, users can click on any of the Category Boxes to be taken to the `Search/Categories Page`.
 
-
-
-### Campaign Show Page
+## Campaign Show Page
 
 ![Campaign Show Page](/docs/images/campaign_show_2.png)
 
@@ -57,8 +55,7 @@ The Campaign Overview section has a small summary of the campaign, and a clickab
 Perks for a campaign are displayed in the bottom right corner. A user can click on a Perk to purchase it from the campaign. The perks have front-end validations to ensure that the user is logged in before they are redirected to the `Check Out Page`. Perks are fetched independently of campaigns, but their *campaign_id* foreign key (which corresponds to the campaign they are associated with) is indexed in the database for fast lookup. Their information is updated automatically as they are purchased.
 
 
-
-### Check Out Page
+## Check Out Page
 
 
 
