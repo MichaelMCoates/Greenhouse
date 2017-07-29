@@ -73,13 +73,22 @@ The right side of the page displays the Check Out Total component. This componen
 
 <br>
 
-## User Show/User Campaigns Page
+## User Show Page
 
 ![User Show Page](/docs/images/user_show.png)
 
-
+When a user clicks on a user's name or clicks on "My Profile" in the navigation bar after clicking their own name, they are taken to the User Show Page. Here, a user can view information about the user.
 
 *Current User Bar*
+
+If a user is viewing their own profile, the Current User Bar is displayed, which allows the user to edit their profile information.
+
+## User Campaigns Page
+
+![User Campaigns Page](/docs/images/user_campaigns.png)
+
+If a user clicks on the Campaigns tab in the `User Show Page`, they are taken to the User Campaigns Page. Here, the user can see what campaigns that user has created and contributed to.
+
 
 
 
