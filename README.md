@@ -39,6 +39,8 @@ Greenhouse uses the following libraries, languages, technologies, and frameworks
 
 # Application Features
 
+Here are summaries of the main features of Greenhouse. Links to the code itself are provided.
+
 ## Home Page
 
 ![Home Page](/docs/images/home_page.png)
@@ -155,7 +157,7 @@ If the user either searches using the Search Input in the Navigation Bar, or cli
 
 ## Upcoming Features
 
-There is still work to be done on Greenhouse. The following is a list of future features that still need implementation:
+There is still work to be done on Greenhouse. The following is a list of features that still need implementation:
 
 * User profile image upload
 * Campaign image upload
