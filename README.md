@@ -90,7 +90,7 @@ After a user either clicks on a Perk, or on the Back It Button, they are redirec
 
 *Check Out Total*
 
-The right side of the page displays the Check Out Total component. This component is rendered conditionally, depending on whether the user is purchasing a perk, or simply making a contribution. If the user is making a contribution, it allows the user to change their contribution, or add a perk. If they are purchasing a perk, it displays the perk information instead. Both instances display the total cost of the contribution the user is making, and the button to submit their payment.
+The right side of the page displays the [Check Out Total](./frontend/components/check_out/check_out_total.jsx) component. This component is rendered conditionally, depending on whether the user is purchasing a perk, or simply making a contribution. If the user is making a contribution, it allows the user to change their contribution, or add a perk. If they are purchasing a perk, it displays the perk information instead. Both instances display the total cost of the contribution the user is making, and the button to submit their payment.
 
 <br>
 
@@ -130,7 +130,7 @@ If a user clicks on the Start A Campaign button in the Navigation Bar, they are 
 
 ![Campaign Create Page](/docs/images/campaign_create.png)
 
-This page allows the user to create a campaign on Greenhouse. Here, they can edit everything about a campaign, from the category it's in, to its story. All state information about the campaign is stored locally, at the top level, to ensure state preservation between pages, speed up state updating, and enforce input validations for the entire campaign. The user can navigate between pages using the Campaign Create Sidebar.
+[This page](./frontend/components/campaign_create/create_campaign_page.jsx) allows the user to create a campaign on Greenhouse. Here, they can edit everything about a campaign, from the category it's in, to its story. All state information about the campaign is stored locally, at the top level, to ensure state preservation between pages, speed up state updating, and enforce input validations for the entire campaign. The user can navigate between pages using the Campaign Create Sidebar.
 
 <br>
 

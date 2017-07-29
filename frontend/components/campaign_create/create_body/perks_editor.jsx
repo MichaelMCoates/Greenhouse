@@ -34,8 +34,11 @@ class PerksEditor extends React.Component {
     this.setState(this.initialState);
   }
 
-  setPerkDate (e) {
-    this.setState({delivery_date: new Date(e.target.value), delivery_date_str: e.target.value} );
+  setPerkDate(e) {
+    this.setState({
+      delivery_date: new Date(e.target.value),
+      delivery_date_str: e.target.value
+    });
   }
 
   update(field) {
@@ -44,7 +47,7 @@ class PerksEditor extends React.Component {
     });
   }
 
-  savePerk () {
+  savePerk() {
     let perkVals = [];
     for(var key in this.state) {
       perkVals.push(this.state[key]);
@@ -65,22 +68,24 @@ class PerksEditor extends React.Component {
     });
   }
 
-  render() {
-    let currentPerks;
-    let divCurrentPerks;
+  divCurrentPerks() {
     if (this.props.state.perks_attributes.length > 0) {
-      currentPerks = this.props.state.perks_attributes.map ((perk) => {
+      let currentPerks = this.props.state.perks_attributes.map ((perk) => {
         perk.number_claimed = 0;
         return (<PerkItem perk={perk} />);
       });
 
-      divCurrentPerks = (
+      return (
         <div className="current-perks">
           <div className="current-perks-title">CURRENT PERKS</div>
           {currentPerks}
         </div>
       );
     }
+  }
+
+  render() {
+    let divCurrentPerks = this.divCurrentPerks();
 
     return (
       <div className="editor">
@@ -145,8 +150,9 @@ class PerksEditor extends React.Component {
             />
         </div>
 
-        <div className="save-perk-button" onClick={this.savePerk}>SAVE PERK TO CAMPAIGN</div>
-
+        <div className="save-perk-button" onClick={this.savePerk}>
+          SAVE PERK TO CAMPAIGN
+        </div>
 
       </div>
     );
