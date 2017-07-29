@@ -20,6 +20,8 @@ Greenhouse is a full-stack clone of Indiegogo, a crowdfunding application. It is
 
 ### Home Page
 
+![Home Page](/docs/images/home_page.png)
+
 The user will typically start at the home page of Greenhouse. The `Home Page` shows featured campaigns, suggested campaigns, and campaign categories.
 
 *Carousels*
@@ -30,11 +32,11 @@ The main feature of the `Home Page` is its two Carousels. The top carousel shows
 
 Beneath the carousels, users can click on any of the Category Boxes to be taken to the `Search/Categories Page`.
 
-![Home Page](/docs/images/home_page.png)
-
 
 
 ### Campaign Show Page
+
+![Campaign Show Page](/docs/images/campaign_show_2.png)
 
 When the user clicks on a campaign, they are taken to the Campaign Show Page. This page gives information about the campaign, from the user that created it, to the amount that it has been funded thus far.
 
@@ -53,8 +55,6 @@ The Campaign Overview section has a small summary of the campaign, and a clickab
 *Perks*
 
 Perks for a campaign are displayed in the bottom right corner. A user can click on a Perk to purchase it from the campaign. The perks have front-end validations to ensure that the user is logged in before they are redirected to the `Check Out Page`. Perks are fetched independently of campaigns, but their *campaign_id* foreign key (which corresponds to the campaign they are associated with) is indexed in the database for fast lookup. Their information is updated automatically as they are purchased.
-
-![Campaign Show Page](/docs/images/campaign_show_2.png)
 
 
 
