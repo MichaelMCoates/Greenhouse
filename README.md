@@ -110,24 +110,6 @@ If a user is viewing their own profile, the Current User Bar is displayed, which
 <br>
 
 
-## User Campaigns Page
-
-![User Campaigns Page](/docs/images/user_campaigns.png)
-
-If a user clicks on the Campaigns tab in the `User Show Page`, they are taken to the User Campaigns Page. Here, the user can see what campaigns that user has created and contributed to.
-
-<br>
-
-
-## Campaign Create Start Page
-
-![Campaign Create Start Page](/docs/images/campaign_create_start.png)
-
-If a user clicks on the Start A Campaign button in the Navigation Bar, they are redirected to the Campaign Create Start Page. Here, they can customize how much money they would like to raise and the title of their campaign. When the Create My Campaign button is clicked, the user is redirected to the `Campaign Create Page`. This page has front-end validations to prevent a user from creating a campaign if they are not logged in.
-
-<br>
-
-
 ## Campaign Create Page
 
 ![Campaign Create Page](/docs/images/campaign_create.png)
