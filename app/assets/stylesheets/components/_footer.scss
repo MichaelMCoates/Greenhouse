@@ -39,6 +39,10 @@
   margin-top: 5px;
 }
 
+.footer-bar-links:hover {
+  text-decoration: underline;
+}
+
 .footer-hr {
   border-top: 1px solid #2a2a2a;
   margin: 0;
@@ -59,8 +63,4 @@
   display: flex;
   justify-content: space-between;
   width: 28%;
-}
-
-.footer-under-hr-right {
-
 }
