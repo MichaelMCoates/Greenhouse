@@ -35,8 +35,6 @@ class FeaturedCarousel extends React.Component {
   shiftOrNot(idx) {
     return () => {
       clearInterval(this.interval);
-      console.log(this.interval);
-      console.log("in shift or not");
       if (idx == 1) {
         this.shiftRight();
       } else if (idx == 3) {
