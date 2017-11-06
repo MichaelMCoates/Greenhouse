@@ -70,7 +70,7 @@ class LogInForm extends React.Component {
 					</div>
 				</form>
         <div className="topborder" onClick={this.props.clearErrors}>
-          New to GREENHOUSE? <br></br> {this.navLink()}
+          New to GREENHOUSE? </br></br> {this.navLink()}
         </div>
         or
         <br/>
