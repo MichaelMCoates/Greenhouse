@@ -82,7 +82,7 @@ class SignUpForm extends React.Component {
 					</div>
 				</form>
         <div className="topborder" onClick={this.props.clearErrors}>
-          Already have an account? </br></br> {this.navLink()}
+          Already have an account? <br></br><br></br> {this.navLink()}
         </div>
         or
         <br/>
