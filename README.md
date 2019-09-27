@@ -2,7 +2,7 @@
 
 [Greenhouse Live Link][heroku]
 
-[heroku]: http://www.the-greenhouse.co/#/
+[heroku]: http://the-greenhouse.herokuapp.com/#/
 
 ## Summary
 

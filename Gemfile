@@ -25,7 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 gem "paperclip", "~> 5.2.1"
 gem "figaro"
-gem 'aws-sdk', '>= 2.0'
+gem 'aws-sdk', '>= 3.0'
 gem 'faker'
 
 # Use Unicorn as the app server
